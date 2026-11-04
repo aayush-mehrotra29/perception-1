@@ -1,0 +1,137 @@
+{
+  "all_passed": true,
+  "segments": [
+    {
+      "segment": 1,
+      "bitwise_equal": true,
+      "max_abs_error": 0.0,
+      "real_seconds": 57.54061224489796,
+      "hidden_shape": [
+        1,
+        200,
+        1152
+      ]
+    },
+    {
+      "segment": 2,
+      "bitwise_equal": true,
+      "max_abs_error": 0.0,
+      "real_seconds": 60.84519274376417,
+      "hidden_shape": [
+        1,
+        200,
+        1152
+      ]
+    },
+    {
+      "segment": 3,
+      "bitwise_equal": true,
+      "max_abs_error": 0.0,
+      "real_seconds": 63.25943310657596,
+      "hidden_shape": [
+        1,
+        200,
+        1152
+      ]
+    },
+    {
+      "segment": 4,
+      "bitwise_equal": true,
+      "max_abs_error": 0.0,
+      "real_seconds": 69.98857142857143,
+      "hidden_shape": [
+        1,
+        200,
+        1152
+      ]
+    },
+    {
+      "segment": 5,
+      "bitwise_equal": true,
+      "max_abs_error": 0.0,
+      "real_seconds": 66.27253968253969,
+      "hidden_shape": [
+        1,
+        200,
+        1152
+      ]
+    },
+    {
+      "segment": 6,
+      "bitwise_equal": true,
+      "max_abs_error": 0.0,
+      "real_seconds": 63.77755102040816,
+      "hidden_shape": [
+        1,
+        200,
+        1152
+      ]
+    },
+    {
+      "segment": 7,
+      "bitwise_equal": true,
+      "max_abs_error": 0.0,
+      "real_seconds": 62.896848072562356,
+      "hidden_shape": [
+        1,
+        200,
+        1152
+      ]
+    },
+    {
+      "segment": 8,
+      "bitwise_equal": true,
+      "max_abs_error": 0.0,
+      "real_seconds": 57.31061224489796,
+      "hidden_shape": [
+        1,
+        200,
+        1152
+      ]
+    },
+    {
+      "segment": 9,
+      "bitwise_equal": true,
+      "max_abs_error": 0.0,
+      "real_seconds": 57.22614512471655,
+      "hidden_shape": [
+        1,
+        200,
+        1152
+      ]
+    },
+    {
+      "segment": 10,
+      "bitwise_equal": true,
+      "max_abs_error": 0.0,
+      "real_seconds": 61.26965986394558,
+      "hidden_shape": [
+        1,
+        200,
+        1152
+      ]
+    },
+    {
+      "segment": 11,
+      "bitwise_equal": true,
+      "max_abs_error": 0.0,
+      "real_seconds": 56.17018140589569,
+      "hidden_shape": [
+        1,
+        200,
+        1152
+      ]
+    },
+    {
+      "segment": 12,
+      "bitwise_equal": true,
+      "max_abs_error": 0.0,
+      "real_seconds": 46.983061224489795,
+      "hidden_shape": [
+        1,
+        200,
+        1152
+      ]
+    }
+  ]
+}

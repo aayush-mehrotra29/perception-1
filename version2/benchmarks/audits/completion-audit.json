@@ -1,0 +1,42 @@
+{
+  "complete": true,
+  "independent_primary_metrics": {
+    "mean": 0.77698135002922,
+    "acoustic_ridge": 0.7852499641547458,
+    "tribe_ridge": 0.797975013716556,
+    "content_ridge": 0.9202532443987927,
+    "full_ridge": 0.9582274847701725,
+    "tribe_tcn": 1.1064979068725151,
+    "content_tcn": 0.9427536852288881,
+    "full_tcn": 0.949432586986908
+  },
+  "primary_reduction_percent": 14.194814008238641,
+  "test_coverage": {
+    "11": {
+      "supported_channels": 35,
+      "channel_sample_pairs": 89530
+    },
+    "12": {
+      "supported_channels": 35,
+      "channel_sample_pairs": 73465
+    }
+  },
+  "nine_models_and_fifty_four_seed_forecasts_replayed": true,
+  "twelve_label_budget_ridges_present": true,
+  "reserved_target_access_followed_forecast_and_reload_locks": true,
+  "example_matches_evaluated_weights_exactly": true,
+  "native_cortical_file_and_clock_unchanged": true,
+  "JSON_missing_values_null": true,
+  "artifact_manifest_sha256": "0f28318376170966f711781fd3e8244221773ae124f258e7b2171d38f26fbacd",
+  "result_sha256": "ab5cf74841c9227c57d1a4e6ff0d7be498ed14c5e750ee17b14e1bf78ad7f706",
+  "report_manifest_sha256": "c4b78e38156c592fde1545bbd734fea7aff697a690d88a4289ba9ae9bc67f2c2",
+  "model_card_sha256": "cf25ed01f8b5b3ec0b07cab32ef5d54b1327a26173a8b8ed67d5fc49baa41f9c",
+  "integration_sha256": "9173c75c7ca07cf1637d511d443cce08aad8f8327915d13add034304b5869a2e",
+  "code_sha256": "575dc5bac245dd25f6ad74383284a8623be57ce83400b1f484c98c0949d1d6f8",
+  "limits": [
+    "Auxiliary one-story EEG transfer test only",
+    "No measured-fMRI superiority",
+    "No educational outcomes validated",
+    "Arbitrary raw-upload parity not qualified"
+  ]
+}

@@ -1,0 +1,28 @@
+VERSION2 INTEGRATION CONTRACT
+
+The fitted readout is artifacts/cohort-v1. Keep the current educational app model selectable and unchanged.
+This new auxiliary audio benchmark predicts40filtered EEG channels, not the earlier8summary features.
+
+Python API:
+    from speech_eeg.inference import predict_features
+    predicted_volts, support, model_card = predict_features(artifact_directory, feature_arrays)
+
+Required feature_arrays:
+    history: float[N,82,51], oldest to newest across1second
+    progress: float[N,3], exact frozen progress basis
+    feature_supported: bool[N]
+    query_seconds: float[N], increasing exact source-relative times
+
+The whole82channel ordering and PCA/scaler identities are mandatory. Do not replace missing modalities with zero.
+The low-level API returns feature-supported predictions; the CLI additionally applies the2second within-clip target-context domain and combines a matching native TRIBE result.
+For already computed acoustic+Wav2Vec2 histories, assemble_from_base adds the frozen native audio, language and TRIBE PCA blocks. Each base cache needs a sidecar .provenance.json with its sha256 and media_sha256.
+Do not use features from one file with cortical results from another. The CLI checks these identities.
+
+CLI output:
+    eeg.npz: predicted_eeg_volts[N,40], query_seconds[N], supported[N]
+    native-fmri.npz: unchanged native predicted_cortical_response
+    prediction.json: both clocks/provenance, native5second neuro offset, unsupported EEG nulls, model and benchmark identity
+
+Native cortical vertex order is not independently qualified; do not invent anatomical names from array indices.
+Neither branch returns attention, retention, learning, personality or demographic scores.
+The cached inference entrypoint is ready. Arbitrary-video/audio upload parity, visual features, and educational generalization require separate qualification.

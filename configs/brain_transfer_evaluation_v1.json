@@ -1,0 +1,18 @@
+{
+  "schema": "perception-modality-transfer-design-v1",
+  "purpose": "Separate exploratory missing-modality heads; does not alter the primary six-arm EEG comparison",
+  "modes": {
+    "text": ["dense_text"],
+    "audio": ["dense_text", "dense_audio"],
+    "visual": ["dense_video"],
+    "document": ["dense_text", "dense_video"]
+  },
+  "fixed_ridge_lambda": 1.0,
+  "pca_max_per_block": 16,
+  "evaluation": "same eight fixed topic-family by participant-group cells",
+  "population": "same complete-supported four-lecture rows as the primary analysis",
+  "branch_combination": "EEG predicts from available frozen content modalities; native TRIBE independently predicts cortical responses from the same available modalities",
+  "fmri_used_as_EEG_predictor": false,
+  "model_selection_by_held_out_performance": false,
+  "claim_limit": "Held-out scores concern lecture-video responses with restricted predictors, not actual silent reading, document study, still-image viewing or audio-only listening. These deployment inputs remain experimental transfer."
+}

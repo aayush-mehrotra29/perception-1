@@ -1,0 +1,153 @@
+{
+  "schema": "perception-v2-content-only-tribe-batch",
+  "items": [
+    {
+      "name": "segment02",
+      "local_media": "/Volumes/EEG Research Workspace/raw/alice-s01-format-v1-2026-10-27/stimuli/2.wav",
+      "request": {
+        "source_id": "alice-author-stimulus02-hidden-v2",
+        "sha256": "45610c4c7179ace6636f7996c046888ad662a1b8d0783bee0756bc59243bcc08",
+        "source_url": "https://doi.org/10.13016/pulf-lndn",
+        "source_origin": "public_url",
+        "cloud_use_basis": "Publicly released ALICE stimulus WAV from the author derivative dataset, whose saved official README states CC BY4.0 with attribution. Content-only feature extraction; no participant EEG or fitted EEG weights sent.",
+        "media_kind": "audio",
+        "size_bytes": 5366590
+      }
+    },
+    {
+      "name": "segment03",
+      "local_media": "/Volumes/EEG Research Workspace/raw/alice-s01-format-v1-2026-10-27/stimuli/3.wav",
+      "request": {
+        "source_id": "alice-author-stimulus03-hidden-v2",
+        "sha256": "d08f407b39b3b55a15dcb5c9d288c5451794d5b04a916c3240a825f073418c23",
+        "source_url": "https://doi.org/10.13016/pulf-lndn",
+        "source_origin": "public_url",
+        "cloud_use_basis": "Publicly released ALICE stimulus WAV from the author derivative dataset, whose saved official README states CC BY4.0 with attribution. Content-only feature extraction; no participant EEG or fitted EEG weights sent.",
+        "media_kind": "audio",
+        "size_bytes": 5579526
+      }
+    },
+    {
+      "name": "segment04",
+      "local_media": "/Volumes/EEG Research Workspace/raw/alice-s01-format-v1-2026-10-27/stimuli/4.wav",
+      "request": {
+        "source_id": "alice-author-stimulus04-hidden-v2",
+        "sha256": "6f84bcc8c776b36ea6f32d0e2abb4374891f9c541d7faacd860e74e103ffc723",
+        "source_url": "https://doi.org/10.13016/pulf-lndn",
+        "source_origin": "public_url",
+        "cloud_use_basis": "Publicly released ALICE stimulus WAV from the author derivative dataset, whose saved official README states CC BY4.0 with attribution. Content-only feature extraction; no participant EEG or fitted EEG weights sent.",
+        "media_kind": "audio",
+        "size_bytes": 6173036
+      }
+    },
+    {
+      "name": "segment05",
+      "local_media": "/Volumes/EEG Research Workspace/raw/alice-s01-format-v1-2026-10-27/stimuli/5.wav",
+      "request": {
+        "source_id": "alice-author-stimulus05-hidden-v2",
+        "sha256": "f35f7c11e7b434374c4d2546a477da558d536654b34ed2274ff37d77ef2b39c3",
+        "source_url": "https://doi.org/10.13016/pulf-lndn",
+        "source_origin": "public_url",
+        "cloud_use_basis": "Publicly released ALICE stimulus WAV from the author derivative dataset, whose saved official README states CC BY4.0 with attribution. Content-only feature extraction; no participant EEG or fitted EEG weights sent.",
+        "media_kind": "audio",
+        "size_bytes": 5845282
+      }
+    },
+    {
+      "name": "segment06",
+      "local_media": "/Volumes/EEG Research Workspace/raw/alice-s01-format-v1-2026-10-27/stimuli/6.wav",
+      "request": {
+        "source_id": "alice-author-stimulus06-hidden-v2",
+        "sha256": "9ff087cd534bb4ac2a7d4a8c3a3014e35d6c1a4dd010e454faa7dd214c88abd1",
+        "source_url": "https://doi.org/10.13016/pulf-lndn",
+        "source_origin": "public_url",
+        "cloud_use_basis": "Publicly released ALICE stimulus WAV from the author derivative dataset, whose saved official README states CC BY4.0 with attribution. Content-only feature extraction; no participant EEG or fitted EEG weights sent.",
+        "media_kind": "audio",
+        "size_bytes": 5625224
+      }
+    },
+    {
+      "name": "segment07",
+      "local_media": "/Volumes/EEG Research Workspace/raw/alice-s01-format-v1-2026-10-27/stimuli/7.wav",
+      "request": {
+        "source_id": "alice-author-stimulus07-hidden-v2",
+        "sha256": "7228a59757e6b74e15cbec25b6e66c3db002553cc567b9cc6f22782f6cbab37e",
+        "source_url": "https://doi.org/10.13016/pulf-lndn",
+        "source_origin": "public_url",
+        "cloud_use_basis": "Publicly released ALICE stimulus WAV from the author derivative dataset, whose saved official README states CC BY4.0 with attribution. Content-only feature extraction; no participant EEG or fitted EEG weights sent.",
+        "media_kind": "audio",
+        "size_bytes": 5547546
+      }
+    },
+    {
+      "name": "segment08",
+      "local_media": "/Volumes/EEG Research Workspace/raw/alice-s01-format-v1-2026-10-27/stimuli/8.wav",
+      "request": {
+        "source_id": "alice-author-stimulus08-hidden-v2",
+        "sha256": "4e66a75cba3f8510d95fe3772e4386916884fb80d0e3298820e342b953e83c98",
+        "source_url": "https://doi.org/10.13016/pulf-lndn",
+        "source_origin": "public_url",
+        "cloud_use_basis": "Publicly released ALICE stimulus WAV from the author derivative dataset, whose saved official README states CC BY4.0 with attribution. Content-only feature extraction; no participant EEG or fitted EEG weights sent.",
+        "media_kind": "audio",
+        "size_bytes": 5054840
+      }
+    },
+    {
+      "name": "segment09",
+      "local_media": "/Volumes/EEG Research Workspace/raw/alice-s01-format-v1-2026-10-27/stimuli/9.wav",
+      "request": {
+        "source_id": "alice-author-stimulus09-hidden-v2",
+        "sha256": "839d5ea0dfb2dc88d109ba534a6eb45c4d86484efddb0522237c9baff53576c2",
+        "source_url": "https://doi.org/10.13016/pulf-lndn",
+        "source_origin": "public_url",
+        "cloud_use_basis": "Publicly released ALICE stimulus WAV from the author derivative dataset, whose saved official README states CC BY4.0 with attribution. Content-only feature extraction; no participant EEG or fitted EEG weights sent.",
+        "media_kind": "audio",
+        "size_bytes": 5047390
+      }
+    },
+    {
+      "name": "segment10",
+      "local_media": "/Volumes/EEG Research Workspace/raw/alice-s01-format-v1-2026-10-27/stimuli/10.wav",
+      "request": {
+        "source_id": "alice-author-stimulus10-hidden-v2",
+        "sha256": "924979910c003226ab94531621786b517ca6c8f3949121300a492ee38cc33603",
+        "source_url": "https://doi.org/10.13016/pulf-lndn",
+        "source_origin": "public_url",
+        "cloud_use_basis": "Publicly released ALICE stimulus WAV from the author derivative dataset, whose saved official README states CC BY4.0 with attribution. Content-only feature extraction; no participant EEG or fitted EEG weights sent.",
+        "media_kind": "audio",
+        "size_bytes": 5404028
+      }
+    },
+    {
+      "name": "segment11",
+      "local_media": "/Volumes/EEG Research Workspace/raw/alice-s01-format-v1-2026-10-27/stimuli/11.wav",
+      "request": {
+        "source_id": "alice-author-stimulus11-hidden-v2",
+        "sha256": "972b4707b8e69ddd7329fd70e5474639a2bac34dcb56e35aba140499edab61ee",
+        "source_url": "https://doi.org/10.13016/pulf-lndn",
+        "source_origin": "public_url",
+        "cloud_use_basis": "Publicly released ALICE stimulus WAV from the author derivative dataset, whose saved official README states CC BY4.0 with attribution. Content-only feature extraction; no participant EEG or fitted EEG weights sent.",
+        "media_kind": "audio",
+        "size_bytes": 4954254
+      }
+    },
+    {
+      "name": "segment12",
+      "local_media": "/Volumes/EEG Research Workspace/raw/alice-s01-format-v1-2026-10-27/stimuli/12.wav",
+      "request": {
+        "source_id": "alice-author-stimulus12-hidden-v2",
+        "sha256": "0d8187497d7cfb25b2f9696bcfe9adc0b46c04dceae70d7bb97c67d21a537a85",
+        "source_url": "https://doi.org/10.13016/pulf-lndn",
+        "source_origin": "public_url",
+        "cloud_use_basis": "Publicly released ALICE stimulus WAV from the author derivative dataset, whose saved official README states CC BY4.0 with attribution. Content-only feature extraction; no participant EEG or fitted EEG weights sent.",
+        "media_kind": "audio",
+        "size_bytes": 4143950
+      }
+    }
+  ],
+  "scope": "source stimuli only; segments11\u201312 remain excluded from fitting and target inspection",
+  "max_gpu_seconds": 4000,
+  "reservation_usd": 4,
+  "new_paid_failure_retries": 0,
+  "source_context_policy": "Each clip inferred independently to prevent cross-split transformer/ASR context"
+}

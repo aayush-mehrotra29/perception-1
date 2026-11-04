@@ -1,0 +1,19 @@
+{
+  "schema": "perception-brain-eeg-evaluation-design-v1",
+  "scope": "Competition EEG summary regression only. Separate from the deferred behavioral protocol.",
+  "status": "frozen_before_full_multimodal_evaluation",
+  "prior_access": "Progress and sensory engineering baselines already evaluated; no hyperparameters selected from those scores.",
+  "targets": "Eight recorded-voltage summary features, not attention or learning",
+  "arms": ["progress", "auxiliary_content", "dense_content", "auxiliary_plus_dense16", "auxiliary_plus_tribe16", "all_blocks"],
+  "shared_support": "Identical rows with every required block and target available; exclusions reported per viewing",
+  "primary_comparison": "all_blocks versus auxiliary_plus_dense16",
+  "dimension_matched_comparison": "auxiliary_plus_tribe16 versus auxiliary_plus_dense16",
+  "dimension_match": "Concatenate native text/audio/video features before one training-only PCA capped at 16; TRIBE receives one PCA capped at 16. Report achieved ranks in every fold; no dimension-match claim for unequal ranks.",
+  "fixed_ridge_lambda": 1.0,
+  "scaling_and_pca": "Training-only; distinct training content windows for feature transforms, no held-out EEG or content",
+  "folds": "8 crossed topic-family by participant-group cells, unchanged",
+  "metrics": ["MAE per target", "training-mean MAE", "normalized RMSE", "R squared"],
+  "uncertainty": "Paired held-out absolute-error differences, crossed participant and lecture resampling; descriptive intervals only with four lectures and two topic families",
+  "deployment": "A separately labelled exploratory full-data fit only after all prescribed evaluation arms finish; never score deployment training rows as validation",
+  "scientific_limits": ["coarse receiver clock", "historical media identity unverified", "signal/contact quality unqualified", "four lessons only", "no attention or retention labels in this stage"]
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "perception-fusion-revision-v3",
+  "frozen_at_utc": "2026-11-04T00:55:16Z",
+  "status": "exploratory_revision_informed_by_v2_results; not untouched validation",
+  "prepared": ".local/brain-runs/fusion-v2-prepared",
+  "previous_evaluation": ".local/brain-runs/fusion-v2-evaluation",
+  "arms": ["mean", "tribe_temporal", "historical_v2_fusion", "robust_tribe", "robust_fusion", "fusion", "without_aux", "shuffled_correction", "simple_ridge"],
+  "primary_candidate": "fusion",
+  "primary_comparator": "tribe_temporal",
+  "primary_architecture": "Frozen v2 TRIBE-only EEG temporal ensemble plus strongly regularized, bounded multimodal residual readout",
+  "seeds": [17, 29, 43],
+  "preprocessing": {
+    "quantiles": [0.01, 0.99],
+    "near_constant_relative_floor": 0.0001,
+    "raw_standardized_clip": 5.0,
+    "pca_max_rank": 16,
+    "pca_seed": 1729,
+    "pca_iterations": 5,
+    "score_clip": 4.0,
+    "auxiliary_gain": 0.25,
+    "fit_scope": "Unique training content bins/windows only; quantiles, feature masks, moments, PCA and score scales fitted inside every fold"
+  },
+  "temporal_controls": "Same v2 temporal architecture, AdamW defaults, 100 epochs, seeds and budget; new bounded preprocessing and auxiliary gain",
+  "residual": {
+    "design": "Per-block sequence mean, standard deviation and second-half minus first-half mean; window-level auxiliary descriptors",
+    "ridge_lambda": 10.0,
+    "training_residual_clip": 3.0,
+    "maximum_normalized_correction": 0.1,
+    "bound": "Every target changes by at most 0.1 training-fold target SD relative to its frozen anchor; not a guarantee of lower error",
+    "variance": "Positive softplus shift around the anchor; no post-hoc output clipping",
+    "negative_control": "Within-viewing cyclic EEG reassignment for correction training only; anchor remains fixed"
+  },
+  "simple_ridge": {"lambda": 10.0, "variance": "softplus around training mean"},
+  "evaluation": "Identical 1020 rows, eight crossed topic-family/participant-group folds and eight v2 targets/scales",
+  "success": {"minimum_relative_error_reduction": 0.05, "must_beat_mean": true},
+  "uncertainty": {"repeats": 2000, "seed": 1729, "clusters": ["lecture", "participant"]},
+  "deployment_choice": "Always export prespecified bounded residual fusion; do not choose an arm or seed using outer scores",
+  "quality_audit": "Integrity, receiver-clock limitations, same-content agreement, participant offsets; no fabricated sample clock, new filtering or outcome-driven exclusions",
+  "measured_fmri_superiority_tested": false,
+  "native_TRIBE_cortical_outputs_changed": false,
+  "new_external_data_required_for_confirmatory_claims": true
+}

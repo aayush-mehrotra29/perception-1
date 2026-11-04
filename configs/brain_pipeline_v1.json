@@ -1,0 +1,23 @@
+{
+  "schema": "perception-brain-pipeline-v1",
+  "status": "implementation_in_progress_not_fitted",
+  "analysis_mode": "whole_lesson_offline",
+  "cloud_policy": "permitted_public_media_and_content_features_only",
+  "participant_data_location": "local_only",
+  "budgets_usd": {"modal": 30, "meta_api": 150, "additional_spending": 0},
+  "required_branches": ["tribe_fmri", "dense_content", "sam_visual", "sam_audio", "muse_semantics", "trained_eeg"],
+  "models": {
+    "tribe": "facebook/tribev2",
+    "sam_audio": "facebook/sam-audio-small",
+    "sam_visual": "sam-3.1",
+    "semantics": "muse-spark-1.3",
+    "transcription": "muse-voice-transcribe-1.0"
+  },
+  "artifact_revisions": "Must be pinned at qualification before remote extraction",
+  "eeg": {"window_seconds": 44, "hop_seconds": 5, "channels": ["tp9", "af7", "af8", "tp10"], "target": "means_and_log1p_population_variances", "ridge_lambda": 1.0, "pca_max_per_block": 16},
+  "evaluation": "eight_topic_by_participant_group_cells",
+  "training_data": "four_previously_inspected_EduGage_lectures",
+  "foundation_model_finetuning": false,
+  "agents_and_behavioral_heads": false,
+  "local_disk_reserve_bytes": 12884901888
+}

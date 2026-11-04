@@ -1,0 +1,439 @@
+{
+  "schema": "perception-v2-cohort-forecast-lock",
+  "complete": true,
+  "test_EEG_opened": false,
+  "forecasts": {
+    "segment09": {
+      "file": "forecasts/segment09.npz",
+      "sha256": "fde7a5728b28c2d28d9b5d4dfffa3c547327538a160ff190987555429ccef4c9",
+      "rows": 2758,
+      "segment": 9,
+      "arms": [
+        "mean",
+        "acoustic_ridge_labels2",
+        "tribe_ridge_labels2",
+        "content_ridge_labels2",
+        "full_ridge_labels2",
+        "acoustic_ridge_labels4",
+        "tribe_ridge_labels4",
+        "content_ridge_labels4",
+        "full_ridge_labels4",
+        "acoustic_ridge_labels8",
+        "acoustic_ridge",
+        "tribe_ridge_labels8",
+        "tribe_ridge",
+        "content_ridge_labels8",
+        "content_ridge",
+        "full_ridge_labels8",
+        "full_ridge",
+        "tribe_tcn",
+        "content_tcn",
+        "full_tcn"
+      ]
+    },
+    "segment10": {
+      "file": "forecasts/segment10.npz",
+      "sha256": "c536c4495c50bfd505ec359eb3ec9c71e236b0dec6c71233d04d108308764b6b",
+      "rows": 2909,
+      "segment": 10,
+      "arms": [
+        "mean",
+        "acoustic_ridge_labels2",
+        "tribe_ridge_labels2",
+        "content_ridge_labels2",
+        "full_ridge_labels2",
+        "acoustic_ridge_labels4",
+        "tribe_ridge_labels4",
+        "content_ridge_labels4",
+        "full_ridge_labels4",
+        "acoustic_ridge_labels8",
+        "acoustic_ridge",
+        "tribe_ridge_labels8",
+        "tribe_ridge",
+        "content_ridge_labels8",
+        "content_ridge",
+        "full_ridge_labels8",
+        "full_ridge",
+        "tribe_tcn",
+        "content_tcn",
+        "full_tcn"
+      ]
+    },
+    "segment11": {
+      "file": "forecasts/segment11.npz",
+      "sha256": "29aa807b7d9d05bd366b9a8512911688007ae73bfebbf575ad2e5e31a2b767d7",
+      "rows": 2706,
+      "segment": 11,
+      "arms": [
+        "mean",
+        "acoustic_ridge_labels2",
+        "tribe_ridge_labels2",
+        "content_ridge_labels2",
+        "full_ridge_labels2",
+        "acoustic_ridge_labels4",
+        "tribe_ridge_labels4",
+        "content_ridge_labels4",
+        "full_ridge_labels4",
+        "acoustic_ridge_labels8",
+        "acoustic_ridge",
+        "tribe_ridge_labels8",
+        "tribe_ridge",
+        "content_ridge_labels8",
+        "content_ridge",
+        "full_ridge_labels8",
+        "full_ridge",
+        "tribe_tcn",
+        "content_tcn",
+        "full_tcn"
+      ]
+    },
+    "segment12": {
+      "file": "forecasts/segment12.npz",
+      "sha256": "20e623fea31aa987ae0b57d3d0405c8d58c0c7764a62543b33b159d7c65c4c12",
+      "rows": 2246,
+      "segment": 12,
+      "arms": [
+        "mean",
+        "acoustic_ridge_labels2",
+        "tribe_ridge_labels2",
+        "content_ridge_labels2",
+        "full_ridge_labels2",
+        "acoustic_ridge_labels4",
+        "tribe_ridge_labels4",
+        "content_ridge_labels4",
+        "full_ridge_labels4",
+        "acoustic_ridge_labels8",
+        "acoustic_ridge",
+        "tribe_ridge_labels8",
+        "tribe_ridge",
+        "content_ridge_labels8",
+        "content_ridge",
+        "full_ridge_labels8",
+        "full_ridge",
+        "tribe_tcn",
+        "content_tcn",
+        "full_tcn"
+      ]
+    },
+    "wrong11-from12": {
+      "file": "forecasts/wrong11-from12.npz",
+      "sha256": "0d6b7a94649024c79166378bb72840ff2039b0d0ef48260c51b0d412c6540713",
+      "rows": 2246,
+      "segment": 11,
+      "arms": [
+        "mean",
+        "acoustic_ridge_labels2",
+        "tribe_ridge_labels2",
+        "content_ridge_labels2",
+        "full_ridge_labels2",
+        "acoustic_ridge_labels4",
+        "tribe_ridge_labels4",
+        "content_ridge_labels4",
+        "full_ridge_labels4",
+        "acoustic_ridge_labels8",
+        "acoustic_ridge",
+        "tribe_ridge_labels8",
+        "tribe_ridge",
+        "content_ridge_labels8",
+        "content_ridge",
+        "full_ridge_labels8",
+        "full_ridge",
+        "tribe_tcn",
+        "content_tcn",
+        "full_tcn"
+      ]
+    },
+    "wrong12-from11": {
+      "file": "forecasts/wrong12-from11.npz",
+      "sha256": "5bd0bc75e99954dc70fcacdeb58296ada43aa227188afb0d8eb04bdd3b1153b8",
+      "rows": 2246,
+      "segment": 12,
+      "arms": [
+        "mean",
+        "acoustic_ridge_labels2",
+        "tribe_ridge_labels2",
+        "content_ridge_labels2",
+        "full_ridge_labels2",
+        "acoustic_ridge_labels4",
+        "tribe_ridge_labels4",
+        "content_ridge_labels4",
+        "full_ridge_labels4",
+        "acoustic_ridge_labels8",
+        "acoustic_ridge",
+        "tribe_ridge_labels8",
+        "tribe_ridge",
+        "content_ridge_labels8",
+        "content_ridge",
+        "full_ridge_labels8",
+        "full_ridge",
+        "tribe_tcn",
+        "content_tcn",
+        "full_tcn"
+      ]
+    }
+  },
+  "models": [
+    {
+      "arm": "tribe_tcn",
+      "seed": 17,
+      "file": "tribe_tcn/seed17/model.npz",
+      "sha256": "df7128ad7d2c6b86347cc66f2cba7522a2de5e841bcbf5422f9e1b71a75dd753",
+      "reload_exact": true,
+      "parameters": 11296
+    },
+    {
+      "arm": "tribe_tcn",
+      "seed": 29,
+      "file": "tribe_tcn/seed29/model.npz",
+      "sha256": "b10d9e38774ec2b0496c7e08a7c3a042b9c542c754fe9945405c01e8db02ebbe",
+      "reload_exact": true,
+      "parameters": 11296
+    },
+    {
+      "arm": "tribe_tcn",
+      "seed": 43,
+      "file": "tribe_tcn/seed43/model.npz",
+      "sha256": "fa825631da07651c2dad8ff3800decb1b74b95550afc0fc77714da6833a99e11",
+      "reload_exact": true,
+      "parameters": 11296
+    },
+    {
+      "arm": "content_tcn",
+      "seed": 17,
+      "file": "content_tcn/seed17/model.npz",
+      "sha256": "c8c5a9db24a50de4d58084daf9fcf410a29ed9547784243031fedb5bd7935ab7",
+      "reload_exact": true,
+      "parameters": 12896
+    },
+    {
+      "arm": "content_tcn",
+      "seed": 29,
+      "file": "content_tcn/seed29/model.npz",
+      "sha256": "ea83e23ba823d134a3c7fec5bbab23804fbb9370696f511c102741727921c4dc",
+      "reload_exact": true,
+      "parameters": 12896
+    },
+    {
+      "arm": "content_tcn",
+      "seed": 43,
+      "file": "content_tcn/seed43/model.npz",
+      "sha256": "94d921a7c00efbaa4dec14956961eeb01f806a2fa62af04916863d0c6adffb8d",
+      "reload_exact": true,
+      "parameters": 12896
+    },
+    {
+      "arm": "full_tcn",
+      "seed": 17,
+      "file": "full_tcn/seed17/model.npz",
+      "sha256": "1a7a28ed98fa2c8aa0d9b512c1e53a71161483ea164b0681b5e4cb9f8486c5a8",
+      "reload_exact": true,
+      "parameters": 13408
+    },
+    {
+      "arm": "full_tcn",
+      "seed": 29,
+      "file": "full_tcn/seed29/model.npz",
+      "sha256": "8b0121878992bee1d5c4aedb506ecc05b05c75a10d1f3e9b94c44e52acb1a32f",
+      "reload_exact": true,
+      "parameters": 13408
+    },
+    {
+      "arm": "full_tcn",
+      "seed": 43,
+      "file": "full_tcn/seed43/model.npz",
+      "sha256": "e79fe5f18b082eb04f1dc8b59e4b23435e9f67c40d63107bb738d84b1783b345",
+      "reload_exact": true,
+      "parameters": 13408
+    }
+  ],
+  "ridges": [
+    {
+      "name": "acoustic_ridge_labels2",
+      "block": "acoustic",
+      "budget": 2,
+      "file": "acoustic_ridge_labels2.npz",
+      "sha256": "fa72a8ae9334d176970fc7530e412f0cafddaa749dcf8acf150c8e23721f2972",
+      "labeled_segments": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "tribe_ridge_labels2",
+      "block": "tribe",
+      "budget": 2,
+      "file": "tribe_ridge_labels2.npz",
+      "sha256": "cd01e044f5e4d48594a7319a6222dde869a84d7436d9cf12e917546403fc947a",
+      "labeled_segments": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "content_ridge_labels2",
+      "block": "content",
+      "budget": 2,
+      "file": "content_ridge_labels2.npz",
+      "sha256": "2251f05bd3241aa81574be2c750d072911f54df5f1facb869646091e5c2b0295",
+      "labeled_segments": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "full_ridge_labels2",
+      "block": "full",
+      "budget": 2,
+      "file": "full_ridge_labels2.npz",
+      "sha256": "a5e1af4d47e9d3964cfd35e0c17fb45b9576053f18302ff875c252313ac438da",
+      "labeled_segments": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "acoustic_ridge_labels4",
+      "block": "acoustic",
+      "budget": 4,
+      "file": "acoustic_ridge_labels4.npz",
+      "sha256": "15e99693ccba5ff9b2e7d7dca9aba0861cb4592b77cb37341a7a381bd38a7052",
+      "labeled_segments": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "tribe_ridge_labels4",
+      "block": "tribe",
+      "budget": 4,
+      "file": "tribe_ridge_labels4.npz",
+      "sha256": "755f7f80122f8de946451c9e9f129522e8ee1b6b1e4d7eafd506e66cf7c4c926",
+      "labeled_segments": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "content_ridge_labels4",
+      "block": "content",
+      "budget": 4,
+      "file": "content_ridge_labels4.npz",
+      "sha256": "62f10c91e8102eab4536888fdd0a30e4839d4bc7a286e075f2d99fadffefb98a",
+      "labeled_segments": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "full_ridge_labels4",
+      "block": "full",
+      "budget": 4,
+      "file": "full_ridge_labels4.npz",
+      "sha256": "d8886d9ed854eaa0e99acd11ca281a7895ad0e8e99152ef355fcf41bacc371ff",
+      "labeled_segments": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "acoustic_ridge_labels8",
+      "block": "acoustic",
+      "budget": 8,
+      "file": "acoustic_ridge_labels8.npz",
+      "sha256": "be089c1c8d6e81827cf862c33406021d58dbbfc1111d0945ded5781988982f43",
+      "labeled_segments": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "name": "tribe_ridge_labels8",
+      "block": "tribe",
+      "budget": 8,
+      "file": "tribe_ridge_labels8.npz",
+      "sha256": "48287d9ab79e025dd1a1275e4e2ef32fea4e6caa756ab9f9d4cf86cedb0c36bf",
+      "labeled_segments": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "name": "content_ridge_labels8",
+      "block": "content",
+      "budget": 8,
+      "file": "content_ridge_labels8.npz",
+      "sha256": "71352f1938d2a9a074d0aa15d438931e1b76f1c889b3dca1ffe73bf4ef2e218f",
+      "labeled_segments": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "name": "full_ridge_labels8",
+      "block": "full",
+      "budget": 8,
+      "file": "full_ridge_labels8.npz",
+      "sha256": "43f7497f3b2a5b6c0f51e9e7ee82e84299713dadec7876775d2e55a7349340d4",
+      "labeled_segments": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  ],
+  "transforms_sha256": "7599c6f32d9abf4f94122047e02f03a79d5ca53ff29bb4a672ded878f8bd66b2",
+  "config_sha256": "68bd633fb9f86beff7d041fdd9a0e74f8c7229d60941f95e76d7c7d9221b3bf7",
+  "feature_manifest_sha256": "3f1bfe6d79d8ec6594798875351a92de8681ec3e60e000788232f6efd61b77cc",
+  "target_manifest_sha256": "220a88e2408e872dc120335ab04c4f749502881a9dfbccd599e9fc5989615a4d",
+  "elapsed_seconds": 2287.9386957078095,
+  "source_sha256": {
+    "cohort_targets.py": "e4db72adb7048ef39062b498d09aacb918c8717ff5b04abd39eb4a679ea341f1",
+    "tribe_capture.py": "cdd80e14607c7a15c3b3a5a98c7beb221403efc12bee856e7113843729adb8ca",
+    "cohort_data.py": "f9367a6cd87d699c0cebc12a6df7d35a63fd80178d6a17e30b67da0d213cce2b",
+    "submit_tribe.py": "80d15f7197f326fd907d9963a9bf64ecab0683914c4f7b8fe551149af6058ee0",
+    "__init__.py": "395c1ea1b34a1c06ddfba044c0aefa45816e46e9686351fcd6a6dbe0c2e30536",
+    "model.py": "19a4ce9e754b12878ec0a9737b9a7a6f883f7b3d875a1f7d9c6ad0cfb5c3d382",
+    "submit_batch.py": "a4a4643b85356eeeba5148ae2ed294c8fbe09491c3733ddf64aa1c4e33e480a1",
+    "cohort_train.py": "e53e4699c3b58457e6ca3defe53c4e26012b00c72cf44c56e5d67896a2201421",
+    "common.py": "7eb09f6167926d94866ebde8e910b41c598298027bcd074953ca0e83b8e6d9f8",
+    "train.py": "89f94042d8aa0fceec5e8ba699d5298060f781bf5729f622f4b4e059cb875729",
+    "cohort_features.py": "3a5679a30f79e73042c9bdd922340399f49f24788c452149a8f4feb90294180c",
+    "prepare.py": "1a66c8fce2e9b2b048353357d4566fec5a7fc5a4e3e17b65be930caf1a71dc14",
+    "acquire_alice.py": "a403f3eb96961fcf254740ac7979e48a161d3c3419a80cb83d5e498eea6a5faa",
+    "status.py": "678c9489244b3746076a9e1c72338892adb333600795c49125735ccaaeb09194"
+  },
+  "resume_records": {
+    "resume-1793763196045769000.json": "d6853b94e4145df0ae005bdd9fcce0d70144cabbc48794be52e38007f3faeb3d"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "perception-brain-model-card-v1",
+  "status": "fitted engineering prototype; weak held-out EEG performance",
+  "format_execution_checks": {"text": "passed", "video": "passed after a local floating-point windowing correction; saved cloud outputs reused", "audio": "passed", "image": "passed", "pdf": "passed after restoring exact source whitespace in a saved semantic quote; no paid inference repeated"},
+  "format_qualification_scope": "Five presentations of one original velocity lesson outside the four training lectures, processed through actual pretrained models and the fitted EEG heads. These are engineering fixtures with no measured EEG, fMRI, attention, or quiz ground truth; they are not five independent scientific validation lessons.",
+  "scope": "Competition-only content-to-EEG-summary pipeline with a separate native pretrained TRIBE cortical-response branch",
+  "architecture": {
+    "EEG": "Frozen content encoders and extracted descriptors, training-only scaling and block PCA capped at 16 dimensions, followed by weighted eight-output ridge regression with lambda=1",
+    "video_features": ["native Llama text representations", "native w2v-BERT audio representations", "native V-JEPA2 video representations", "TRIBE-predicted cortical representations", "Meta semantic features", "SAM visual descriptors", "SAM Audio descriptors", "measured audio and visual descriptors", "lesson progress"],
+    "fMRI": "Pretrained facebook/tribev2 checkpoint; native average-subject predictions on an fsaverage5 cortical surface with 20,484 vertices",
+    "training_boundary": "Only the EEG regression and its local transforms were fitted here. TRIBE and the content encoders were not retrained. There is no jointly trained EEG/fMRI world model or learned student agent."
+  },
+  "training_data": {
+    "source": "Four audited EduGage lectures and their participant viewings, per the local corpus registry",
+    "lectures": ["ideal_rocket_equation", "atmosphere_pressure_composition", "xray_diffraction", "healing_radiation"],
+    "participants": 16,
+    "scheduled_viewings": 32,
+    "missing_EEG": "Participant 2, xray_diffraction",
+    "supported_model_rows": 1020,
+    "distinct_content_windows": 145,
+    "independent_content_items": 4,
+    "effective_sample_caution": "Repeated participant rows and overlapping windows do not create 1,020 independent content examples."
+  },
+  "EEG_targets": {
+    "channels": ["TP9", "AF7", "AF8", "TP10"],
+    "features_per_channel": ["mean", "log1p population variance"],
+    "window_seconds": 44,
+    "query_hop_seconds": 5,
+    "timing_basis": "Coarse receiver-to-reported-playback-position association, not verified physical sample synchronization",
+    "unsupported_regions": "Preserved as NaN with an explicit support mask; no interpolation across playback gaps",
+    "units": "Training-source feature units; channel calibration and artifact/contact quality remain unqualified"
+  },
+  "evaluation": {
+    "design": "Eight crossed held-topic-family and held-participant-group cells per model; all fitted transforms use only the corresponding training scope",
+    "primary_arms": 6,
+    "transfer_heads": 4,
+    "saved_cells_independently_checked": 80,
+    "checks": "Model reload, forecast reproduction, people/lesson/content separation, training-only scaling and target means, PCA rank cap, complete held-row coverage, and independent viewing-weighted MAE recomputation",
+    "descriptive_mean_cell_target_MAE_ratio_vs_training_mean": {
+      "progress": 0.9994616735944049,
+      "auxiliary_content": 5.116751880604301,
+      "dense_content": 1.0042349520921054,
+      "auxiliary_plus_dense16": 3.6003737885532052,
+      "auxiliary_plus_tribe16": 4.780738203409471,
+      "all_blocks": 2.7300588602581963
+    },
+    "ratio_interpretation": "1 equals the training-mean baseline; smaller is better. These are descriptive averages across cells and targetwise ratios, not a prespecified single scientific endpoint.",
+    "TRIBE_incremental_comparison": "All eight descriptive crossed-bootstrap intervals for all_blocks minus auxiliary_plus_dense16 absolute error include zero; no clear benefit established.",
+    "invalid_physical_domain_predictions": "The all-block held-out forecasts contain 191 negative log1p-variance values. Raw regression outputs are retained without clipping, and inference diagnostics count such values.",
+    "conclusion": "Useful EEG generalization has not been demonstrated. Do not present the model as an accurate predictor of student brain responses."
+  },
+  "inference_contract": {
+    "formats": ["video", "audio", "text", "image", "pdf"],
+    "EEG_required_context": "At least one complete 44-second context at a 5-second query; the pipeline requires at least 45 seconds for EEG output",
+    "text": "Explicit assumed reading speed; exact source words, no synthetic narration",
+    "image_and_PDF": "Explicit assumed display duration for every page; page rendering and extracted PDF text. Image OCR is not implemented.",
+    "nonvideo_EEG": "Separate available-modality heads fitted to audiovisual lecture responses; actual silent-reading and audio-only responses have not been validated",
+    "output": "Versioned JSON manifests and checksummed NPZ arrays, including temporal support and separate native cortical timestamps",
+    "analysis_mode": "Whole-lesson offline inference; not a causal real-time forecasting model",
+    "runtime": "GPU content/TRIBE/SAM Audio inference on Modal, hosted Meta feature APIs, and local EEG prediction. No browser-only execution of all models."
+  },
+  "claims_not_supported": [
+    "Individual attention, distraction, cognitive load, comprehension, retention, or quiz prediction",
+    "Student demographic or persona-specific neural simulation",
+    "Calibrated raw EEG waveform or spectral-band prediction",
+    "Causal effects of particular video edits",
+    "Validated prediction of actual fMRI responses in this student cohort",
+    "Real reading or listening validation from video-only training",
+    "Scientific accuracy from successful engineering fixture execution"
+  ],
+  "local_evidence": {
+    "primary_training": ".local/brain-runs/integrated-eeg-training-v1/manifest.json",
+    "primary_comparisons": ".local/brain-runs/integrated-eeg-training-v1/comparisons.json",
+    "saved_fold_audit": ".local/brain-runs/fitted-eeg-artifact-audit-v1.json",
+    "transfer_training": ".local/brain-runs/transfer-eeg-training-v1/manifest.json",
+    "text_execution": ".local/brain-runs/full-text-qualification-v1/qualification.json",
+    "video_execution": ".local/brain-runs/full-video-qualification-v1/qualification.json",
+    "audio_execution": ".local/brain-runs/full-audio-qualification-v1/qualification.json",
+    "image_execution": ".local/brain-runs/full-image-qualification-v1/qualification.json",
+    "pdf_execution": ".local/brain-runs/full-pdf-qualification-v1/qualification.json",
+    "pdf_local_recovery": ".local/brain-runs/full-pdf-qualification-v1/local-recovery.json",
+    "five_format_rollup": ".local/brain-runs/five-format-qualification-v1.json",
+    "final_prediction_reproduction_audit": ".local/brain-runs/final-pipeline-artifact-audit-v1.json",
+    "tests": ".local/brain-runs/tests-v11.log: 70 passed",
+    "video_local_recovery": ".local/brain-runs/full-video-qualification-v1/local-recovery.json"
+  }
+}

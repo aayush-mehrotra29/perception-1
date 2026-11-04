@@ -1,0 +1,11 @@
+{
+  "complete": true,
+  "model_card_sha256": "cf25ed01f8b5b3ec0b07cab32ef5d54b1327a26173a8b8ed67d5fc49baa41f9c",
+  "integration_sha256": "9173c75c7ca07cf1637d511d443cce08aad8f8327915d13add034304b5869a2e",
+  "artifact_manifest_sha256": "0f28318376170966f711781fd3e8244221773ae124f258e7b2171d38f26fbacd",
+  "benchmark_sha256": "ab5cf74841c9227c57d1a4e6ff0d7be498ed14c5e750ee17b14e1bf78ad7f706",
+  "report_manifest_sha256": "c4b78e38156c592fde1545bbd734fea7aff697a690d88a4289ba9ae9bc67f2c2",
+  "architecture_runs": true,
+  "primary_benchmark_success": false,
+  "measured_fMRI_superiority_tested": false
+}

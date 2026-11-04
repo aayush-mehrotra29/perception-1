@@ -1,0 +1,2 @@
+# Preserve exact source and audit bytes, including recorded CSV line endings.
+* -text

@@ -1,0 +1,14 @@
+{
+  "schema": "perception-v2-tribe-transfer-prerequisites",
+  "status": "not_executed_no_TRIBE_comparison_claim",
+  "capture": "speech_eeg.tribe_capture.TribeHiddenCapture attached to authenticated TribeModel._model and its encoder; native BOLD output must remain bitwise identical in a paired smoke test",
+  "representation": "transformer hidden output before subject projection; not predicted cortical BOLD values",
+  "media": "exact authenticated original audio segments, no EEG, questionnaires, labels or local EEG weights in remote payloads",
+  "clock": "retain native rate, segments, bin supports and full-context availability; qualify overlapping native windows and source padding before choosing any resampling or join policy",
+  "PCA": "fit only on selected training speech segments, max16 TRIBE dimensions; new participants/content validation requires new training-only fits",
+  "controls_required": ["training_mean", "acoustic_TRF", "TRIBE_hidden_ridge", "TRIBE_hidden_TCN", "content_only_TCN", "content_TRIBE_TCN", "training_EEG_time_shift_control"],
+  "fairness": "same recorded targets, supported rows, folds, temporal-head family, fixed tuning budget and seeds; disclose information and native temporal resolution differences",
+  "data_gate": "ALICE S01 current segments are development only. Define independent people/content test and inspect historical target quality before superiority claims.",
+  "cloud_gate": "use existing credit accounting and maximum-cost ceilings; no paid auto-retries; cache public content features only",
+  "next_action": "capture and qualify one source-audio segment, then freeze stage-B alignment/configuration before fitting or scoring"
+}

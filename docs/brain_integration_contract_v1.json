@@ -1,0 +1,57 @@
+{
+  "schema": "perception-brain-integration-contract-v1",
+  "scope": "Python brain pipeline for a future browser-app backend; the brain pipeline is not yet connected to a web upload endpoint",
+  "project_root": "/Volumes/EEG Research Workspace/MetaHackathon",
+  "entrypoint": "brain.content_pipeline.run",
+  "CLI": ".venv/bin/python -m brain.content_pipeline SOURCE REQUEST_JSON NEW_OUTPUT --request-prefix UNIQUE_ID --video-model .local/brain-runs/integrated-eeg-training-v1/exploratory-deployment --transfer-models .local/brain-runs/transfer-eeg-training-v1",
+  "input": {
+    "source": "Local uploaded file path; the caller creates an authenticated PublicMediaRequest using its actual SHA-256 and byte size",
+    "request_schema": "brain.worker_contract.PublicMediaRequest",
+    "source_provenance": "Source origin and cloud-use basis must describe the actual upload; do not mark arbitrary uploads as project-generated fixtures",
+    "video": "Native audiovisual media clock",
+    "audio": "Native decoded audio clock; no visual input is fabricated",
+    "text": "UTF-8 text and an explicit words_per_minute argument; CLI --words-per-minute",
+    "image_or_pdf": "An explicit seconds_per_page list with one value per actual page; CLI --seconds-per-page",
+    "duration_limits": "At least 45 seconds for the current EEG head. Text cloud inference is limited to 30 minutes; other prototype rendering and transport bounds are enforced by their adapters.",
+    "transport_limit_bytes": 268435456,
+    "output_directory": "A new directory for every attempt. Existing partial outputs are preserved and require inspection before recovery."
+  },
+  "execution": {
+    "browser": "Uploads content and displays job progress/results through a backend; it does not execute every model in-browser",
+    "local_Python_orchestrator": "Checks source identity, prepares media, calls remote feature models, and runs the fitted EEG head",
+    "Modal": "Native TRIBE and SAM Audio GPU inference on permitted content",
+    "Meta_API": "Applicable voice, semantics, and SAM visual feature extraction",
+    "local_only": ["Participant EEG", "behavioral labels", "training targets", "fitted EEG weights"],
+    "credentials": "Owner-only .local/brain-credentials.json; never send credentials to the browser or serialize them in result artifacts",
+    "parallelism": "One project GPU request at a time. The video pipeline may run hosted visual and speech/semantic extraction alongside the serialized GPU branch.",
+    "failure_recovery": "Inspect saved stage status and .local/brain-dispatches. Recover the same function-call handle after a local observation failure. No automatic paid retry.",
+    "credit_limits": {"modal_USD": 30, "meta_API_USD": 150}
+  },
+  "outputs": {
+    "pipeline_manifest": "NEW_OUTPUT/manifest.json",
+    "joint_manifest": "NEW_OUTPUT/prediction/manifest.json",
+    "joint_arrays": "NEW_OUTPUT/prediction/predictions.npz",
+    "EEG_query_seconds": "Content/presentation query times at a 5-second hop",
+    "EEG_features": "N by 8: four channel means followed by four log1p variances, ordered TP9, AF7, AF8, TP10",
+    "EEG_supported": "Temporal feature coverage only; not a scientific-confidence or physiological-validity score",
+    "cortical_response": "Native TRIBE average-subject predictions with 20,484 cortical vertices",
+    "cortical_clock": "Use fmri_segment_starts_native and fmri_segment_durations_native. Preserve native offsets and gaps; do not assume these arrays share the EEG query clock.",
+    "cortical_surface": "Optional brain.surface export with the qualified template geometry; no validated anatomical-region labels are supplied",
+    "raw_content_features": "Retained in modality-specific subdirectories for inspection and future research; supplemental features are not all predictors of the nonvideo EEG heads",
+    "JSON_conversion": "NPZ arrays can contain NaN at unsupported EEG slots. Convert these to null for JSON transport and retain the support mask; do not display them as zero-valued measurements."
+  },
+  "consumer_requirements": {
+    "model_status": "Read docs/brain_model_card_v1.json and display predictions as an unvalidated experimental model",
+    "performance": "The all-block held-out EEG model is worse than its training-mean baseline. Successful execution is not evidence of useful neural prediction.",
+    "physical_domain": "Check diagnostics.json or transfer-diagnostics.json for negative predicted log1p variances. Such raw regression outputs are outside the target's physical domain and must not be described as observed physiological signals.",
+    "nonvideo": "Display assumed reading/page timing and experimental transfer status; no measured gaze or real nonvideo neural validation is implied",
+    "not_provided": ["Attention score", "retention score", "quiz outcome", "individual student EEG waveform", "100 student personas", "causal effects of edits"]
+  },
+  "evidence_locations": {
+    "model_card": "docs/brain_model_card_v1.json",
+    "fitted_fold_audit": ".local/brain-runs/fitted-eeg-artifact-audit-v1.json",
+    "format_checks": ".local/brain-runs/full-FORMAT-qualification-v1/qualification.json",
+    "all_format_rollup": ".local/brain-runs/five-format-qualification-v1.json",
+    "final_prediction_reproduction_audit": ".local/brain-runs/final-pipeline-artifact-audit-v1.json"
+  }
+}

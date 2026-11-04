@@ -1,0 +1,121 @@
+{
+  "schema": "perception-brain-execution-v1",
+  "project": "Competition-only brain pipeline; standalone neuroscience research remains separate",
+  "current_scope": "Content-to-eight-EEG-summary-features plus native pretrained TRIBE cortical predictions. Agents and supervised attention/quiz outcomes are deferred.",
+  "input_security": "Credentials remain in owner-only ignored .local/brain-credentials.json. Participant EEG, behavioral labels, fitted EEG weights and targets stay local. Remote payloads contain only explicitly permitted content.",
+  "target_definition": {
+    "channels": ["tp9", "af7", "af8", "tp10"],
+    "features": ["per-channel mean", "per-channel log1p population variance"],
+    "window_seconds": 44,
+    "hop_seconds": 5,
+    "association": "Samples retain the left-reported video position of their original accepted receiver/poll interval. Select assigned positions in [query-44,query) inside one uninterrupted playback chain.",
+    "limitation": "Exact aggregation under that observation rule is not physical sample synchronization. No spectral band, attention, retention or individual brain-state interpretation is established. Channel calibration and artifact/contact quality are not yet qualified.",
+    "missing_policy": "No interpolation, no stitching across pauses, no filling missing participant EEG, no averaging ambiguous repeat viewings. First incomplete windows remain unsupported."
+  },
+  "commands": {
+    "setup": "uv sync --extra test --extra research --extra cloud --extra media",
+    "preflight": ".venv/bin/python -m brain preflight",
+    "qualify_targets": ".venv/bin/python -m brain.qualify_corpus CORPUS NEW_OUTPUT",
+    "local_engineering_baseline": ".venv/bin/python -m brain.local_baseline DATA_ROOT QUALIFIED_TARGETS NEW_OUTPUT",
+    "live_meta_test": ".venv/bin/python -m brain.smoke_meta NEW_OUTPUT --request-prefix UNIQUE_REQUEST_ID",
+    "gpu_request_after_deployment_and_access": ".venv/bin/python -m brain.modal_client tribe MEDIA REQUEST_JSON NEW_OUTPUT --request-id UNIQUE_REQUEST_ID",
+    "lesson_audio_derivative": ".venv/bin/python -m brain.audio_derivative MEDIA REQUEST_JSON NEW_OUTPUT",
+    "lesson_frames": ".venv/bin/python -m brain.media_frames MEDIA REQUEST_JSON NEW_OUTPUT",
+    "lesson_visual_features": ".venv/bin/python -m brain.lesson_meta sam FRAME_DIRECTORY OUTPUT --request-prefix UNIQUE_PREFIX",
+    "meta_voice_transcript": ".venv/bin/python -m brain.meta_voice AUDIO_DERIVATIVE_DIRECTORY OUTPUT --request-prefix UNIQUE_PREFIX",
+    "meta_voice_semantics": ".venv/bin/python -m brain.lesson_meta voice-semantics VOICE_DIRECTORY OUTPUT --request-prefix UNIQUE_PREFIX",
+    "recover_same_gpu_call": ".venv/bin/python -m brain.recover_modal SAVED_DISPATCH_JSON",
+    "qualify_complete_native_lecture": ".venv/bin/python -m brain.qualify_native TRIBE_DIRECTORY REQUEST_JSON VERIFIED_MEDIA_DURATION NEW_REPORT_JSON",
+    "execute_audited_four_lecture_plan": ".venv/bin/python -m brain.corpus_pipeline .local/brain-corpus-execution-v2.json",
+    "cached_native_tribe": ".venv/bin/python -m brain.modal_client tribe MEDIA REQUEST_JSON NEW_OUTPUT --request-id UNIQUE_REQUEST_ID --cached-media",
+    "cached_native_sam_audio": ".venv/bin/python -m brain.modal_client sam_audio PARENT_VIDEO PARENT_REQUEST_JSON NEW_OUTPUT --request-id UNIQUE_REQUEST_ID --cached-media --cached-audio-manifest CPU_DERIVATIVE_MANIFEST",
+    "new_upload_sensory": ".venv/bin/python -m brain.sensory MEDIA REQUEST_JSON NEW_OUTPUT",
+    "lesson_feature_assembly": ".venv/bin/python -m brain.lesson_features SOURCE_SPEC NEW_OUTPUT --allow-prototype-timing",
+    "local_integrated_eeg_fit": ".venv/bin/python -m brain.train_integrated QUALIFIED_TARGETS FEATURE_REGISTRY NEW_OUTPUT",
+    "joint_bundle": ".venv/bin/python -m brain.predict_bundle FEATURE_DIRECTORY EEG_MODEL_DIRECTORY TRIBE_DIRECTORY NEW_OUTPUT",
+    "cortical_surface_export": ".venv/bin/python -m brain.surface TRIBE_DIRECTORY QUALIFIED_SURFACE_DIRECTORY NEW_OUTPUT",
+    "all_format_entrypoint": ".venv/bin/python -m brain.content_pipeline SOURCE REQUEST_JSON NEW_OUTPUT --request-prefix UNIQUE_REQUEST_ID --video-model VIDEO_EEG_MODEL --transfer-models TRANSFER_MODEL_ROOT",
+    "text_timing_option": "--words-per-minute EXPLICIT_ASSUMED_PACE",
+    "image_or_pdf_timing_option": "--seconds-per-page SECONDS_FOR_EACH_ACTUAL_PAGE",
+    "local_document_presentation": ".venv/bin/python -m brain.document_presentation SOURCE REQUEST_JSON NEW_OUTPUT --seconds-per-page SECONDS_FOR_EACH_ACTUAL_PAGE",
+    "separate_transfer_head_training": ".venv/bin/python -m brain.transfer QUALIFIED_TARGETS FEATURE_REGISTRY NEW_OUTPUT",
+    "tests": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 .venv/bin/python -m pytest -q"
+  },
+  "execution_order_remaining": [
+    "Gated access and small GPU runs now pass. Complete full-lecture qualification with corrected TRIBE word events and compact SAM Audio features; verify output timing/mesh and GPU memory.",
+    "Dense export and training-only dimension-matched controls are implemented. Verify actual full-lecture artifacts before fitting.",
+    "Extract authenticated public lesson content features through the tested Meta API adapters and qualified GPU workers. Preserve source/media-version uncertainty.",
+    "Resolve EEG signal quality and the suitability of the coarse observation target. Record any change of estimand before further evaluation.",
+    "Fit prespecified multimodal arms locally with every transform restricted to the training scope. Retain negative results and report clustered uncertainty.",
+    "Only after evaluation, export the full-data EEG head and construct a versioned joint EEG/fMRI bundle with separate native clocks and unsupported-region masks.",
+    "Add explicit presentation schedules for text, image and PDF inputs. Label them experimental transfer; do not infer reading speed or gaze as observed data."
+  ],
+  "native_preprocessing_correction": {
+    "upstream_revision": "af58661791a351a448a489042a28f6c37e1c14b7",
+    "observed_issue": "Pinned demo chunks Audio before ExtractWordsFromAudio, which reuses each full-source transcript and adds chunk start plus offset. Rocket produced 21862 word events ending at 2036.431 seconds for a 720.94-second media event.",
+    "correction": "Extract words once from the full zero-origin source, then chunk audio/video and apply the original text/context transforms.",
+    "real_media_check": "Corrected rocket events retain 1822 source words ending at 716.431 seconds, within media extent; no duplicate events or missing-context removals.",
+    "model_weights_changed": false,
+    "rejected_run": ".local/brain-runs/rocket-native-brain-v1.log",
+    "corrected_event_audit": ".local/brain-runs/rocket-event-correction-v1.json",
+    "full_inference_requalification": "Corrected rocket full-lecture run returned 721 by 20484 cortical predictions and all three dense modalities. Capture/no-capture replay maximum absolute error was 0. Local window-coverage qualification remains a separate gate; this is not measured neural accuracy."
+  },
+  "verified_execution_optimizations": {
+    "video_frame_cache": "Bounded exact-timestamp reuse per subclip; 2048 native pixel arrays matched exactly in qualification. CPU decoding fell from 38.3 to 9.7 seconds in that test; not a full-pipeline speed guarantee.",
+    "public_media_cache": "Four owner-hosted lecture files are fetched on an isolated CPU worker and must match authenticated local SHA-256 values. GPU calls can reference the cache without re-uploading media.",
+    "cloud_audio": "Cloud FFmpeg decoding did not reproduce the Mac PCM byte-for-byte. The cloud decoder therefore produces separately versioned, timing-checked audio derivatives with their own hashes. Do not describe them as identical local decodes.",
+    "sam_chunk_checkpoints": "Every completed 30-second speech separation chunk is checksummed and committed. A later explicitly authorized request may reuse matching completed chunks; no automatic paid retries.",
+    "cached_media_requests": "Validate the local source or the local parent plus CPU derivative receipt, then recheck the full cached file on the GPU worker. Never replace a missing cache with an unverified download."
+  },
+  "local_resources": {
+    "numerical_internal_reserve_GiB": 12,
+    "bounded_cloud_recovery_internal_reserve_GiB": 6,
+    "external_destination_reserve_GiB": 12,
+    "recovery_scope": "Only observation and recovery of existing cloud responses, whose archive transport is capped at 256 MiB. This does not relax numerical training or local inference guards. Every publication still verifies the external mount identity and destination reserve."
+  },
+  "cloud_billing": {
+    "modal_credit_ceiling_usd": 30,
+    "meta_credit_ceiling_usd": 150,
+    "modal_full_lecture_tribe_timeout_seconds": 4000,
+    "modal_long_lecture_tribe_timeout_seconds": 6000,
+    "modal_bounded_cached_resume_timeout_seconds": 1200,
+    "modal_qualification_timeout_seconds": 1200,
+    "modal_full_request_reservation_usd": 4,
+    "modal_long_request_reservation_usd": 6,
+    "modal_qualification_reservation_usd": 2,
+    "modal_policy": "One locally serialized GPU request, no automatic inference retry; bounded polling re-observes the same persisted call. A local observation timeout is not a remote execution timeout. Retain reservation until provider billing is reconciled; app-level group totals use explicitly recorded bookkeeping allocations, not invented individual request prices. Keep a separate billing-lag reserve.",
+    "meta_policy": "No SDK retries. Save response usage and validate exact supporting quotes. Reserve before paid calls. Failed or unknown usage retains the reservation.",
+    "pricing_source": "https://dev.meta.ai/docs/pricing-rate-limits"
+  },
+  "baseline_freeze": {
+    "purpose": "Engineering baseline only, not the final competition model or a validated neuroscience finding",
+    "features": "Native sensory measurements and a separate progress-only arm",
+    "regularization": 1.0,
+    "pca_max_per_block": 16,
+    "folds": "8 fixed topic-family by participant-group cells; no held lesson or participant enters training",
+    "no_posthoc_tuning": true,
+    "historical_media_identity_established": false
+  },
+  "cortical_surface": {
+    "qualification": ".local/brain-runs/native-surface-qualification-v2/manifest.json",
+    "mesh": "Generic fsaverage5 pial and inflated template surfaces, 10242 vertices per hemisphere",
+    "indexing": "Pinned upstream projector tests verify left columns [0,10242) then right [10242,20484); same-resolution identity, downsampling indices, and mocked volume concatenation",
+    "export": "Native cortical values and segment clocks remain unchanged. Authenticated topology and geometry accompany them in a standalone array archive.",
+    "limits": "Source-code/index qualification does not independently validate the checkpoint's anatomical correspondence. Generic display geometry is not the original MNI training projection mesh or individual anatomy. No anatomical region labels, attention interpretation, or measured neural accuracy is asserted."
+  },
+  "nonvideo_transfer": {
+    "status": "implementation_and_local_contract_checks; complete native inference and fitted heads still require qualification",
+    "native_preprocessing_qualification": ".local/brain-runs/native-presentation-qualification-v2.json",
+    "preprocessing_qualification_scope": "Pinned native transforms preserve original synthetic text and page-word events, cover a 65-second silent presentation, and introduce no audio events. This is not GPU neural inference, real PDF comprehension, observed reading behavior, or scientific validation.",
+    "design": "configs/brain_transfer_evaluation_v1.json",
+    "training_source": "Original audiovisual lecture responses with restricted available-modality predictors; no real reading or audio-only cohort is implied",
+    "EEG_heads": {"text": ["dense_text"], "audio": ["dense_text", "dense_audio"], "visual": ["dense_video"], "document": ["dense_text", "dense_video"]},
+    "brain_outputs": "EEG and native pretrained TRIBE fMRI are separate branches. Nonvideo EEG heads do not use fMRI or supplemental Meta content features as predictors.",
+    "text": "Exact UTF-8 text plus an explicit assumed constant reading pace; no synthetic narration",
+    "audio": "Authenticated decoded audio with its original timing provenance; no fabricated video",
+    "documents": "Poppler page rendering and content-stream text extraction, with explicit page display times. Text order and uniform within-page pace are assumptions; image OCR is not implemented.",
+    "rendered_video": "1920x1080 contain-without-crop, white letterboxing, exactly checked 25 fps clock, no audio track. Rendering is a declared experimental presentation, not a recorded learner viewing.",
+    "missing_modalities": "Omitted from the native input batch; TRIBE's own missing-modality computation is retained. EEG head selection requires exact available-modality agreement.",
+    "evaluation_claim": "Eight held-out video-domain cells per head cannot validate actual silent reading, document study, or audio-only listening. All such deployment inputs remain experimental transfer."
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "implementation_and_evaluation_complete": true,
+  "requirements": {
+    "previous_work_preserved": [
+      {
+        "path": "archive/pre-version2-2026-11-03/verification.json",
+        "sha256": "1af205c846e74fa0d6a76c270e3e11efb330b9fc2903560654d140feeaee91d3"
+      },
+      {
+        "path": "runs/resume-preservation-audit.json",
+        "sha256": "32000641d2cc428730268049847ebf6feeab6ca3a97b012a029caf89cb39f05a"
+      }
+    ],
+    "fixed_model_training_complete": [
+      {
+        "path": "runs/cohort-v1/manifest.json",
+        "sha256": "46b8d9af4e767dc8b8bd53885ddc1d3c837fb5b7ef93d773a3cfbc3ca02d6e5f"
+      },
+      {
+        "path": "runs/cohort-v1/forecast-lock.json",
+        "sha256": "dda4acb57fd29baed9248b1f801bb70cf8641be806da77d399df9e517286ff07"
+      }
+    ],
+    "native_TRIBE_hidden_features_qualified": [
+      {
+        "path": "runs/native-capture-audit.json",
+        "sha256": "e2b570285a7b6710a1d17c3057e28b6134e536d2fd09df7d0cb317da0548fab1"
+      },
+      {
+        "path": "runs/native-encoder-identity-audit.json",
+        "sha256": "e909a484751d55a1944349e0752ea78cdb8e03265c7f665768bb279393c0bf1e"
+      }
+    ],
+    "training_only_transforms_and_features_verified": [
+      {
+        "path": "runs/training-scaling-audit.json",
+        "sha256": "cfaa678fd37b9f8af16040cae94c9a7f93a74b8b9f9312b3a12608dfad540cf0"
+      },
+      {
+        "path": "runs/feature-assembly-audit.json",
+        "sha256": "964f032c49f2885a4a98599e455b84785e34aa204e9321eb3104a561c109d446"
+      }
+    ],
+    "all_checkpoint_and_forecast_replay": [
+      {
+        "path": "runs/cohort-v1/reload-audit.json",
+        "sha256": "d75c3db8bdecb2a97218d06637d9b98853a78a16921bd695e056a1909db36af5"
+      }
+    ],
+    "held_data_and_limited_label_comparisons": [
+      {
+        "path": "runs/cohort-v1-evaluation/test-access-receipt.json",
+        "sha256": "972e40b4239b05ed3aef1b01f6bae0f1c2a0352d7dd552b9eeeaf2931486edd1"
+      },
+      {
+        "path": "runs/cohort-v1-evaluation/results.json",
+        "sha256": "ab5cf74841c9227c57d1a4e6ff0d7be498ed14c5e750ee17b14e1bf78ad7f706"
+      }
+    ],
+    "exported_local_inference_verified": [
+      {
+        "path": "artifacts/cohort-v1/manifest.json",
+        "sha256": "0f28318376170966f711781fd3e8244221773ae124f258e7b2171d38f26fbacd"
+      },
+      {
+        "path": "runs/cohort-v1-example/prediction.json",
+        "sha256": "73421206b3b29fb32930dd7ffa9e117b9fd684b873a151a95b7ff27fa3443099"
+      },
+      {
+        "path": "runs/completion-audit.json",
+        "sha256": "d62b5035530d5d9c314179ad8aadd0a370d5ba5c177b3cd63a347aa4a5ce6aa8"
+      }
+    ],
+    "tests_and_honest_handoff": [
+      {
+        "path": "runs/all-final-tests.log",
+        "sha256": "8058564047fde5219664138a2e448352874411d496e864387e06f64b59cac8bb"
+      },
+      {
+        "path": "MODEL_CARD.txt",
+        "sha256": "cf25ed01f8b5b3ec0b07cab32ef5d54b1327a26173a8b8ed67d5fc49baa41f9c"
+      },
+      {
+        "path": "INTEGRATION.txt",
+        "sha256": "9173c75c7ca07cf1637d511d443cce08aad8f8327915d13add034304b5869a2e"
+      },
+      {
+        "path": "handoff-manifest.json",
+        "sha256": "e18fce45cc0ddbe1dbfab005d50c3febaae2afed929c7c6cbab70a11608913b8"
+      },
+      {
+        "path": "runs/cohort-v1-report/manifest.json",
+        "sha256": "c4b78e38156c592fde1545bbd734fea7aff697a690d88a4289ba9ae9bc67f2c2"
+      }
+    ]
+  },
+  "visual_review": "All3PNGfigures inspected; missing-coverage line-bridging fixed and re-rendered",
+  "scientific_success": false,
+  "claim": "14.19percent lower EEG MSE than the matched TRIBE-only TCN, but mean baseline is better and stimulus-tracking controls fail; not a validated brain simulator",
+  "excluded_claims": [
+    "measured-fMRI superiority",
+    "validated educational outcomes",
+    "arbitrary raw-upload parity"
+  ]
+}

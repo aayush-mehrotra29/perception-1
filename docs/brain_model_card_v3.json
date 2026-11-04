@@ -1,0 +1,538 @@
+{
+  "schema": "perception-brain-model-card-v3",
+  "created_at_utc": "2026-11-04T01:25:52.731050+00:00",
+  "architecture_runs": true,
+  "EEG_benchmark_conclusion": "Prespecified 5% improvement target not met.",
+  "native_fmri_modified": false,
+  "measured_fmri_superiority_tested": false,
+  "scope": "Competition-only exploratory revision; standalone research untouched",
+  "architecture": {
+    "frozen": [
+      "Llama 3.2",
+      "W2v-BERT",
+      "V-JEPA2",
+      "native TRIBE cortical predictor"
+    ],
+    "anchor": "Three-seed TRIBE-only EEG temporal network; same source architecture as v2 comparator",
+    "correction": "Training-only robust transforms and strongly regularized multimodal ridge residual, bounded by 0.1 target SD",
+    "features": "Llama, W2v-BERT, V-JEPA2, TRIBE sequences plus existing SAM and content descriptors",
+    "preprocessing": "Training 1st/99th percentiles, near-constant feature removal, bounded standardized values and PCA scores, auxiliary gain 0.25",
+    "temporal_context": "44 seconds at 2 Hz; ordered-bin mean, standard deviation and half-context change for the residual",
+    "training_boundary": "Only EEG heads and preprocessing fitted. No measured fMRI used; native TRIBE branch unchanged.",
+    "correction_bound_is_not_accuracy_guarantee": true,
+    "inference_mode": "Offline whole-content prediction, not causal real-time forecasting"
+  },
+  "data": {
+    "source": "Four previously audited EduGage lectures",
+    "people": 16,
+    "scheduled_viewings": 32,
+    "observed_supported_viewings": 31,
+    "missing_EEG": "Participant 2, xray_diffraction",
+    "rows": 1020,
+    "unique_content_windows": 145,
+    "independent_content_items": 4,
+    "additional_sequence_exclusions": 0,
+    "effective_sample_warning": "Overlapping contexts and repeated participant targets do not create 1,020 independent lessons"
+  },
+  "targets": {
+    "names": [
+      "mean_tp9",
+      "mean_af7",
+      "mean_af8",
+      "mean_tp10",
+      "log1p_variance_tp9",
+      "log1p_variance_af7",
+      "log1p_variance_af8",
+      "log1p_variance_tp10"
+    ],
+    "channels": [
+      "TP9",
+      "AF7",
+      "AF8",
+      "TP10"
+    ],
+    "context_seconds": 44,
+    "query_hop_seconds": 5,
+    "units": "Training-source channel means and log1p population variances; no calibrated waveform claim",
+    "alignment": "Existing coarse receiver-to-reported-playback association; physical sample synchronization is unqualified",
+    "signal_quality": "Channel calibration and artifact/contact quality remain unqualified",
+    "not_individualized": "Same content produces the same ensemble mean; no learned demographics or person-specific brain model"
+  },
+  "evaluation": {
+    "design": "Same eight crossed participant/topic-family folds and 1020 rows as v2",
+    "status": "exploratory_reanalysis_adapted_after_v2_results",
+    "fresh_validation": false,
+    "primary_candidate": "fusion",
+    "primary_comparator": "tribe_temporal",
+    "success_point_estimate_met": false,
+    "primary_comparison": {
+      "normalized_MAE_difference": 0.008297009934622901,
+      "relative_error_reduction": -0.009734226402246637,
+      "difference_interval_95": [
+        -0.0034784226076397806,
+        0.01842221913255261
+      ],
+      "reduction_interval_95": [
+        -0.025339347086501658,
+        0.003378517304908582
+      ],
+      "supported_cluster_resamples": 2000,
+      "requested_cluster_resamples": 2000,
+      "interpretation": "Descriptive reanalysis of four previously evaluated lectures, conditional on fixed fits; not a fresh population-level validation."
+    },
+    "all_arms": {
+      "mean": {
+        "primary_normalized_MAE": 0.8542634970509604,
+        "MAE_per_target": [
+          20.687944169245398,
+          1.2327709052620552,
+          1.1574442667387985,
+          12.5464090654315,
+          2.0653630932084726,
+          1.0152051606303543,
+          1.0490984202441407,
+          1.779185870714333
+        ],
+        "normalized_MAE_per_target": [
+          0.7610095848870092,
+          0.8780594279512276,
+          0.8809290555657059,
+          0.7107947101846324,
+          0.9628600262006454,
+          0.8467456343359715,
+          0.837612816625449,
+          0.9560967206570413
+        ],
+        "normalized_RMSE": 1.2055884878835617,
+        "negative_log1p_variance_predictions": 0
+      },
+      "tribe_temporal": {
+        "primary_normalized_MAE": 0.8523543209050423,
+        "MAE_per_target": [
+          21.104254077240256,
+          1.2448265978853819,
+          1.1784257376323168,
+          13.310103190235854,
+          1.9801698491635769,
+          1.0181550241974375,
+          1.057414651646871,
+          1.6239324144071967
+        ],
+        "normalized_MAE_per_target": [
+          0.7774389213266686,
+          0.8926541303365978,
+          0.8988883935138179,
+          0.7510523062719089,
+          0.9226735870524942,
+          0.8502415804766683,
+          0.8405687220046181,
+          0.8853169262575665
+        ],
+        "normalized_RMSE": 1.2491828564179908,
+        "negative_log1p_variance_predictions": 0
+      },
+      "historical_v2_fusion": {
+        "primary_normalized_MAE": 2.1096866363997533,
+        "MAE_per_target": [
+          60.32435790163783,
+          3.2819929731170254,
+          3.3407995476692394,
+          31.739345543946396,
+          5.963846023620737,
+          1.5281423822627798,
+          1.6281994643302458,
+          5.405732995104786
+        ],
+        "normalized_MAE_per_target": [
+          2.1529757429345864,
+          2.2950328017878174,
+          2.661422017536154,
+          1.922127678595779,
+          2.720985913897886,
+          1.2719774040447192,
+          1.2669117868625084,
+          2.5860597455385737
+        ],
+        "normalized_RMSE": 3.9271138224209485,
+        "negative_log1p_variance_predictions": 0
+      },
+      "robust_tribe": {
+        "primary_normalized_MAE": 0.8365378389935044,
+        "MAE_per_target": [
+          20.82246069229994,
+          1.2182942731178565,
+          1.1596290997996008,
+          12.608902515357476,
+          1.9164710094451993,
+          1.0175170710375772,
+          1.044751596901421,
+          1.5912410890151052
+        ],
+        "normalized_MAE_per_target": [
+          0.7689980125338551,
+          0.8716948659357507,
+          0.8822283506734809,
+          0.7119508432923176,
+          0.8986742325934179,
+          0.8495518147626592,
+          0.8338224513372522,
+          0.8753821408193037
+        ],
+        "normalized_RMSE": 1.2256744130439796,
+        "negative_log1p_variance_predictions": 0
+      },
+      "robust_fusion": {
+        "primary_normalized_MAE": 0.833641588016946,
+        "MAE_per_target": [
+          21.26456392260291,
+          1.2087794475744245,
+          1.1804675083243654,
+          12.950247441280425,
+          1.8322170470442507,
+          1.0082947428409375,
+          1.0503493713513639,
+          1.5314144486411043
+        ],
+        "normalized_MAE_per_target": [
+          0.7754503892989023,
+          0.8690737298431142,
+          0.9041758513814722,
+          0.7280507129048658,
+          0.8633271832971007,
+          0.8401201189611754,
+          0.838294019988214,
+          0.8506406984607235
+        ],
+        "normalized_RMSE": 1.2276825549186319,
+        "negative_log1p_variance_predictions": 0
+      },
+      "fusion": {
+        "primary_normalized_MAE": 0.8606513308396652,
+        "MAE_per_target": [
+          21.25226657904128,
+          1.2582500241465475,
+          1.190303015568732,
+          13.418966461186074,
+          2.0161230852635823,
+          1.0179761994519696,
+          1.0528481892154569,
+          1.6834161839753168
+        ],
+        "normalized_MAE_per_target": [
+          0.7825964308488886,
+          0.900039509930364,
+          0.9062376145207502,
+          0.7570136962207584,
+          0.9391373211295981,
+          0.8501890251537638,
+          0.8383056856685219,
+          0.9116913632446701
+        ],
+        "normalized_RMSE": 1.2415588965526947,
+        "negative_log1p_variance_predictions": 0
+      },
+      "without_aux": {
+        "primary_normalized_MAE": 0.8605643374867133,
+        "MAE_per_target": [
+          21.259094159367606,
+          1.2581992431898583,
+          1.1900990735445682,
+          13.410576916639156,
+          2.015732002294104,
+          1.0179178920215735,
+          1.0528831509390415,
+          1.6831598609125726
+        ],
+        "normalized_MAE_per_target": [
+          0.7827956714702458,
+          0.89999359620791,
+          0.9060834071163978,
+          0.7566057574861899,
+          0.9389836340347114,
+          0.8501458824629529,
+          0.8383321453744959,
+          0.9115746057408043
+        ],
+        "normalized_RMSE": 1.2414502840046417,
+        "negative_log1p_variance_predictions": 0
+      },
+      "shuffled_correction": {
+        "primary_normalized_MAE": 0.8595217000617106,
+        "MAE_per_target": [
+          21.193545287627884,
+          1.2541015784131702,
+          1.1870635433786845,
+          13.368845294904176,
+          2.0162658222472847,
+          1.0169872737089813,
+          1.053208315054468,
+          1.6840680762209483
+        ],
+        "normalized_MAE_per_target": [
+          0.7805328404380725,
+          0.8973223754796686,
+          0.9039923244220238,
+          0.7549349379285756,
+          0.9392101136452471,
+          0.8494324302006365,
+          0.8387172806755503,
+          0.9120312977039108
+        ],
+        "normalized_RMSE": 1.240265052201714,
+        "negative_log1p_variance_predictions": 0
+      },
+      "simple_ridge": {
+        "primary_normalized_MAE": 0.8537367294953113,
+        "MAE_per_target": [
+          20.806153031497658,
+          1.2346325297633136,
+          1.159460415446044,
+          12.567467991717747,
+          2.054221898449318,
+          1.0154786240701248,
+          1.046626971077477,
+          1.7660527686232215
+        ],
+        "normalized_MAE_per_target": [
+          0.7648583853625882,
+          0.8793258766441201,
+          0.8826625041572511,
+          0.711363023134846,
+          0.958331413034165,
+          0.8470168739005657,
+          0.8356399861753642,
+          0.9506957735535894
+        ],
+        "normalized_RMSE": 1.2066566784325485,
+        "negative_log1p_variance_predictions": 0
+      }
+    },
+    "all_comparisons": {
+      "mean": {
+        "normalized_MAE_difference": 0.0063878337887046666,
+        "relative_error_reduction": -0.007477591879737844,
+        "difference_interval_95": [
+          -0.021723950554420453,
+          0.03499505148158061
+        ],
+        "reduction_interval_95": [
+          -0.041135509003091174,
+          0.026370407493699757
+        ],
+        "supported_cluster_resamples": 2000,
+        "requested_cluster_resamples": 2000,
+        "interpretation": "Descriptive reanalysis of four previously evaluated lectures, conditional on fixed fits; not a fresh population-level validation."
+      },
+      "tribe_temporal": {
+        "normalized_MAE_difference": 0.008297009934622901,
+        "relative_error_reduction": -0.009734226402246637,
+        "difference_interval_95": [
+          -0.0034784226076397806,
+          0.01842221913255261
+        ],
+        "reduction_interval_95": [
+          -0.025339347086501658,
+          0.003378517304908582
+        ],
+        "supported_cluster_resamples": 2000,
+        "requested_cluster_resamples": 2000,
+        "interpretation": "Descriptive reanalysis of four previously evaluated lectures, conditional on fixed fits; not a fresh population-level validation."
+      },
+      "historical_v2_fusion": {
+        "normalized_MAE_difference": -1.249035305560088,
+        "relative_error_reduction": 0.5920477875764556,
+        "difference_interval_95": [
+          -2.785290102298031,
+          0.018847347510338428
+        ],
+        "reduction_interval_95": [
+          -0.023585734226086223,
+          0.7521550465742681
+        ],
+        "supported_cluster_resamples": 2000,
+        "requested_cluster_resamples": 2000,
+        "interpretation": "Descriptive reanalysis of four previously evaluated lectures, conditional on fixed fits; not a fresh population-level validation."
+      },
+      "robust_tribe": {
+        "normalized_MAE_difference": 0.02411349184616074,
+        "relative_error_reduction": -0.02882534503779688,
+        "difference_interval_95": [
+          0.009444654136621445,
+          0.03987039802013443
+        ],
+        "reduction_interval_95": [
+          -0.05608610952854351,
+          -0.0098163266452037
+        ],
+        "supported_cluster_resamples": 2000,
+        "requested_cluster_resamples": 2000,
+        "interpretation": "Descriptive reanalysis of four previously evaluated lectures, conditional on fixed fits; not a fresh population-level validation."
+      },
+      "robust_fusion": {
+        "normalized_MAE_difference": 0.027009742822719063,
+        "relative_error_reduction": -0.03239970655371138,
+        "difference_interval_95": [
+          -0.006017982883576254,
+          0.0613400294332687
+        ],
+        "reduction_interval_95": [
+          -0.08710415919841051,
+          0.006615909956747495
+        ],
+        "supported_cluster_resamples": 2000,
+        "requested_cluster_resamples": 2000,
+        "interpretation": "Descriptive reanalysis of four previously evaluated lectures, conditional on fixed fits; not a fresh population-level validation."
+      },
+      "without_aux": {
+        "normalized_MAE_difference": 8.69933529518141e-05,
+        "relative_error_reduction": -0.00010108872650471667,
+        "difference_interval_95": [
+          -3.738472577409502e-05,
+          0.00021593302510400624
+        ],
+        "reduction_interval_95": [
+          -0.0002830165769224013,
+          4.1928072177979545e-05
+        ],
+        "supported_cluster_resamples": 2000,
+        "requested_cluster_resamples": 2000,
+        "interpretation": "Descriptive reanalysis of four previously evaluated lectures, conditional on fixed fits; not a fresh population-level validation."
+      },
+      "shuffled_correction": {
+        "normalized_MAE_difference": 0.0011296307779545822,
+        "relative_error_reduction": -0.0013142551001021907,
+        "difference_interval_95": [
+          -0.0003440575365131676,
+          0.002502434219224929
+        ],
+        "reduction_interval_95": [
+          -0.0028035119834799336,
+          0.0004516171545136
+        ],
+        "supported_cluster_resamples": 2000,
+        "requested_cluster_resamples": 2000,
+        "interpretation": "Descriptive reanalysis of four previously evaluated lectures, conditional on fixed fits; not a fresh population-level validation."
+      },
+      "simple_ridge": {
+        "normalized_MAE_difference": 0.0069146013443538434,
+        "relative_error_reduction": -0.008099219707276006,
+        "difference_interval_95": [
+          -0.01929142562564285,
+          0.0333863368945624
+        ],
+        "reduction_interval_95": [
+          -0.039548981033783265,
+          0.024036231778591155
+        ],
+        "supported_cluster_resamples": 2000,
+        "requested_cluster_resamples": 2000,
+        "interpretation": "Descriptive reanalysis of four previously evaluated lectures, conditional on fixed fits; not a fresh population-level validation."
+      },
+      "robust_fusion_vs_robust_tribe": {
+        "normalized_MAE_difference": -0.0028962509765583233,
+        "relative_error_reduction": 0.0034621876519572714,
+        "difference_interval_95": [
+          -0.029966802230599093,
+          0.023646583796794924
+        ],
+        "reduction_interval_95": [
+          -0.027174102036244013,
+          0.03935034242274086
+        ],
+        "supported_cluster_resamples": 2000,
+        "requested_cluster_resamples": 2000,
+        "interpretation": "Descriptive reanalysis of four previously evaluated lectures, conditional on fixed fits; not a fresh population-level validation."
+      },
+      "robust_fusion_vs_historical_v2_fusion": {
+        "normalized_MAE_difference": -1.2760450483828072,
+        "relative_error_reduction": 0.604850514937336,
+        "difference_interval_95": [
+          -2.7858186513006586,
+          -0.023283883764798
+        ],
+        "reduction_interval_95": [
+          0.028621683790837748,
+          0.7548536261714711
+        ],
+        "supported_cluster_resamples": 2000,
+        "requested_cluster_resamples": 2000,
+        "interpretation": "Descriptive reanalysis of four previously evaluated lectures, conditional on fixed fits; not a fresh population-level validation."
+      }
+    },
+    "all_seeds": {
+      "fusion": {
+        "17": 0.8665994388050638,
+        "29": 0.8637093666744878,
+        "43": 0.8666511920651343
+      },
+      "without_aux": {
+        "17": 0.8665342268907479,
+        "29": 0.8636281810979061,
+        "43": 0.8665263892968258
+      },
+      "shuffled_correction": {
+        "17": 0.866165020991006,
+        "29": 0.8618931062877796,
+        "43": 0.865754434822272
+      },
+      "robust_tribe": {
+        "17": 0.8366848956506814,
+        "29": 0.8437348695350236,
+        "43": 0.8374142863182865
+      },
+      "robust_fusion": {
+        "17": 0.8321232828423635,
+        "29": 0.8420159767244279,
+        "43": 0.8366466025194506
+      }
+    },
+    "model_selection": "Deploy bounded residual chosen before scores, never the best-scoring arm or seed",
+    "negative_control": "Shuffled correction matches or beats the correctly paired correction; no demonstrated benefit of temporal EEG pairing.",
+    "negative_control_scope": "Only correction EEG shuffled; TRIBE-only anchor remains trained on correctly paired EEG",
+    "uncertainty": "Paired participant/lecture cluster resampling conditional on fitted models; only four lectures",
+    "deployment": "Separately refitted on all eligible data after evaluation; training predictions are not validation"
+  },
+  "inference": {
+    "entrypoint": "brain.content_pipeline.run(..., fusion_model=Path(...))",
+    "formats": [
+      "video",
+      "audio",
+      "text",
+      "image",
+      "pdf"
+    ],
+    "nonvideo_status": "Experimental transfer; absent blocks zeroed and reported",
+    "execution": "Existing content-only pretrained inference plus local EEG head; no EEG required at inference",
+    "native_cortical_predictions": "Copied unchanged with original clock; not measured participant fMRI",
+    "five_format_checks": "Cached versions of one lesson, engineering checks only",
+    "new_paid_requests": 0
+  },
+  "limitations": [
+    "V3 settings were motivated by v2 errors on these same lectures. This is exploratory reanalysis.",
+    "Only four distinct lectures; repeated windows/viewers do not supply independent stimulus diversity.",
+    "Same-content target agreement is often weak. The model cannot reconstruct unobserved person-specific responses.",
+    "Receiver timestamps do not establish a physical sample clock. Contact quality, channel calibration and artifact handling remain unqualified.",
+    "No new filtering, targets, rows or exclusions were introduced to improve the score.",
+    "Fixing unstable scaling does not prove that features encode attention or learning.",
+    "Improving native TRIBE fMRI requires a separate measured-fMRI evaluation; it was not tested here."
+  ],
+  "not_supported": [
+    "Attention, distraction, cognitive load, learning, retention or quiz scores",
+    "Causal effects of video features",
+    "Demographic student personas",
+    "Raw EEG waveforms",
+    "Joint training on measured EEG and fMRI",
+    "Outperforming TRIBE on measured fMRI",
+    "Accuracy on silent reading or audio-only responses",
+    "Clinical or educational decisions about individual students"
+  ],
+  "privacy": "Fitted EEG weights remain local. No participant EEG or fitted weights sent to cloud.",
+  "evidence": {
+    "benchmark": "benchmark/report.json",
+    "audit": "audit.json",
+    "quality": "signal-quality.json",
+    "qualification": "qualification.json",
+    "protocol": "protocol.json",
+    "model": "model/manifest.json"
+  }
+}

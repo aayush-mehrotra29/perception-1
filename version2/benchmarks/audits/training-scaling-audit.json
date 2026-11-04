@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "training_people": [
+    "S01",
+    "S03",
+    "S04",
+    "S05"
+  ],
+  "training_segments": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "held_EEG_opened": false,
+  "coverage": [
+    {
+      "segment": 1,
+      "total_rows": 2878,
+      "training_rows": 2627,
+      "feature_rows": 2774,
+      "EEG_complete_rows": 2678
+    },
+    {
+      "segment": 2,
+      "total_rows": 3043,
+      "training_rows": 2792,
+      "feature_rows": 2897,
+      "EEG_complete_rows": 2843
+    },
+    {
+      "segment": 3,
+      "total_rows": 3163,
+      "training_rows": 2861,
+      "feature_rows": 3009,
+      "EEG_complete_rows": 2963
+    },
+    {
+      "segment": 4,
+      "total_rows": 3500,
+      "training_rows": 3198,
+      "feature_rows": 3345,
+      "EEG_complete_rows": 3300
+    },
+    {
+      "segment": 5,
+      "total_rows": 3314,
+      "training_rows": 3012,
+      "feature_rows": 3160,
+      "EEG_complete_rows": 3114
+    },
+    {
+      "segment": 6,
+      "total_rows": 3189,
+      "training_rows": 2887,
+      "feature_rows": 3035,
+      "EEG_complete_rows": 2989
+    },
+    {
+      "segment": 7,
+      "total_rows": 3145,
+      "training_rows": 2849,
+      "feature_rows": 2991,
+      "EEG_complete_rows": 2945
+    },
+    {
+      "segment": 8,
+      "total_rows": 2866,
+      "training_rows": 2615,
+      "feature_rows": 2763,
+      "EEG_complete_rows": 2666
+    }
+  ],
+  "target_scale_range_volts": [
+    1.289791220787267e-06,
+    4.689183829800936e-06
+  ],
+  "transform_sha256": "7599c6f32d9abf4f94122047e02f03a79d5ca53ff29bb4a672ded878f8bd66b2"
+}

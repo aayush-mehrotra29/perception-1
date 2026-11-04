@@ -1,0 +1,37 @@
+{
+  "schema": "perception-version2-status",
+  "updated_utc": "2026-11-04T03:47:58.770093+00:00",
+  "workspace": "/Volumes/EEG Research Workspace/MetaHackathon/version2",
+  "stage": "Training, locked benchmarks, inference export and final audit complete",
+  "model_training_complete": true,
+  "TRIBE_benchmark_complete": true,
+  "scientific_success": false,
+  "primary_MSE_reduction_vs_TRIBE_TCN_percent": 14.194814008238641,
+  "quality_status": "Failed training-mean/acoustic-baseline success gate; negative waveform correlation and weak wrong-content control. Research prototype only.",
+  "trained_neural_models": 9,
+  "trained_label_budget_ridges": 12,
+  "tests": "36 passed; independent numerical and inference audit passed",
+  "training_rows": 22841,
+  "test_coverage": {
+    "11": {
+      "supported_channels": 35,
+      "channel_sample_pairs": 89530
+    },
+    "12": {
+      "supported_channels": 35,
+      "channel_sample_pairs": 73465
+    }
+  },
+  "artifact": "artifacts/cohort-v1",
+  "report": "runs/cohort-v1-report/index.html",
+  "example": "runs/cohort-v1-example",
+  "model_card": "MODEL_CARD.txt",
+  "integration": "INTEGRATION.txt",
+  "completion_audit": "runs/completion-audit.json",
+  "previous_results_preserved": true,
+  "raw_upload_adapter_qualified": false,
+  "measured_fMRI_superiority_tested": false,
+  "education_or_attention_validated": false,
+  "neural_data_and_weights_local": true,
+  "last_goal_turn_classification": "progress"
+}

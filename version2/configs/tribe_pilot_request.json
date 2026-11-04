@@ -1,0 +1,12 @@
+{
+  "local_media": "/Volumes/EEG Research Workspace/raw/alice-s01-format-v1-2026-10-27/stimuli/1.wav",
+  "request": {
+    "source_id": "alice-author-stimulus01-hidden-pilot-v2",
+    "sha256": "0d283709e216b2a3142011ee70d0ddcdb629319f98b787ddc5a21b59647ff49e",
+    "source_url": "https://doi.org/10.13016/pulf-lndn",
+    "source_origin": "public_url",
+    "cloud_use_basis": "Publicly released ALICE stimulus WAV from the author derivative dataset, whose saved official README states CC BY4.0 with attribution. Content-only feature extraction; no participant EEG or fitted EEG weights sent.",
+    "media_kind": "audio",
+    "size_bytes": 5075126
+  }
+}

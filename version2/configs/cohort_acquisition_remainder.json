@@ -1,0 +1,48 @@
+{
+  "schema": "perception-v2-prospective-cohort-acquisition",
+  "participants": [
+    "S05",
+    "S06",
+    "S08",
+    "S10"
+  ],
+  "selection": "first six available ascending participant IDs after previously acquired S01; no EEG/score selection",
+  "archive_directory": "/Volumes/EEG Research Workspace/runs/alice-source-qualification.belsx2ll/archive_directories.json",
+  "archive_directory_sha256": "fb03607668db35beb21473d6533988c29f2efdc5379653f48314947ef7333a95",
+  "resource_config": "configs/stage_a.json",
+  "training_participants": [
+    "S01",
+    "S03",
+    "S04",
+    "S05"
+  ],
+  "development_participants": [
+    "S06"
+  ],
+  "reserved_test_participants": [
+    "S08",
+    "S10"
+  ],
+  "training_segments": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "development_segments": [
+    9,
+    10
+  ],
+  "reserved_test_segments": [
+    11,
+    12
+  ],
+  "stage": "source bytes only; inspect headers and freeze target/clock contract before any test EEG decoding",
+  "claims": "one narrative, author-selected cohort, shared source preprocessing; not broad population validation",
+  "continuation_of": "configs/cohort_acquisition.json",
+  "reason": "HTTP502 interrupted the first attempt after two verified members; no cohort or split change"
+}

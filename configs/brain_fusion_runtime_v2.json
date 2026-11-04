@@ -1,0 +1,22 @@
+{
+  "schema": "perception-fusion-local-runtime-v2",
+  "python": "3.11.15",
+  "executable": "/Users/Aayush/Workspace/Nueroscience Research/.venv/bin/python",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "packages": {
+    "torch": "2.14.1",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "pytest": "9.1.1"
+  },
+  "policy": "Read-only reuse of existing interpreter; no installation or modification of the standalone research environment",
+  "required_local_inference_packages": [
+    "torch",
+    "numpy",
+    "scikit-learn",
+    "pydantic"
+  ],
+  "native_components": "Use pinned existing cloud workers and authenticated content caches; no local foundation-model download required"
+}

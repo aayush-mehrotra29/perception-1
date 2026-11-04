@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "frozen_design_pending_label_and_media_audit",
+  "date_frozen": "2026-11-01",
+  "dataset": "EduGage public release; four previously inspected lectures",
+  "reuse_disclosure": "The four lecture sources and EEG timing adapters were inspected in the separate existing neuroscience project. Behavioral endpoints are newly proposed here. This is not an untouched external test set.",
+  "lectures": {
+    "aerospace": ["ideal_rocket_equation", "atmosphere_pressure_composition"],
+    "xray": ["xray_diffraction", "healing_radiation"]
+  },
+  "participants": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+  "participant_groups": [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]],
+  "outer_folds": [
+    {"held_out_family": "aerospace", "train_family": "xray"},
+    {"held_out_family": "xray", "train_family": "aerospace"}
+  ],
+  "crossed_cells": "Report both held-out topic-family folds crossed with all four held-out participant groups; complete participant histories and lesson versions stay together. Unsupported cells remain unsupported.",
+  "primary_endpoint": {"name": "difficulty maintaining attention", "type": "self_report", "scale": [1, 5], "resolution": "released probe", "metric": "MAE", "higher_means": "more difficulty"},
+  "secondary_endpoint": {"name": "post-quiz correctness conditional on pre-quiz score", "resolution": "supported question or assessment pairing only", "metrics": ["Brier", "log_loss"], "prerequisite": "verified key and valid pre/post pairing"},
+  "arms": ["training mean / progress", "content only", "content + predicted EEG", "content + TRIBE", "all blocks"],
+  "primary_comparison": "all blocks versus content only, across every supported predetermined cell",
+  "tribe_specific_control": "Dimension-matched features from TRIBE's underlying content encoders must be included before attributing benefit to brain alignment.",
+  "regularization_grid": [0.1, 1, 10, 100],
+  "heads": {"attention": "ridge", "quiz": "regularized logistic"},
+  "transform_scope": "Fit scaling, PCA (at most 16 dimensions per representation block), EEG encoder, feature selection and regularization inside each training scope only.",
+  "missingness_policy": "Keep every scheduled cell. Exclude only unqualified media or unsupported labels and report the exclusion. Never silently substitute a lecture, participant or timestamp.",
+  "leakage_checks": ["no lesson", "shuffled content", "future section isolation", "no overlapping EEG windows across folds", "no answer keys in student context"],
+  "claim_gate": "A neuroscience benefit claim requires a supported primary comparison, uncertainty across people and lessons, and a dimension-matched content control. Broad generalization requires further human validation.",
+  "execution_gate": "Do not run until the external research volume is mounted with verified identity, both disks have at least 12 GiB free, and the separate audit records probe semantics, keys, pairings, prior label access, media mappings and missing viewings."
+}

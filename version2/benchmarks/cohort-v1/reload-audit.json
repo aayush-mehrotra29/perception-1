@@ -1,0 +1,534 @@
+{
+  "passed": true,
+  "forecast_lock_sha256": "dda4acb57fd29baed9248b1f801bb70cf8641be806da77d399df9e517286ff07",
+  "checks": [
+    {
+      "context": "segment09",
+      "arm": "acoustic_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "segment09",
+      "arm": "tribe_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "segment09",
+      "arm": "content_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "segment09",
+      "arm": "full_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "segment09",
+      "arm": "acoustic_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "segment09",
+      "arm": "tribe_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "segment09",
+      "arm": "content_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "segment09",
+      "arm": "full_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "segment09",
+      "arm": "acoustic_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "segment09",
+      "arm": "tribe_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "segment09",
+      "arm": "content_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "segment09",
+      "arm": "full_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "segment09",
+      "arm": "tribe_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "segment09",
+      "arm": "content_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "segment09",
+      "arm": "full_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "segment10",
+      "arm": "acoustic_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "segment10",
+      "arm": "tribe_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "segment10",
+      "arm": "content_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "segment10",
+      "arm": "full_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "segment10",
+      "arm": "acoustic_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "segment10",
+      "arm": "tribe_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "segment10",
+      "arm": "content_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "segment10",
+      "arm": "full_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "segment10",
+      "arm": "acoustic_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "segment10",
+      "arm": "tribe_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "segment10",
+      "arm": "content_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "segment10",
+      "arm": "full_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "segment10",
+      "arm": "tribe_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "segment10",
+      "arm": "content_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "segment10",
+      "arm": "full_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "segment11",
+      "arm": "acoustic_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "segment11",
+      "arm": "tribe_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "segment11",
+      "arm": "content_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "segment11",
+      "arm": "full_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "segment11",
+      "arm": "acoustic_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "segment11",
+      "arm": "tribe_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "segment11",
+      "arm": "content_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "segment11",
+      "arm": "full_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "segment11",
+      "arm": "acoustic_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "segment11",
+      "arm": "tribe_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "segment11",
+      "arm": "content_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "segment11",
+      "arm": "full_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "segment11",
+      "arm": "tribe_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "segment11",
+      "arm": "content_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "segment11",
+      "arm": "full_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "segment12",
+      "arm": "acoustic_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "segment12",
+      "arm": "tribe_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "segment12",
+      "arm": "content_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "segment12",
+      "arm": "full_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "segment12",
+      "arm": "acoustic_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "segment12",
+      "arm": "tribe_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "segment12",
+      "arm": "content_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "segment12",
+      "arm": "full_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "segment12",
+      "arm": "acoustic_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "segment12",
+      "arm": "tribe_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "segment12",
+      "arm": "content_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "segment12",
+      "arm": "full_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "segment12",
+      "arm": "tribe_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "segment12",
+      "arm": "content_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "segment12",
+      "arm": "full_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "wrong11-from12",
+      "arm": "acoustic_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "wrong11-from12",
+      "arm": "tribe_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "wrong11-from12",
+      "arm": "content_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "wrong11-from12",
+      "arm": "full_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "wrong11-from12",
+      "arm": "acoustic_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "wrong11-from12",
+      "arm": "tribe_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "wrong11-from12",
+      "arm": "content_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "wrong11-from12",
+      "arm": "full_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "wrong11-from12",
+      "arm": "acoustic_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "wrong11-from12",
+      "arm": "tribe_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "wrong11-from12",
+      "arm": "content_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "wrong11-from12",
+      "arm": "full_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "wrong11-from12",
+      "arm": "tribe_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "wrong11-from12",
+      "arm": "content_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "wrong11-from12",
+      "arm": "full_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "wrong12-from11",
+      "arm": "acoustic_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "wrong12-from11",
+      "arm": "tribe_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "wrong12-from11",
+      "arm": "content_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "wrong12-from11",
+      "arm": "full_ridge_labels2",
+      "passed": true
+    },
+    {
+      "context": "wrong12-from11",
+      "arm": "acoustic_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "wrong12-from11",
+      "arm": "tribe_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "wrong12-from11",
+      "arm": "content_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "wrong12-from11",
+      "arm": "full_ridge_labels4",
+      "passed": true
+    },
+    {
+      "context": "wrong12-from11",
+      "arm": "acoustic_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "wrong12-from11",
+      "arm": "tribe_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "wrong12-from11",
+      "arm": "content_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "wrong12-from11",
+      "arm": "full_ridge_labels8",
+      "passed": true
+    },
+    {
+      "context": "wrong12-from11",
+      "arm": "tribe_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "wrong12-from11",
+      "arm": "content_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    },
+    {
+      "context": "wrong12-from11",
+      "arm": "full_tcn",
+      "all_seeds_exact": true,
+      "passed": true
+    }
+  ],
+  "maximum_ridge_absolute_error": 0.0,
+  "neural_replay_bitwise_equal": true,
+  "held_EEG_opened": false,
+  "seed_forecast_sha256": {
+    "tribe_tcn/seed17/segment09.npz": "cc378f06dbd9e6e2762cb2068f253bf0cd0f1bfe2da5893df41a2319c744cf29",
+    "tribe_tcn/seed29/segment09.npz": "3dcc342a0121f11ecda64cdee2022bd34ae73f72bbdce56b54ca7206c813a9c6",
+    "tribe_tcn/seed43/segment09.npz": "86f1677dbe673588635a1c3e08356fc5ceb93fcc25ccffbf68f2efe4f8b9ce88",
+    "content_tcn/seed17/segment09.npz": "5339e929640ba577fb8557f4f3958ac2da4f3fc12e98f4db0f4f7dd916f74148",
+    "content_tcn/seed29/segment09.npz": "aa07c9ada8e38d2a0ccf32fbc650d419d572d630bf031ee7e4a1ad758979271a",
+    "content_tcn/seed43/segment09.npz": "7216874247d12df2477c7665b6585c35fac87083e8dd7023940992c15453c38b",
+    "full_tcn/seed17/segment09.npz": "ca8937ced40c839bfbe3e1f950fa4e7f487bc2d10401ea74260a40e83db8fad7",
+    "full_tcn/seed29/segment09.npz": "d13156224743f5f96e22547f24224dffa984c88b3c0fe0a79b75287e3b97853d",
+    "full_tcn/seed43/segment09.npz": "e1ce00e4c84fa9fd6816dccf2ccfff82c97edf8ca8bb4f1e27bfef8f3bf8b572",
+    "tribe_tcn/seed17/segment10.npz": "0ec7c6f9439e6756a5c0f8377550ea944143c9b2992c91df9758dcb7a055efe9",
+    "tribe_tcn/seed29/segment10.npz": "ba38b29509819df0b869ef1ef4bb03828b3e460ce630cc6472fd0b7a61b1fc7c",
+    "tribe_tcn/seed43/segment10.npz": "89be9175b4f77f07df0699f9ef3622e7a6239761665b6dd0039cd705d955f31b",
+    "content_tcn/seed17/segment10.npz": "759eae40783a105fb209d75c2ec09aa72120a2b947fc60c822a6fd5d48648641",
+    "content_tcn/seed29/segment10.npz": "692427d44e49fe06dc04c12adb6058f18a3ba659333f9df8620b99793ff2e300",
+    "content_tcn/seed43/segment10.npz": "c31a5b8b48021c5474a6b023c8c544065250e5d4d77ea01fdeb65ca89cfb8359",
+    "full_tcn/seed17/segment10.npz": "761568186efa2a04c0c3ed2f21d41e33f1d75b60bcc990b867d029793b97e7cc",
+    "full_tcn/seed29/segment10.npz": "186663ee80c4358a3605b16630991c977746af4dbad71bd186165b26b7e3e325",
+    "full_tcn/seed43/segment10.npz": "f4d99bc3b3e54c7715c2ecaed8b7f7a87508870256c9d4f78d488360bd0f2fbe",
+    "tribe_tcn/seed17/segment11.npz": "f7c4f3669ce6f28ce2f57b6cc5fe5ba29b07df09ef653f93088bbfced3f660e3",
+    "tribe_tcn/seed29/segment11.npz": "ad6bf66f2a7a91f8022c7ee0949bb7c4749735d563510a4d60eb969d11190a58",
+    "tribe_tcn/seed43/segment11.npz": "327e482c27c159d9936e63aa821438bb6308e6e1751cd085643d89e7afba6e27",
+    "content_tcn/seed17/segment11.npz": "0ce74b7411dd03e118e2ed9a9437f15cac3b3eafcbd6b8c3288da5b71b722945",
+    "content_tcn/seed29/segment11.npz": "a681c673f423528baf0d1d66f0183dc09cacd7a6a50558b30c21b83a24b24023",
+    "content_tcn/seed43/segment11.npz": "7d4b871db994b30817db784c7dedfe53d5a38f63272e13ac66d7ea63c3816696",
+    "full_tcn/seed17/segment11.npz": "850e8d606f0d3accac96a2e5286c6595232f145d23f0fb1846996ab5532174fd",
+    "full_tcn/seed29/segment11.npz": "c42ee7fc24a8834f99ffa8a1da8d8d9c7bbdbeeb6d347f953cdec61ea88b5567",
+    "full_tcn/seed43/segment11.npz": "2d66118d67cc7d48013851542133d4c063f3562c39d92125c69363c9cf584d75",
+    "tribe_tcn/seed17/segment12.npz": "81ae3d0619cb4ebf9642c7b7f735adb52f212859087ab6eeec0677e5240d36c3",
+    "tribe_tcn/seed29/segment12.npz": "f64bddc7cecfdd54ec780406551e3624a3c1444c871f3a22a64e26c8f367eaf5",
+    "tribe_tcn/seed43/segment12.npz": "4c95d17510866e87b799fb32823921c72d70c501be09099cd8d9e819f6cd21a5",
+    "content_tcn/seed17/segment12.npz": "e692c5a555e2a335b4cc0ff899821bac5534cf97c4c9c134eb18b29994f09618",
+    "content_tcn/seed29/segment12.npz": "e0ae1b803aab7172d991c9eb5d733a35fc84cb58040b60a281b8b43dede39c22",
+    "content_tcn/seed43/segment12.npz": "e52cfafbb4ff61f996de75f84c12e8f5d2f0fa779539c2e8c2f813a41ce10842",
+    "full_tcn/seed17/segment12.npz": "211db8b32b2cf23df68b836c04294065ba91e5d3267d701dbf2112d1763cfcab",
+    "full_tcn/seed29/segment12.npz": "7187823a2f94137aeea547886597a60cc8e1b5d5009cbd4f839a8fa7ac7fe692",
+    "full_tcn/seed43/segment12.npz": "b01334bc48f16c3b8a09113f49e003e62aa3dc9816f5dc93844e30686cd52e9c",
+    "tribe_tcn/seed17/wrong11-from12.npz": "46d68b00d49819b304707b9fcc8ba54aebda2499b042bbfa0723b3d63ae1b3ff",
+    "tribe_tcn/seed29/wrong11-from12.npz": "d3e91079613ad3a5b10caa057ab6e8cbdb09bdc111a5351835218dce9f9bfab9",
+    "tribe_tcn/seed43/wrong11-from12.npz": "fdc466eb39b9fa038dcb7617dacc3c9c29d519520915a84a56a2e886e318ba5a",
+    "content_tcn/seed17/wrong11-from12.npz": "e0dde96e7afb6ca6f8b00ae50636831c2b4d7a1df746697846c5ce1f90d3e63f",
+    "content_tcn/seed29/wrong11-from12.npz": "03f62f5a2d2231f611fc32731eb2402e521307c536af91cd8b4aa1861061c592",
+    "content_tcn/seed43/wrong11-from12.npz": "8bae6ecc2d688f8c01df55195d25e8d2586add99e41dca413214a0f9c1f10758",
+    "full_tcn/seed17/wrong11-from12.npz": "80821f41f49e235651399c2bd415575dbf5ef89bbe7b5e1d90b144dd60297d92",
+    "full_tcn/seed29/wrong11-from12.npz": "cfae546bff30f3250b49ae59bdbd7c2294e21e0a5600a5f82cd05c950b9dc3bb",
+    "full_tcn/seed43/wrong11-from12.npz": "f9278a186262b2404c5b15ecee5ca7144bd4686e7a583cebb05309fe06b01d24",
+    "tribe_tcn/seed17/wrong12-from11.npz": "3148a4c96b75b87e3ed816ad2ca31192bebb2082cee2217cfa026ae79f627900",
+    "tribe_tcn/seed29/wrong12-from11.npz": "b711e41949d76c9db9e25bb12abb0e66f81f166df49d80c3405a08b471419934",
+    "tribe_tcn/seed43/wrong12-from11.npz": "844b9ecb1eece05200f07213b0e000b70ff5e7eeb1e33a70f50778ff61c25427",
+    "content_tcn/seed17/wrong12-from11.npz": "58161b042e05e29ccda62836ce9c0f4259b27104f2575c2700e90f3af13fb00d",
+    "content_tcn/seed29/wrong12-from11.npz": "75b3bcd49aec36777d22ace925264fcf240999bdfd843e074bc379d936abfc65",
+    "content_tcn/seed43/wrong12-from11.npz": "20ec510a8857dc5e09ce89f28b41b36e0959bf4a97b0e43c4d8f1a7fc038df8a",
+    "full_tcn/seed17/wrong12-from11.npz": "b45c1ba998a6f80f57ae335834de3fe9214cea1ea22287bf35bea26b1d2b5d92",
+    "full_tcn/seed29/wrong12-from11.npz": "2e15e9996f3f93b066d9b0c91424fd7034fa13a6ef0ea41a4e33f9bfa7c0220f",
+    "full_tcn/seed43/wrong12-from11.npz": "8e1bbe8cfa992e42fb7631b604e2abe9927208b43395a4e991b7ac57f4c31e70"
+  },
+  "code_sha256": "b62d58faf4fd810c9b7ba74ae25324781eb84aec1fe50e5727a5188ded73c74d"
+}

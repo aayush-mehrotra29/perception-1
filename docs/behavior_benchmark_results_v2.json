@@ -1,0 +1,104 @@
+{
+  "schema": "perception-behavior-benchmark-handoff-v2",
+  "status": "completed_negative_incremental_result",
+  "counts": {
+    "attention": {
+      "supported_rows": 353,
+      "eligible_rows": 353,
+      "participants": 16,
+      "lectures": 4,
+      "viewings": 32,
+      "folds": 8
+    },
+    "quiz": {
+      "supported_rows": 16,
+      "eligible_rows": 16,
+      "participants": 12,
+      "lectures": 4,
+      "viewings": 16,
+      "folds": 6,
+      "post_quiz_items": 80
+    }
+  },
+  "findings": [
+    "Combined content + TRIBE + predicted EEG did not beat content-only on either prespecified endpoint.",
+    "Attention MAE: content-only 1.033949, combined 1.048875; combined error 1.44% higher. Descriptive error-reduction interval -5.18% to +0.73%.",
+    "Quiz Brier: content-only 0.271516, combined 0.279434; combined error 2.92% higher. Descriptive error-reduction interval -23.66% to +0.43%.",
+    "Quiz pre-score-only baseline Brier 0.243935 beats every content model. Log loss shows the same ordering.",
+    "Shuffled-EEG control has lower attention MAE than the real-EEG combined arm. No demonstrated EEG-specific incremental value.",
+    "These benchmarks do not establish improved teaching, measured-fMRI superiority, or neural attention decoding."
+  ],
+  "scope": [
+    "Exploratory reanalysis of four previously evaluated lectures, not an external untouched benchmark.",
+    "Participant and topic-family holdout; all preprocessing, EEG encoders and behavioral selection fit within training scopes.",
+    "EEG features use fold-trained ridge transfer encoders, not the deployed full-data v3 temporal network.",
+    "Attention labels are self-reported difficulty maintaining attention (1 to 5), not direct neural attention measurements.",
+    "Quiz predicts one correctness probability per five-question assessment, conditional on observed pre-quiz score; not item-specific understanding.",
+    "Cluster intervals are descriptive, conditional on fixed fits, with only four lectures; quiz sample is especially small.",
+    "Whole-content encoders can see future context: offline analysis, not causal online forecasting.",
+    "Historical stimulus byte identity is not established; existing candidate media and timing mapping reused.",
+    "Native TRIBE fMRI branch is unchanged. Measured-fMRI superiority and causal learning improvement were not tested.",
+    "Predicted EEG is derived from content; any gain is supervised representation transfer, not an additional measurement of the viewer."
+  ],
+  "validation": {
+    "regression": "89 passed, 1 skipped (optional torch runtime), 1 dependency deprecation warning",
+    "heads_independently_refitted": 112,
+    "training_preprocessing_and_EEG_scopes_refitted": 59,
+    "prediction_replay_tolerance": 1e-12,
+    "EEG_scope_state_replay": "exact array equality",
+    "paid_requests": 0,
+    "outer_scores_used_to_change_models": false,
+    "production_defaults_changed": false
+  },
+  "artifacts": {
+    "frozen_protocol": {
+      "path": "/Volumes/EEG Research Workspace/MetaHackathon/configs/behavior_benchmark_v2.json",
+      "sha256": "544f3de4855a97598b7475119f67ac6effd5d562cdb942659b7a0cd773902ffc"
+    },
+    "source_audit": {
+      "path": "/Volumes/EEG Research Workspace/MetaHackathon/.local/brain-runs/behavior-v2-audit-r2/audit.json",
+      "sha256": "165a94e6f862b32676faf936c07bb3f5cd292c3de5f2e612725784575127ee91"
+    },
+    "prepared_manifest": {
+      "path": "/Volumes/EEG Research Workspace/MetaHackathon/.local/brain-runs/behavior-v2-prepared-r2/manifest.json",
+      "sha256": "2442821bcf309d0e8b4cb5ec5c977f83d0ec8e10c189c8ac00f337cce9721c95"
+    },
+    "evaluation_manifest": {
+      "path": "/Volumes/EEG Research Workspace/MetaHackathon/.local/brain-runs/behavior-v2-evaluation-r1/manifest.json",
+      "sha256": "346d8b97b5936e5f789386a1145698e515598516398a9e6463de60f056e30247"
+    },
+    "replay_verification": {
+      "path": "/Volumes/EEG Research Workspace/MetaHackathon/.local/brain-runs/behavior-v2-verification-r1/verification.json",
+      "sha256": "a285ab56c3f8f18d0ed608d5f3126713f1db301c278e6ef17581119901de7539"
+    },
+    "results": {
+      "path": "/Volumes/EEG Research Workspace/MetaHackathon/.local/brain-runs/behavior-v2-report-r1/results.json",
+      "sha256": "ac7d696a81e8b12f68db8c47373fb2db24dc2f091b3f7a54b450c7ed59929aaa"
+    },
+    "figure": {
+      "path": "/Volumes/EEG Research Workspace/MetaHackathon/.local/brain-runs/behavior-v2-report-r1/benchmark.png",
+      "sha256": "455e0ba9573e75706426b6d5fd6eea256700be2976e5ae798e3af6e59bcdafaa"
+    },
+    "report": {
+      "path": "/Volumes/EEG Research Workspace/MetaHackathon/.local/brain-runs/behavior-v2-report-r1/index.html",
+      "sha256": "dc467bc97c56cefcca52c284fef5a77b92baae56f7c47e03c8b737ad4d336b48"
+    },
+    "scorer": {
+      "path": "/Volumes/EEG Research Workspace/MetaHackathon/.local/brain-runs/behavior-v2-report-r1/scoring_source.py",
+      "sha256": "95982633cde9da7306ba7386d117e30dcb6356420f469a84086a76ce2efe1de8"
+    },
+    "regression_log": {
+      "path": "/Volumes/EEG Research Workspace/MetaHackathon/.local/brain-runs/behavior-v2-regression.log",
+      "sha256": "49df58ea3147af860b8d4497d0137831ca20d6d9ade9c42c202d83789b09bad8"
+    }
+  },
+  "reproduction": {
+    "environment": "project .venv, one BLAS thread; existing standalone research runtime used read-only for matplotlib rendering only",
+    "audit": "python -m brain.behavior_audit NEW_AUDIT_DIRECTORY",
+    "prepare": "python -m brain.behavior_prepare AUDIT_DIRECTORY NEW_PREPARED_DIRECTORY",
+    "fit": "python -m brain.behavior_benchmark PREPARED_DIRECTORY NEW_EVALUATION_DIRECTORY",
+    "verify": "python -m brain.behavior_verify EVALUATION_DIRECTORY NEW_VERIFICATION_DIRECTORY",
+    "score": "python -m brain.behavior_report EVALUATION_DIRECTORY VERIFICATION_DIRECTORY NEW_REPORT_DIRECTORY --scores-only",
+    "render": "from brain.behavior_report import render; render(REPORT_DIRECTORY)"
+  }
+}

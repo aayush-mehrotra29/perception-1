@@ -1,0 +1,10 @@
+export type Segment = { start: number | null; end: number | null; text: string };
+export type Section = { id: string; title: string; start: number | null; end: number | null; text: string; added_by_revision: boolean };
+export type Item = { id: string; prompt: string; options: string[]; correct_index?: number };
+export type Profile = { id: string; name: string; prior_knowledge: 'low' | 'medium' | 'high'; misconceptions: string[]; provenance: string };
+export type Lesson = { id: string; project_id: string; version: number; parent_id: string | null; title: string; source_hash: string; content_hash: string; duration_seconds: number | null; transcript: Segment[]; sections: Section[]; concepts: string[]; concepts_reviewed: boolean; assessment: Item[]; status: string; analysis_provenance: string; created_at: string; trajectory_count?: number };
+export type Action = { kind: string; section_id: string | null; item_id: string | null; text: string | null; selected_option: number | null; source_start: number | null };
+export type Run = { id: string; lesson_id: string; profile: Profile; seed: number; actions: Action[]; prediction: { status: string; reason: string }; cost_usd: number; tokens_used: number; status: string };
+export type Finding = { id: string; lesson_id: string; section_id: string; source_start: number | null; source_excerpt: string; title: string; explanation: string; suggested_repair: string; evidence_label: string };
+export type Report = { id?: string; lesson_id?: string; metrics?: Record<string, number | null>; limitations?: string[]; prediction?: { status: string; reason: string }; comparisons?: Array<Record<string, unknown>>; status?: string };
+export type Job = { id: string; state: string; stage: string; progress: number; error: string | null; config: Record<string, unknown> };

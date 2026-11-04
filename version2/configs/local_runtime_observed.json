@@ -1,0 +1,14 @@
+{
+  "python": "3.11.15",
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.14.1",
+    "mne": "1.13.2",
+    "matplotlib": "3.11.2",
+    "pytest": "9.1.1",
+    "pydantic": "2.14.1",
+    "modal": null
+  }
+}

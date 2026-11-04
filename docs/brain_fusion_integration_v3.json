@@ -1,0 +1,48 @@
+{
+  "schema": "perception-fusion-integration-v3",
+  "status": "fitted_and_engineering_verified; see benchmark for scientific outcome",
+  "scope": "Model/backend contract; frontend implementation belongs to other chats",
+  "entrypoint": "brain.content_pipeline.run(..., fusion_model=Path(...))",
+  "selection": "fusion_model is exclusive with video_model and transfer_models; omitted preserves v1 behavior",
+  "CLI_option": "--fusion-model MODEL_DIRECTORY",
+  "inference_input": "Existing PublicMediaRequest and source file; text requires explicit words_per_minute and documents require seconds_per_page",
+  "local_prediction_entrypoint": "python -m brain.fusion_inference --native TRIBE_DIRECTORY --model MODEL_DIRECTORY --output NEW_DIRECTORY --duration SECONDS --input-format FORMAT [--features VERIFIED_VIDEO_FEATURE_DIRECTORY]",
+  "output": {
+    "arrays": "prediction/predictions.npz: existing EEG queries, eight EEG features, support mask, native cortical response and native cortical times",
+    "manifest": "prediction/manifest.json: existing bundle fields plus fusion model version, artifact hash, available modalities, evaluation status and benchmark reference",
+    "diagnostics": "unsupported intervals, missing modalities, prototype signal/timing limitations and variance-domain checks",
+    "JSON": "NaN becomes null; retain explicit support flags",
+    "EEG": "TP9 AF7 AF8 TP10 means followed by log1p variances; 44-second context, five-second hop; not attention or retention",
+    "fMRI": "Unmodified pretrained TRIBE predictions; separate native clock; not observed student measurements"
+  },
+  "transfer": "Absent representation/descriptor blocks are zeroed and reported; nonvideo use remains experimental transfer",
+  "runtime": "Existing cloud encoders, local small EEG network; no participant EEG or fitted EEG weights uploaded",
+  "failures": "Reject conflicting models, bad artifact hashes and insufficient duration before paid work. Preserve completed cloud outputs and partial local results; do not retry paid inference automatically.",
+  "benchmark": "/Volumes/EEG Research Workspace/MetaHackathon/.local/brain-runs/fusion-v3-handoff/benchmark/report.json",
+  "frontend_requirements": [
+    "display experimental status",
+    "keep EEG and cortical clocks separate",
+    "do not turn content observations into attention/learning scores",
+    "no synthetic brain data in live results"
+  ],
+  "app_server_guidance": "Run brain.content_pipeline.run in a background Python worker, not the browser or an HTTP event loop. Return a job ID, then serve the verified prediction bundle after completion. The EEG artifact remains local; remote adapters receive only content.",
+  "JSON_export": "python -m brain.fusion_export PREDICTION_BUNDLE PREDICTION_BUNDLE/app-result.json",
+  "JSON_cortex_policy": "JSON carries unchanged native cortical clocks and a checksummed NPZ reference. A local backend can serve the required cortical slices; no brain-region labels or physiological calibration are invented.",
+  "benchmark_success_target_met": false,
+  "primary_normalized_MAE": {
+    "mean": 0.8542634970509604,
+    "tribe_temporal": 0.8523543209050423,
+    "historical_v2_fusion": 2.1096866363997533,
+    "robust_tribe": 0.8365378389935044,
+    "robust_fusion": 0.833641588016946,
+    "fusion": 0.8606513308396652,
+    "without_aux": 0.8605643374867133,
+    "shuffled_correction": 0.8595217000617106,
+    "simple_ridge": 0.8537367294953113
+  },
+  "scientific_status": "exploratory_revision_after_v2; inspect uncertainty and negative control",
+  "model_artifact": "/Volumes/EEG Research Workspace/MetaHackathon/.local/brain-runs/fusion-v3-handoff/model",
+  "model_manifest_sha256": "f6c2813664c59db9782257d47d6746c073d3821a015385da0ed1cee885b5eee2",
+  "app_example": "/Volumes/EEG Research Workspace/MetaHackathon/.local/brain-runs/fusion-v3-handoff/video-example/app-result.json",
+  "legacy_selection_preserved": true
+}

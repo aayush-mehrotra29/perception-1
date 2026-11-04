@@ -1,0 +1,23 @@
+{
+  "schema": "perception-v2-cohort-target-definition",
+  "stage": "new prospective cohort experiment; preserve stage-A and all older results",
+  "header_audit": "runs/cohort-header-audit.json",
+  "training_people": ["S01","S03","S04","S05"],
+  "development_people": ["S06"],
+  "reserved_test_people": ["S08","S10"],
+  "training_segments": [1,2,3,4,5,6,7,8],
+  "development_segments": [9,10],
+  "reserved_test_segments": [11,12],
+  "channels": "fixed intersection of unflagged numeric EEG channels in training-person headers only, excluding constructed reference29; verify EEG type and declared volts",
+  "bad_channel_policy": "held-out source bad flags produce masks; no interpolation, performance-based deletion or replacement by zero",
+  "native_rate_hz":500,
+  "output_rate_hz":50,
+  "filter": {"numtaps":2001,"cutoff_hz":[0.5,8.0],"window":"hamming","fs":500,"pass_zero":false,"scale":true,"DC_policy":"subtract coefficient mean once to make coefficient sum numerically zero; disclose frequency response","convolution":"centered VALID within each source segment; complete finite context required; no source extension"},
+  "clock": "MNE canonical annotation event sample + phase-zero j=0,10,... < ceil(WAV_frames*500/WAV_rate); exact original slowed WAVs; no fitted delay/stretch",
+  "training_target":"equal-person average of the four training listeners on identical source-time samples and fixed40 channels; all four must have finite supported values",
+  "primary_test_target":"equal-person average of both reserved listeners on identical timestamps and channels good in both, scored equally by segment/channel",
+  "secondary_test_target":"each reserved listener individually on its own documented good-channel mask; all supported results reported",
+  "preprocessing_scope":"no new ICA/referencing; inherited author ICA and bad-flag estimation scope remains unknown; one narrative chapter only",
+  "test_lock":"Do not decode reserved test people/segments until all candidate forecasts and metrics/comparisons are frozen. Header/channel metadata inspection is permitted and logged.",
+  "causal_or_educational_claim":false
+}
