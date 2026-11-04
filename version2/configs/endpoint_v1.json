@@ -1,0 +1,24 @@
+{
+  "schema": "perception-endpoint-v1",
+  "status": "exploratory follow-up; earlier test outcomes already observed",
+  "hypothesis": "Final temporal-state readout preserves waveform phase better than averaging hidden states.",
+  "base_run": "runs/cohort-v1",
+  "base_evaluation": "runs/cohort-v1-evaluation",
+  "features": "data/cohort-features",
+  "targets": "data/cohort-targets",
+  "output": "runs/endpoint-v1",
+  "arms": ["tribe", "full"],
+  "architecture_change": "Replace mean hidden-state pooling by the last valid hidden-state position. All other architecture and optimization parameters remain as in cohort-v1.",
+  "training": "Reuse only training-fit transforms, identical training people/clips, three seeds, 30 epochs, 128 steps, batch 128; no EEG reprocessing or new encoder calls.",
+  "selection": {
+    "development_people": ["S06"],
+    "development_clips": [9, 10],
+    "weights": [0, 0.05, 0.1, 0.2, 0.4, 0.7, 1],
+    "formula": "(1-weight)*existing acoustic_ridge + weight*endpoint ensemble",
+    "rule": "For each arm independently, select maximum equal-clip mean signed channel correlation among weights whose development MSE does not exceed acoustic_ridge. Prefer smaller weight on ties. Report all weights. A selected zero is explicitly baseline-only, not a fusion success."
+  },
+  "evaluation": "Freeze development selection and predictions before rereading old test targets; exploratory only, never an untouched test. Same rows, channel masks, scales and metrics as cohort-v1. Include individual listeners, both clips and matched-versus-wrong-content control.",
+  "promotion_gate": "Nonzero fusion weight; positive group correlation on both clips; group MSE below mean and acoustic_ridge; aggregate correlation above acoustic_ridge; matched-content MSE lower than wrong content on both clips. Passing remains exploratory and requires independent replication.",
+  "resource_limits": {"threads": 1, "max_training_seconds": 3600, "new_paid_calls": 0},
+  "claims": {"native_TRIBE_changed": false, "measured_fMRI_superiority_tested": false, "attention_or_learning_validated": false}
+}

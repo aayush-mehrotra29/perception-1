@@ -1,0 +1,80 @@
+{
+  "complete": true,
+  "UTC": "2026-11-04T12:13:29.322564+00:00",
+  "forecasts": {
+    "segment09": {
+      "file": "forecasts/segment09.npz",
+      "sha256": "93c530bb9eb8638c34441d5a1d9bf13a92513090287431eca0aa1a153afdbf34"
+    },
+    "segment10": {
+      "file": "forecasts/segment10.npz",
+      "sha256": "4efe97b5de4613bb65c1497c267721c3919723488c8f6021f5e437dc2c929b4f"
+    },
+    "segment11": {
+      "file": "forecasts/segment11.npz",
+      "sha256": "6c8ca80aee136e81703df34d8ee721ed8424a6583ffb0410f4746e6fc4503214"
+    },
+    "segment12": {
+      "file": "forecasts/segment12.npz",
+      "sha256": "62cf53a4a065f301687a8f19c2a12f49fccd887bc967a1949c980f37027abc75"
+    },
+    "wrong11-from12": {
+      "file": "forecasts/wrong11-from12.npz",
+      "sha256": "14e297bc132a7d5b36f02c66b19912f5ad0b925dedc9677c49ffa08585222d64"
+    },
+    "wrong12-from11": {
+      "file": "forecasts/wrong12-from11.npz",
+      "sha256": "4dd783808c46918f86db636cb772dd41dad81a4ba393a7ed572a80d76ca3ff75"
+    }
+  },
+  "models": [
+    {
+      "block": "tribe",
+      "seed": 17,
+      "file": "tribe/seed17/model.npz",
+      "sha256": "37577e79cb1448138736d7952148bbc71116e2c8eaf4a7b39379d4e1cbbe87ae",
+      "reload_exact": true
+    },
+    {
+      "block": "tribe",
+      "seed": 29,
+      "file": "tribe/seed29/model.npz",
+      "sha256": "b71747a25adf02d521df69c1e23f32d6020cdd69a1703181c33136e0b9d2ce6b",
+      "reload_exact": true
+    },
+    {
+      "block": "tribe",
+      "seed": 43,
+      "file": "tribe/seed43/model.npz",
+      "sha256": "1d9b3ec85ff629b10bd78be3ce3e2713778e4837f3d4f3f417cf0b28865b43e5",
+      "reload_exact": true
+    },
+    {
+      "block": "full",
+      "seed": 17,
+      "file": "full/seed17/model.npz",
+      "sha256": "bafab8c14055187f539a95fdcf48e940880653d65783379bbac9ce5f381d9212",
+      "reload_exact": true
+    },
+    {
+      "block": "full",
+      "seed": 29,
+      "file": "full/seed29/model.npz",
+      "sha256": "9a9cbb75f0a50701fc607779fdb7d47dc6a753d7ad052b676ac3a6e0dba1ac2d",
+      "reload_exact": true
+    },
+    {
+      "block": "full",
+      "seed": 43,
+      "file": "full/seed43/model.npz",
+      "sha256": "f61923c93831e25d976bd619dc623c368bf79776b67a7c99d0e4fe61156917a3",
+      "reload_exact": true
+    }
+  ],
+  "config_sha256": "91dceccbd6b65767c7d9927c6025d727a85c53b48b57ca41d017c886a0ed4867",
+  "selection_sha256": "5c1a2ef08534f945eaf0a7d0bc718eda5751d31114e8f5aa89acc46e38ab5c3f",
+  "transforms_sha256": "7599c6f32d9abf4f94122047e02f03a79d5ca53ff29bb4a672ded878f8bd66b2",
+  "elapsed_seconds": 853.343141624995,
+  "test_reuse": "exploratory; historical results known",
+  "old_targets_loaded_for_this_training": false
+}

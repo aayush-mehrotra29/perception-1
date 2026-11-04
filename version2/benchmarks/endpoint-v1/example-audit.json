@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "predictions_exactly_match_locked_forecast": true,
+  "unsupported_JSON_null": true,
+  "native_file_and_clock_unchanged": true,
+  "supported_rows": 2558,
+  "prediction_json_sha256": "f072bd44532cce5cdbc6e213339d787815da73acda1f178facff63fb5e7219b9",
+  "inference_code_sha256": "85275a8867f8865770b6f85d749ca720f78a74b8cec01bc421cb02f90643927f"
+}

@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "training_models": 6,
+  "training_seconds": 853.343141624995,
+  "targeted_tests_passed": 35,
+  "quality_gate_passed": false,
+  "app_default_changed": false,
+  "evaluation_status": "exploratory reused test",
+  "point_estimate_improvement_vs_previous_full": {
+    "MSE_reduction_percent": 16.895024415139012,
+    "correlation_before": -0.07319539705592902,
+    "correlation_after": 0.02903374122691794
+  },
+  "strong_or_generalizable_correlation_established": false,
+  "native_TRIBE_changed": false,
+  "full_regression_tests_passed": 40
+}

@@ -1,0 +1,45 @@
+Experimental model card: endpoint-v1
+
+Status: fitted and reproducible; quality gate FAILED; app default unchanged.
+Domain: auxiliary speech-to-EEG ALICE benchmark, not educational video.
+Architecture: frozen content/TRIBE representations; last-valid-state residual
+TCN EEG readout. Same training folds, scales, targets and three-seed schedule
+as cohort-v1. Native pretrained TRIBE fMRI output is unchanged.
+
+Training: S01/S03/S04/S05, clips 1–8. Development: S06, clips 9–10.
+Evaluation: S08/S10, clips 11–12, previously observed and now reused.
+All results are exploratory, not fresh independent validation.
+Output: 40 electrode voltage predictions on a 50 Hz grid for the existing
+0.5–8 Hz filtered target. No attention, learning or demographic inference.
+
+A fixed development-only rule selected 20% full endpoint network and
+80% acoustic ridge. The TRIBE-only calibration selected zero neural weight.
+The uncalibrated full network is also reported, so baseline gains cannot
+be mistaken for a standalone multimodal success.
+
+Results (normalized MSE; mean signed Pearson correlation)
+previous_full_tcn: 0.949433; -0.07319539705592902
+full_endpoint: 0.906187; 0.0074265263162746255
+full_calibrated: 0.789026; 0.02903374122691794
+previous_acoustic_ridge: 0.785250; 0.03698184694262458
+previous_mean: 0.776981; None
+
+The calibrated model reduces error versus the old full model but does not
+beat the acoustic or training-mean baselines. One clip remains negatively
+correlated. Matching content beats wrong content on both test clips, which
+is encouraging but insufficient to establish useful generalization.
+
+Training-person pairwise EEG repeatability in the existing diagnostic was
+about r=0.009. That suggests weak shared targets; it is not a validated
+noise ceiling or proof that the recordings cannot support another task.
+Development calibration gains did not transfer over the acoustic baseline.
+
+Files: config.json, development-selection.json, forecast-lock.json,
+results.json, audit.json, example-audit.json, and six numeric model.npz
+files under tribe/ and full/. Use speech_eeg.endpoint.load_endpoint;
+loading these weights into the original mean-pooling class is incorrect.
+
+Next scientific step: prespecify evaluation on a new story and new people,
+and establish training-only target repeatability before expanding model
+capacity. Do not choose channels, signs or endpoints to improve this reused
+test. Classroom benefit and measured-fMRI superiority remain untested.

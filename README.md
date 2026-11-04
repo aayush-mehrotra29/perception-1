@@ -6,7 +6,26 @@ experiment. The SSD working files were copied without modification. This is a
 new source snapshot that includes previously uncommitted code; it does not
 rewrite or publish the original Git history.
 
-## Current research result
+## Latest follow-up: endpoint readout
+
+The small timing-preserving readout experiment is fitted and checked. Its
+development-selected blend uses 20% multimodal neural prediction and 80%
+acoustic ridge. On the **previously observed, reused test set**, MSE fell from
+0.949433 to 0.789026 and mean signed correlation rose from −0.07320 to +0.02903.
+These are exploratory point estimates, not independent confirmation.
+
+**The quality gate still failed.** Acoustic ridge alone had MSE 0.785250 and
+correlation +0.03698; the mean baseline had MSE 0.776981. One clip remained
+negatively correlated. The unblended new neural model had MSE 0.906187 and
+correlation +0.00743. The TRIBE-only blend selected zero neural contribution
+and is explicitly acoustic-only. Native TRIBE and the application default
+remain unchanged.
+
+See [`version2/ENDPOINT_EXPERIMENT.txt`](version2/ENDPOINT_EXPERIMENT.txt),
+the [fixed protocol](version2/configs/endpoint_v1.json), and the
+[complete follow-up summary](version2/benchmarks/endpoint-v1/REPORT.md).
+
+## Preserved original cohort result
 
 Version2 training, checkpoint replay, cached inference, and the locked benchmark
 are complete. **The combined model did not pass its scientific success gate.**

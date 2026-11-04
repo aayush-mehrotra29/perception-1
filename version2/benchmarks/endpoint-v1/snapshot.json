@@ -1,0 +1,26 @@
+{
+  "schema": "endpoint-follow-up-code-and-aggregate-results",
+  "original_baseline_backup_commit": "07eb47345fe112e72c9a9a83ea55de0763e1377a",
+  "files": {
+    "speech_eeg/endpoint.py": "b5903a86985c1fa013a14ad28f84fb5f5f5dbd764bee3dfc003275d2b09658ba",
+    "speech_eeg/endpoint_experiment.py": "a2fbd4a592086dc7cc249fd600b47d8c00257b1e16425dab2d54e17e8a4c9000",
+    "speech_eeg/endpoint_review.py": "a99120d309a0c723f525bb4474192fae0005cfe61e92e130e28d56adc20eb5b9",
+    "speech_eeg/endpoint_inference.py": "85275a8867f8865770b6f85d749ca720f78a74b8cec01bc421cb02f90643927f",
+    "configs/endpoint_v1.json": "2286ce644adc5d4001c67df4cf96f42e728623266c94a8bb17d6e1adc5c5c1d9",
+    "tests/test_endpoint.py": "1f8bf8eb470f038963b72a7f28bcdab05f1d55ddf86d45732e53542be50d16f7",
+    "ENDPOINT_EXPERIMENT.txt": "15e1fa5d22628a1ba1f76f2799c6773df5257c7604f6868b4d6ff9c4c8290316"
+  },
+  "reports": {
+    "REPORT.md": "4c10d5d34bb89d7fbaf10942386b67c5f278cac7d1c67b568882cfefba303928",
+    "MODEL_CARD.txt": "6ac4473796335cdefbfc00c7b894c549655fb92d4fc8ed3d7cbe4f490972b3ef",
+    "STATUS.json": "7a3ced2c1c5e83bd889eeedf888723a4cafa31e060554d753d04f3c8bc8f7c65",
+    "results.json": "9802fbc21407d8d54994d4452b526f84ac558cf96883bc0e737a816361e7cf32",
+    "development-selection.json": "5c1a2ef08534f945eaf0a7d0bc718eda5751d31114e8f5aa89acc46e38ab5c3f",
+    "forecast-lock.json": "758df5799e48ac6f6e8889356b3c2111ba93b95e42fde0414af7ee79d804bf48",
+    "audit.json": "6f15eba072b495cdec351cbccd81a056cfe77a76d32febb28a63df54b77d136c",
+    "example-audit.json": "c759aa2d766b7a895f61c667b112976436a2233a2c98cbd610a9dd46ce3573a1",
+    "comparison.png": "3425b11f5bed9a20ca2412fda90ba4aeb5604d2762dbba4d629d791053eec0ba"
+  },
+  "raw_EEG_predictions_and_weights_uploaded": false,
+  "evaluation": "exploratory reused test; failed quality gate"
+}

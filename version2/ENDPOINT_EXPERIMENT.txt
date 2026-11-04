@@ -1,0 +1,50 @@
+Endpoint readout follow-up (2026-11-04)
+
+Purpose
+Test one small architectural change: predict the current EEG target from the
+last valid TCN hidden state instead of the mean of all valid hidden states.
+The electrode targets, clocks, folds, feature caches, scaling, optimizer,
+training duration and seed ensemble remain unchanged. The last state sees
+27 feature samples (0.52 seconds between its earliest and latest samples).
+This is an auxiliary speech-to-EEG experiment, not an educational-video model.
+
+Selection and interpretation
+The fixed configuration is configs/endpoint_v1.json. Both TRIBE-only and full
+content models receive the same change. S06 clips 9 and 10 alone select a
+blend with the existing acoustic ridge predictor. Zero neural weight is a
+baseline fallback, not evidence that multimodal fusion works. All candidate
+weights and results are retained. No sign flip, channel selection, target
+change, best-seed selection or fitted timing offset is allowed.
+
+The S08/S10 clips 11/12 results have already been inspected in the earlier
+experiment. Any subsequent comparison is exploratory. No new inference
+credits, raw EEG processing or measured-fMRI evaluation are involved.
+Native TRIBE output arrays remain unchanged. Neither attention nor learning
+outcomes are predicted by this experiment.
+
+Reproduce (from version2, using the existing PyTorch environment)
+python -m pytest tests -q
+python -m speech_eeg.endpoint_experiment train configs/endpoint_v1.json
+python -m speech_eeg.endpoint_experiment evaluate configs/endpoint_v1.json
+python -m speech_eeg.endpoint_review runs/endpoint-v1
+
+Existing output folders are deliberately not overwritten. To reproduce a
+separate run, copy the config with a new output path before training.
+The trained models use speech_eeg.endpoint.load_endpoint, not the original
+mean-pooling loader; numeric weight shapes alone do not encode pooling.
+The original model and application default are not replaced automatically.
+
+Outputs
+runs/endpoint-v1/config.json: frozen follow-up plan
+runs/endpoint-v1/source/: source snapshots before training
+runs/endpoint-v1/{tribe,full}/seed{17,29,43}/model.npz: local numeric weights
+runs/endpoint-v1/development-selection.json: complete calibration comparison
+runs/endpoint-v1/forecast-lock.json: predictions frozen before reused-test access
+runs/endpoint-v1/results.json: all clip, listener, model and control metrics
+runs/endpoint-v1/REPORT.md: concise comparison
+runs/endpoint-v1/audit.json: preservation and independent metric checks
+runs/endpoint-v1/comparison.png: full comparison figure
+
+Promotion requires every gate in the frozen config, not just a better number
+than the TRIBE comparator. Even a passing gate would require new independent
+people/content before a generalization claim.
