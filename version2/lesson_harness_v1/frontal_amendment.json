@@ -1,0 +1,16 @@
+{
+  "schema": "perception-exploratory-frontal-amendment-v1",
+  "created_utc": "2026-11-04T20:48:29.745004+00:00",
+  "failed_original_screen": "/Volumes/EEG Research Workspace/MetaHackathon/version2/.local/lesson-harness-v1/edugage-quality-corpus-r1/summary.json",
+  "failed_original_screen_sha256": "54e63efa0c4d295047c1e62fefbd6056f33e0ccdec91564f95e312b04078440e",
+  "changes": [
+    "Use AF7 and AF8 only for EEG auxiliary supervision and evidence packets; no substitute for TP9/TP10.",
+    "Auxiliary target width becomes4 for this experiment; shared64/32 network and five rating heads unchanged.",
+    "All contact, blink, jaw, flatline, range, retention and context thresholds unchanged.",
+    "Clarify teacher probability-array formatting after two invalid runtime-only outputs, before real annotation."
+  ],
+  "motivation": "Observed recording-quality and source-code evidence, not heldout behavior/model scores.",
+  "old_results_preserved": true,
+  "new_EEG_arm_scored": false,
+  "reanalysis_status": "exploratory protocol amendment; not original four-channel success"
+}

@@ -1,0 +1,22 @@
+{
+  "ideal_rocket_equation": {
+    "source_sha256": "b1aae301e01cf320dcb007bc76e03fa1b78c009b39cfd0caf6799014eea2e687",
+    "eeg_directory": "REPLACE_WITH_COMPLETED_WAVEFORM_DIRECTORY",
+    "native_directory": "/Volumes/EEG Research Workspace/MetaHackathon/.local/brain-runs/rocket-native-brain-v4"
+  },
+  "atmosphere_pressure_composition": {
+    "source_sha256": "bc26383285431523ee12d5ed8d256f67d6febc2934c3b37cfe1f7fbc4cd7915e",
+    "eeg_directory": "REPLACE_WITH_COMPLETED_WAVEFORM_DIRECTORY",
+    "native_directory": "/Volumes/EEG Research Workspace/MetaHackathon/.local/brain-runs/atmosphere_pressure_composition-native-brain-v2"
+  },
+  "xray_diffraction": {
+    "source_sha256": "b8fa1ab009b284e6ba70114d1574c8ad697b2d67bf2e592159526ddbfca366e9",
+    "eeg_directory": "REPLACE_WITH_COMPLETED_WAVEFORM_DIRECTORY",
+    "native_directory": "/Volumes/EEG Research Workspace/MetaHackathon/.local/brain-runs/xray_diffraction-native-brain-v1"
+  },
+  "healing_radiation": {
+    "source_sha256": "7a6039f451f1c7eb1d271b8d1a22908f4bda24d3e568c9564b49ce52d7d2fe9b",
+    "eeg_directory": "REPLACE_WITH_COMPLETED_WAVEFORM_DIRECTORY",
+    "native_directory": "/Volumes/EEG Research Workspace/MetaHackathon/.local/brain-runs/healing_radiation-native-brain-v1"
+  }
+}

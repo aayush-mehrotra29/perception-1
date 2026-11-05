@@ -1,0 +1,19 @@
+{
+  "method": "content-anchored-ordinal-v2",
+  "runner_sha256": "7fa04160697aeabaa20e9afce3ccd89c616e592b734d6971a1f986205139ca0b",
+  "numeric_parser_sha256": "4077d45bbd40a96f16ad42a1037ddaaad3cfb2efcea2190bc0516e1df0d09ae5",
+  "diagnostic_evaluator_sha256": "055f9023f3ff2493fc06150d2411604a23bd321201187377e92faf073ac93de2",
+  "quantization_receipt_sha256": "afd0075696ce07e638941cfa68731d9dde75742e902cda4cbcb106c7a75a36e8",
+  "minimum_option_mass": 0.1,
+  "rubric_disagreement_limit": 2.5,
+  "diagnostic_packets_sha256": "3185b4420a99ecfb2b6e7bc83b30147c6280f78ac1af8d07a38e2dce126c0e4a",
+  "diagnostic_manifest_sha256": "97519e8732aef2853aca606f67c8212306a41c1e222bfb2c58d59893f083dcc5",
+  "corpus_packets_sha256": "86325b6851dff921076ca02c17f2cf7db81bbf0741dd9d0204d87cbe03d64fec",
+  "corpus_packets": "/Volumes/EEG Research Workspace/MetaHackathon/version2/.local/lesson-harness-v1/frontal-presentation-packets-r3/packets.json",
+  "prior_policy_sha256": "b2c29ec888a929434dd09e612490153cf0a3dfbcb2f5b95708992b4e15476ba3",
+  "experiment_change": "Explicit observable-content anchors for the originally requested provisional learner-response task. Original teacher abstained on 310 corpus and 40 later diagnostic/pilot quality responses. No threshold relaxation, checkpoint change, EEG-state mapping or alteration of previous results.",
+  "acceptance_gate_frozen_before_this_method_outputs": true,
+  "one_candidate_no_prompt_search": true,
+  "synthetic_labels_are_human_observations": false,
+  "real_corpus_requires_passing_diagnostic": true
+}

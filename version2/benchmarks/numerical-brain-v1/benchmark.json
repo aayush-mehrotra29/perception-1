@@ -1,0 +1,558 @@
+{
+  "schema": "perception-numerical-fusion-benchmark-v1",
+  "complete": true,
+  "endpoints": {
+    "attention_difficulty": {
+      "human": {
+        "status": "evaluated",
+        "count": 353,
+        "scores": {
+          "mean": {
+            "MAE_0_10": 2.665428207859848,
+            "Brier": 0.7682950892858047
+          },
+          "content_only": {
+            "MAE_0_10": 2.704010270819605,
+            "Brier": 0.8118072235692022
+          },
+          "content_cortex": {
+            "MAE_0_10": 2.7578082072565757,
+            "Brier": 0.9042815986241975
+          },
+          "full_fusion": {
+            "MAE_0_10": 2.772140636190751,
+            "Brier": 0.896668915335221
+          },
+          "reassigned_eeg": {
+            "MAE_0_10": 2.760627151802839,
+            "Brier": 0.9120928186406763
+          }
+        },
+        "comparisons": {
+          "mean": {
+            "MAE_reduction": -0.10671242833090255,
+            "relative_reduction_percent": -4.003575411118844,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.3182091105086085,
+                0.18765739893659095
+              ],
+              "reason": null,
+              "replicates": 2000
+            }
+          },
+          "content_only": {
+            "MAE_reduction": -0.068130365371146,
+            "relative_reduction_percent": -2.5196045335469526,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.34460555913300256,
+                0.21782827285045284
+              ],
+              "reason": null,
+              "replicates": 2000
+            }
+          },
+          "content_cortex": {
+            "MAE_reduction": -0.014332428934175316,
+            "relative_reduction_percent": -0.5197036145030909,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.054876094205585306,
+                0.028000171306772428
+              ],
+              "reason": null,
+              "replicates": 2000
+            }
+          },
+          "reassigned_eeg": {
+            "MAE_reduction": -0.01151348438791237,
+            "relative_reduction_percent": -0.4170604632499336,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.12516726734260217,
+                0.08899824073869929
+              ],
+              "reason": null,
+              "replicates": 2000
+            }
+          }
+        },
+        "interpretation": "human_label_accuracy"
+      },
+      "synthetic": {
+        "status": "evaluated",
+        "count": 31,
+        "scores": {
+          "mean": {
+            "MAE_0_10": 1.817787247474747,
+            "Brier": 0.7643417902527299
+          },
+          "content_only": {
+            "MAE_0_10": 1.7974853139603506,
+            "Brier": 1.0176516038655985
+          },
+          "content_cortex": {
+            "MAE_0_10": 2.766389136646557,
+            "Brier": 1.2331133300265007
+          },
+          "full_fusion": {
+            "MAE_0_10": 2.6926588662730975,
+            "Brier": 1.2295586668136678
+          },
+          "reassigned_eeg": {
+            "MAE_0_10": 2.6448905740036706,
+            "Brier": 1.2026297805053803
+          }
+        },
+        "comparisons": {
+          "mean": {
+            "MAE_reduction": -0.8748716187983501,
+            "relative_reduction_percent": -48.12838356159191,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -1.354945537799115,
+                -0.5257964406822188
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          },
+          "content_only": {
+            "MAE_reduction": -0.8951735523127466,
+            "relative_reduction_percent": -49.80143900816831,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -1.8198807414773908,
+                0.6247802842990496
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          },
+          "content_cortex": {
+            "MAE_reduction": 0.07373027037345992,
+            "relative_reduction_percent": 2.6652168849548206,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.16942917660344392,
+                0.2367797733677435
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          },
+          "reassigned_eeg": {
+            "MAE_reduction": -0.04776829226942709,
+            "relative_reduction_percent": -1.8060593031309582,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.269881085245288,
+                0.06908653034670917
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          }
+        },
+        "interpretation": "synthetic_content_review_agreement"
+      }
+    },
+    "interest_engagement": {
+      "human": {
+        "status": "not_evaluated",
+        "reason": "no_supported_labels"
+      },
+      "synthetic": {
+        "status": "evaluated",
+        "count": 31,
+        "scores": {
+          "mean": {
+            "MAE_0_10": 0.9960937499999999,
+            "Brier": 0.5128906249999998
+          },
+          "content_only": {
+            "MAE_0_10": 1.3938805954181586,
+            "Brier": 0.8417852436047233
+          },
+          "content_cortex": {
+            "MAE_0_10": 1.0684580036167686,
+            "Brier": 0.5727549925256501
+          },
+          "full_fusion": {
+            "MAE_0_10": 1.2261699822507985,
+            "Brier": 0.687867906494013
+          },
+          "reassigned_eeg": {
+            "MAE_0_10": 1.1275837432819462,
+            "Brier": 0.5923046778476315
+          }
+        },
+        "comparisons": {
+          "mean": {
+            "MAE_reduction": -0.2300762322507986,
+            "relative_reduction_percent": -23.09784919851155,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.4698234449006122,
+                0.21183703983297164
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          },
+          "content_only": {
+            "MAE_reduction": 0.16771061316736016,
+            "relative_reduction_percent": 12.031921078365228,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.6060731532452337,
+                0.5866681389193219
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          },
+          "content_cortex": {
+            "MAE_reduction": -0.15771197863402991,
+            "relative_reduction_percent": -14.760709180910172,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.3085229851291623,
+                0.02413500511693201
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          },
+          "reassigned_eeg": {
+            "MAE_reduction": -0.09858623896885221,
+            "relative_reduction_percent": -8.743141212900696,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.1480403548157483,
+                -0.02482738304934173
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          }
+        },
+        "interpretation": "synthetic_content_review_agreement"
+      }
+    },
+    "mental_effort": {
+      "human": {
+        "status": "not_evaluated",
+        "reason": "no_supported_labels"
+      },
+      "synthetic": {
+        "status": "evaluated",
+        "count": 31,
+        "scores": {
+          "mean": {
+            "MAE_0_10": 1.1882812499999997,
+            "Brier": 0.5579531249999999
+          },
+          "content_only": {
+            "MAE_0_10": 1.805085999111179,
+            "Brier": 1.0375572537536946
+          },
+          "content_cortex": {
+            "MAE_0_10": 1.214223156068328,
+            "Brier": 0.8335353864982268
+          },
+          "full_fusion": {
+            "MAE_0_10": 1.2517785594987798,
+            "Brier": 0.8470785381109214
+          },
+          "reassigned_eeg": {
+            "MAE_0_10": 1.0874663040325685,
+            "Brier": 0.7819377913446768
+          }
+        },
+        "comparisons": {
+          "mean": {
+            "MAE_reduction": -0.06349730949877992,
+            "relative_reduction_percent": -5.3436263089045575,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.3070525646932462,
+                0.4054702548310161
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          },
+          "content_only": {
+            "MAE_reduction": 0.5533074396123991,
+            "relative_reduction_percent": 30.65269133353462,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.2569115432561375,
+                1.4718730409513225
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          },
+          "content_cortex": {
+            "MAE_reduction": -0.0375554034304514,
+            "relative_reduction_percent": -3.0929572741847826,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.1243258380314468,
+                0.0755928764874625
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          },
+          "reassigned_eeg": {
+            "MAE_reduction": -0.1643122554662113,
+            "relative_reduction_percent": -15.109641085604647,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.4832433597184718,
+                -0.04628112636510197
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          }
+        },
+        "interpretation": "synthetic_content_review_agreement"
+      }
+    },
+    "confusion_risk": {
+      "human": {
+        "status": "not_evaluated",
+        "reason": "no_supported_labels"
+      },
+      "synthetic": {
+        "status": "evaluated",
+        "count": 31,
+        "scores": {
+          "mean": {
+            "MAE_0_10": 0.9734374999999998,
+            "Brier": 0.4511874999999999
+          },
+          "content_only": {
+            "MAE_0_10": 1.4290885290480215,
+            "Brier": 0.9258776508039086
+          },
+          "content_cortex": {
+            "MAE_0_10": 1.6351786185654413,
+            "Brier": 0.9768434712960238
+          },
+          "full_fusion": {
+            "MAE_0_10": 1.77803917179408,
+            "Brier": 1.1519507706785697
+          },
+          "reassigned_eeg": {
+            "MAE_0_10": 1.566737954581913,
+            "Brier": 1.0116484630310818
+          }
+        },
+        "comparisons": {
+          "mean": {
+            "MAE_reduction": -0.80460167179408,
+            "relative_reduction_percent": -82.65570946199219,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -1.502388461958617,
+                -0.3253710268181749
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          },
+          "content_only": {
+            "MAE_reduction": -0.34895064274605825,
+            "relative_reduction_percent": -24.417706506853676,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -1.0247390673030168,
+                0.3645563075588143
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          },
+          "content_cortex": {
+            "MAE_reduction": -0.14286055322863828,
+            "relative_reduction_percent": -8.736694059390972,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.27826605959489825,
+                0.010609553428366785
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          },
+          "reassigned_eeg": {
+            "MAE_reduction": -0.21130121721216708,
+            "relative_reduction_percent": -13.486698052741897,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.4121853935066611,
+                -0.07371128447630328
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          }
+        },
+        "interpretation": "synthetic_content_review_agreement"
+      }
+    },
+    "comprehension_difficulty": {
+      "human": {
+        "status": "not_evaluated",
+        "reason": "no_supported_labels"
+      },
+      "synthetic": {
+        "status": "evaluated",
+        "count": 31,
+        "scores": {
+          "mean": {
+            "MAE_0_10": 1.0593749999999997,
+            "Brier": 0.4534218749999999
+          },
+          "content_only": {
+            "MAE_0_10": 1.809309575217776,
+            "Brier": 1.0546002255030489
+          },
+          "content_cortex": {
+            "MAE_0_10": 1.2628722302135427,
+            "Brier": 0.8522196018297421
+          },
+          "full_fusion": {
+            "MAE_0_10": 1.3253310733536634,
+            "Brier": 0.9788040993118136
+          },
+          "reassigned_eeg": {
+            "MAE_0_10": 1.1570637742749568,
+            "Brier": 0.9223531759465722
+          }
+        },
+        "comparisons": {
+          "mean": {
+            "MAE_reduction": -0.2659560733536636,
+            "relative_reduction_percent": -25.104998074682115,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.6561408804554958,
+                0.16603911900892857
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          },
+          "content_only": {
+            "MAE_reduction": 0.48397850186411223,
+            "relative_reduction_percent": 26.749347292093926,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.3646647893037881,
+                1.1741544299138695
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          },
+          "content_cortex": {
+            "MAE_reduction": -0.06245884314012073,
+            "relative_reduction_percent": -4.945776908053428,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.16806176049158242,
+                0.024524934124201543
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          },
+          "reassigned_eeg": {
+            "MAE_reduction": -0.1682672990787068,
+            "relative_reduction_percent": -14.542612327842258,
+            "descriptive_cluster_interval": {
+              "interval": [
+                -0.2817724645137787,
+                0.17822035762947053
+              ],
+              "reason": null,
+              "replicates": 1915
+            }
+          }
+        },
+        "interpretation": "synthetic_content_review_agreement"
+      }
+    }
+  },
+  "exclusions": [],
+  "fit_manifest_sha256": "efc853175d5efc882f02c5a47d072456a079feb53f20218c82f2ab4bb264d6bb",
+  "source_manifest_sha256": "89d887c4e4e492894bf10b29100e5d68e8ffc6fca8fa09dc93e64c7800cfd769",
+  "architecture_runs": true,
+  "independent_human_validation": false,
+  "measured_fmri_superiority_tested": false,
+  "five_heads_fitted_in_every_fold": true,
+  "cortical_information_note": "Existing tribe block may already contain pooled native cortical predictions; the new cortex block recomputes a native-clock summary. Both are common to content_cortex and full_fusion, so their contrast isolates predicted EEG features, not new fMRI information.",
+  "fixed_EEG_branch_benchmark": {
+    "path": "/Volumes/EEG Research Workspace/MetaHackathon/version2/runs/endpoint-v1/results.json",
+    "sha256": "9802fbc21407d8d54994d4452b526f84ac558cf96883bc0e737a816361e7cf32",
+    "evaluation_status": "exploratory reused test",
+    "promotion_gate_passed": false,
+    "deployed_arm": "full_calibrated",
+    "equal_clip_metrics": {
+      "tribe_endpoint": {
+        "MSE": 1.0755059172835106,
+        "MAE": 0.8035399978941744,
+        "macro_r": -0.013471645167790668
+      },
+      "full_endpoint": {
+        "MSE": 0.906186594196094,
+        "MAE": 0.746952950061933,
+        "macro_r": 0.0074265263162746255
+      },
+      "tribe_calibrated": {
+        "MSE": 0.7852499641547458,
+        "MAE": 0.6966810530422498,
+        "macro_r": 0.03698184694262458
+      },
+      "full_calibrated": {
+        "MSE": 0.789025719610184,
+        "MAE": 0.698303310948367,
+        "macro_r": 0.02903374122691794
+      },
+      "previous_mean": {
+        "MSE": 0.77698135002922,
+        "MAE": 0.6933979802878003,
+        "macro_r": null
+      },
+      "previous_acoustic_ridge": {
+        "MSE": 0.7852499641547458,
+        "MAE": 0.6966810530422498,
+        "macro_r": 0.03698184694262458
+      },
+      "previous_tribe_tcn": {
+        "MSE": 1.1064979068725151,
+        "MAE": 0.8116835800533824,
+        "macro_r": 0.011251404426347773
+      },
+      "previous_full_tcn": {
+        "MSE": 0.949432586986908,
+        "MAE": 0.763870025453005,
+        "macro_r": -0.07319539705592902
+      }
+    },
+    "interpretation": "Separate reused speech EEG benchmark; not new educational-content validation or fMRI superiority."
+  },
+  "limitations": [
+    "Previously evaluated four lectures and synthetic content opinions.",
+    "No individual-student or instantaneous state validation.",
+    "Predicted EEG summaries represent transfer from speech EEG.",
+    "Native cortex unchanged; no measured-fMRI training or test."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "schema": "perception-quality-gate-code-revision-v1",
+  "parent_amendment_sha256": "e317d9aa99ea4d70b1450e1eb8e8463669f4c4519a4b1c276fa329245c994cf5",
+  "quality_import_code_sha256": "2bba8a9ecf7af0f4d9f9827b072d1065351167285ad7171722b4c177dba0a0c1",
+  "change": "Additional inference-time validation that the screening code matches the authenticated audit; target definition, thresholds and folds unchanged.",
+  "EEG_arms_fitted_or_scored": false
+}

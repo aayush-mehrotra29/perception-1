@@ -1,12 +1,36 @@
 # Perception — model and application code
 
-Private source backup of the MetaHackathon workspace, including the original
+Source backup of the MetaHackathon workspace, including the original
 application, multimodal inference code, and the isolated version2 speech-to-EEG
 experiment. The SSD working files were copied without modification. This is a
 new source snapshot that includes previously uncommitted code; it does not
 rewrite or publish the original Git history.
 
-## Latest follow-up: endpoint readout
+## Current release: numerical EEG, cortex, and five ratings
+
+The completed numerical backend is in [`version2/numerical_brain_v1/`](version2/numerical_brain_v1/).
+It combines the frozen 40-channel, 50 Hz filtered speech-EEG endpoint, unchanged
+native TRIBE cortical predictions, and a fitted five-head rating network that
+consumes content and both predicted neural streams. Numerical exports include
+surface geometry, independent clocks, validity masks, and provenance. Verified
+examples cover video, audio, and narrated text, images, and PDFs. The recorded
+release check passed 185 regression tests and all five numerical bundle audits.
+
+The primary human attention MAE was **2.77214** for full fusion, **2.75781** for
+content plus cortex, and **2.66543** for the training mean. Adding predicted EEG
+did not demonstrate an accuracy benefit. The waveform correlation remains
+approximately **0.029**, and measured-fMRI superiority has not been tested.
+
+Read the [model card](version2/numerical_brain_v1/MODEL_CARD.md),
+[integration guide](version2/numerical_brain_v1/INTEGRATION.md), and
+[complete results](version2/benchmarks/numerical-brain-v1/RESULTS.md).
+[`version2/NUMERICAL_SOURCE_SNAPSHOT.json`](version2/NUMERICAL_SOURCE_SNAPSHOT.json)
+records the new source hashes. Fitted weights, participant recordings, and
+private runtime configuration are excluded; a source clone alone cannot perform
+inference without those provisioned artifacts. The active application is in
+the separate [superclass repository](https://github.com/aayush-mehrotra29/superclass).
+
+## Earlier follow-up: endpoint readout
 
 The small timing-preserving readout experiment is fitted and checked. Its
 development-selected blend uses 20% multimodal neural prediction and 80%

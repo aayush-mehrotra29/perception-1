@@ -1,0 +1,17 @@
+{
+  "schema": "perception-fixed-local-annotation-policy-v1",
+  "teacher_repo": "meta-llama/Llama-3.2-3B-Instruct",
+  "teacher_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "quantization_receipt_sha256": "afd0075696ce07e638941cfa68731d9dde75742e902cda4cbcb106c7a75a36e8",
+  "backend": "mlx-affine-4bit-group64",
+  "decoding": "greedy",
+  "seed": 17,
+  "max_new_tokens": 900,
+  "max_packets_per_viewing": 8,
+  "selection": "equally spaced chronological row positions without reading human ratings",
+  "transcript_scope": "only complete original transcript intervals inside the preceding 44 seconds",
+  "rubric_disagreement_limit": 2.5,
+  "human_scope_precedence": "only identical person, media, quality, scope, start and stop",
+  "invalid_or_missing_evidence": "abstain; no generated response repair or best-response selection",
+  "status": "fixed before any real training-label run; not a claim that the runtime or five labels are validated"
+}

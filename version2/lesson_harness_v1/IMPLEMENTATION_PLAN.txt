@@ -1,0 +1,148 @@
+
+# Multimodal Lesson Harness with One-Second Timelines and TRIBE Predictions
+
+## 1. Final behavior
+
+A teacher uploads video, audio, text, a PDF, or an image. The system returns:
+
+- A **one-second timeline** containing attention difficulty, interest/engagement, mental effort, confusion risk, and comprehension difficulty, each displayed on 0–10.
+- Content references and concept identifiers for each interval.
+- Flags for sustained changes in the predicted qualities.
+- **Native TRIBE fMRI-response predictions**, with their original timestamps and provenance.
+- An export that future student agents can combine with their own knowledge and memory states.
+
+“One-second timeline” means one output position per second. It does **not** establish one-second psychological accuracy. Training-label resolution, prediction context, and display resolution remain explicit and separate.
+
+These are expected responses for a reference learner population, not observations of a particular student.
+
+## 2. Inputs, clocks, and outputs
+
+### Supported inputs
+
+Reuse the existing adapters:
+
+| Input | Timeline basis |
+|---|---|
+| Video | Decoded media timestamps |
+| Audio | Decoded audio timestamps |
+| Text | Explicit assumed reading speed |
+| PDF | Explicit page-display durations, with page/text references |
+| Image | Explicit assumed viewing duration |
+
+“Files” initially means these supported formats. DOCX, PPTX, websites, and arbitrary archives are outside this build; users can export documents to PDF or text.
+
+Preserve modality masks. Do not invent audio for silent documents or assume scanned PDFs contain extracted text. Document predictions remain experimental transfer until separately evaluated.
+
+### One-second quality predictions
+
+- Evaluate the small prediction head at every integer second using the preceding supported content context.
+- Keep the existing **44-second context** as the initial model definition.
+- Reassemble window features for the one-second queries; do not relabel five-second cached predictions as independently computed one-second predictions.
+- Reuse expensive frozen encoder outputs wherever their timing and coverage support the new queries.
+- Return `null` for unsupported intervals, including the initial incomplete context. Short inputs may therefore receive TRIBE output without supported quality predictions.
+- Do not create artificial fluctuations simply to make static content appear dynamic.
+
+### TRIBE output
+
+Run the existing frozen native TRIBE branch alongside the quality predictor. Preserve its output arrays, spatial representation, temporal sampling, and model identity.
+
+A synchronized browser display may interpolate TRIBE frames, but interpolated frames must remain identifiable. They are not additional independent fMRI predictions, instantaneous neural measurements, or evidence that EEG training improved TRIBE.
+
+### Interface
+
+Extend `brain.content_pipeline.run` with an optional versioned `lesson_model` artifact.
+
+Export a manifest, quality timeline, change flags, and references to native TRIBE arrays. Include:
+
+- Source/artifact hashes and model versions.
+- Clock basis and content references.
+- Five rating distributions and their expected 0–10 values.
+- Per-quality supervision origin and validation status.
+- Context duration, supported coverage, and ensemble disagreement.
+- Separate provenance for the quality model and TRIBE.
+
+## 3. Training the five-output model
+
+### Data
+
+Use verified EduGage material and eligible official BBBD v1.1 recordings. Reuse authenticated local caches and selectively acquire missing data.
+
+Require correct media alignment, recording conditions, artifact handling, and label provenance. Keep the standalone research’s reserved test material protected. Exclude unsupported samples rather than filling them with zeros.
+
+### Labels
+
+Use human attention and engagement labels where available, at their actual temporal scope. Use valid quizzes only for assessment-level evaluation or corroboration.
+
+For missing targets, generate **explicitly synthetic labels** locally using:
+
+- Timestamped lesson content and observable presentation features.
+- Quality-checked EEG summaries.
+- Available recording-condition information.
+- Fixed, quality-specific annotation rubrics.
+
+Use the existing local Llama checkpoint with two fixed rubric formulations. Each produces a distribution over five levels: 0, 2.5, 5, 7.5, and 10. Exclude targets when the expected rubric scores disagree by more than one level or evidence is insufficient.
+
+Do not equate a particular EEG band change with confusion, understanding, or attention. Synthetic labels are experimental interpretations, not newly discovered ground truth. Preserve their evidence and provenance.
+
+Whole-video human ratings supervise pooled video predictions; they are not copied into every second as measured labels.
+
+### Architecture and defaults
+
+Reuse frozen audio, visual, language, TRIBE, and existing content features.
+
+- Separate modality blocks with explicit missing-modality masks.
+- Training-fold scaling and PCA, capped at 16 components per block.
+- Shared network: hidden widths 64 and 32, GELU activations.
+- Five separate ordered-rating distribution heads.
+- Human-label loss weight 1; synthetic-label weight 0.2.
+- Balance qualities and participant viewings so dense synthetic windows do not dominate.
+- AdamW: learning rate 0.001, weight decay 0.01, batch size 32, 100 epochs, gradient clipping at 1.
+- Seeds 17, 29, and 43; average predictions without selecting the best test seed.
+
+No waveform training, foundation-model fine-tuning, student-agent implementation, or frontend redesign is included.
+
+## 4. Evaluation, flags, and release tests
+
+Freeze content-family and participant splits before scoring. Fit learned EEG projections, scalers, feature selection, and model parameters inside training scopes.
+
+Compare identical eligible observations across:
+
+1. Training-mean baseline.
+2. Content-only ridge.
+3. Content-only five-head network.
+4. Content plus TRIBE network.
+5. Full EEG-informed network.
+6. Full network with reassigned training EEG as a negative control.
+
+Report human-label accuracy, synthetic-label agreement, behavioral relevance, and engineering performance separately. Report every head, including failures.
+
+For the prototype, flag a change of at least two display points that persists across three consecutive **five-second checkpoints**. The chart remains one-second; the alert rule does not treat heavily overlapping adjacent seconds as independent evidence. Describe flags as predicted intervals, not observed student transitions.
+
+Required checks:
+
+- No participant, content-family, or label leakage.
+- One-second query alignment and explicit context boundaries.
+- Correct document schedules and modality masks.
+- No fabricated values for unsupported intervals.
+- Bounded scores, valid distributions, and reproducible model reload.
+- Unchanged native TRIBE arrays and clocks.
+- No participant EEG or derived participant summaries sent to cloud models.
+- Compatibility with existing bundles.
+
+A release may be a working experimental five-output model without passing a human-accuracy claim. Synthetic-label agreement, faster inference, or more output samples cannot establish superiority over TRIBE on measured fMRI.
+
+## 5. Execution and completion gates
+
+1. Publish the input/output contract and one-second timing rules.
+2. Qualify data, labels, and cached representation coverage.
+3. Generate and audit synthetic labels.
+4. Train the fixed baselines and five-head model.
+5. Evaluate, fit deployment artifacts, and connect the pipeline.
+6. Export one verified video example plus audio, text, PDF, and image compatibility examples.
+
+Deliver the fitted artifacts, frozen configuration, label audit, complete benchmark report, model card, and integration example. If a head lacks usable training labels, report it as blocked rather than silently inventing evidence.
+
+Preserve existing compute-credit ceilings and 12 GiB disk reserves. The last check found approximately 6 GiB free internally, so local numerical training and label generation currently require restored headroom. Estimate runtime after one representative labeling batch and training fold.
+
+**The intended result is one upload, five synchronized quality timelines, and a separate synchronized TRIBE prediction stream—ready for the later student-agent system.**
+

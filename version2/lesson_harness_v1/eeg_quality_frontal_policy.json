@@ -1,0 +1,55 @@
+{
+  "schema": "perception-received-EEG-frontal-quality-policy-v1",
+  "status": "new_exploratory_montage_fixed_before_frontal_screen_and_training",
+  "purpose": "Conservative engineering screen of received voltage summaries for exploratory auxiliary supervision; not validated brain-state labels",
+  "primary_documentation": "https://mind-monitor.com/FAQ.php#oscspec",
+  "documentation_inspected_with_browser": "2026-11-04",
+  "channels": [
+    "af7",
+    "af8"
+  ],
+  "contact_codes": {
+    "1": "good",
+    "2": "medium",
+    "4": "bad"
+  },
+  "contact_rule": "Both bracketing contact packets must report good on AF7 and AF8; other channels are not used as targets.",
+  "maximum_contact_packet_gap_ms": 500,
+  "movement_padding_ms": {
+    "blink": 500,
+    "jaw_clench": 1000
+  },
+  "flatline_rows": 128,
+  "flatline_definition": "At least 128 identical consecutive received values in any channel; broken by missing original rows; row count does not imply verified physical duration",
+  "documented_voltage_range_uv": [
+    0.0,
+    1682.815
+  ],
+  "range_rule": "Reject values at or outside documented limits; do not treat the observed 1450 value as an established Athena saturation limit",
+  "maximum_rejected_sample_fraction": 0.1,
+  "minimum_retained_rows": 256,
+  "target_definition": "Two frontal channel means and two log1p population variances; original eight-channel aggregate verified before selecting AF7 and AF8.",
+  "preserve_original_target_artifacts": true,
+  "interpolation_or_spectral_reconstruction": false,
+  "thresholds_are_validated_neuroscience_cutoffs": false,
+  "physical_acquisition_alignment_established": false,
+  "historical_stimulus_identity_established": false,
+  "artifact_free_claim": false,
+  "selection_uses_behavioral_ratings_or_held_out_scores": false,
+  "limitations": [
+    "Host-receipt clocks do not identify hardware acquisition latency.",
+    "Marker padding and 90 percent retained-row requirement are fixed engineering choices, not calibrated neuroscience criteria.",
+    "The general relay voltage specification may not expose every device-specific saturation boundary.",
+    "Good contact markers and movement screening do not exclude all ocular, muscle or reference artifacts.",
+    "Raw-voltage means retain device/reference offsets and must not be interpreted as cognitive ratings."
+  ],
+  "source_channels": [
+    "tp9",
+    "af7",
+    "af8",
+    "tp10"
+  ],
+  "reason": "All-four-channel screen accepted0/1020 windows. Marker audits show poor TP9/TP10 contact and predominantly good AF7/AF8 contact; pinned author preprocessing exports AF7/AF8.",
+  "author_code_sha256": "51eca55cf312b6cb4317cf8bb324c1b3883bacbc1681f41a38a6e4c19793d458",
+  "changed_thresholds": false
+}

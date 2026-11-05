@@ -1,0 +1,30 @@
+{
+  "schema": "perception-lesson-experimental-release-v1",
+  "created_at_utc": "2026-11-04T21:25:22.790794+00:00",
+  "full_five_quality_goal_complete": false,
+  "fitted_heads": [
+    "attention_difficulty"
+  ],
+  "blocked_heads": [
+    "interest_engagement",
+    "mental_effort",
+    "confusion_risk",
+    "comprehension_difficulty"
+  ],
+  "human_accuracy_improvement_established": false,
+  "measured_fmri_superiority_tested": false,
+  "sources": {
+    "/Volumes/EEG Research Workspace/MetaHackathon/version2/lesson_harness_v1/config.json": "95fdb0ffa37844997ad913fa6159a1f032046b9a5bcd75b0f4da4300b9e6226e",
+    "/Volumes/EEG Research Workspace/MetaHackathon/version2/lesson_harness_v1/annotation_policy.json": "b2c29ec888a929434dd09e612490153cf0a3dfbcb2f5b95708992b4e15476ba3",
+    "/Volumes/EEG Research Workspace/MetaHackathon/version2/lesson_harness_v1/MODEL_CARD.md": "f239f242948c5284006a341f5254b15c77cd80f3cf3445cf786b50b6255dd81a",
+    "/Volumes/EEG Research Workspace/MetaHackathon/version2/lesson_harness_v1/INTEGRATION.md": "d97b3fc69c3ee26278e5fb95a38e0d953d49341c6dd5ed6e64b36f2e945390d0",
+    "/Volumes/EEG Research Workspace/MetaHackathon/version2/.local/lesson-harness-v1/frontal-deployment-r1/manifest.json": "dd373313cee21cd4ea9742ae0d27576e9a593351310f80165a19660b337f3bda",
+    "/Volumes/EEG Research Workspace/MetaHackathon/version2/.local/lesson-harness-v1/frontal-six-arm-benchmark-r1/benchmark.json": "3b9af71b26e19e2113fe3f3bcf62829089ccecc92ea9acbf24522ba41e91910d",
+    "/Volumes/EEG Research Workspace/MetaHackathon/version2/.local/lesson-harness-v1/frontal-report-r1/manifest.json": "0fcbd98186eda1e34b301bb77d622f474193d9dd122257f6dae56ca6dfb0374b",
+    "/Volumes/EEG Research Workspace/MetaHackathon/version2/.local/lesson-harness-v1/labeled-frontal-ordinal-r1/label-audit.json": "b00e16dba265cda27750756ff6d43bb8c0b44e0bea128c0ff20f42d570810e3f",
+    "/Volumes/EEG Research Workspace/MetaHackathon/version2/.local/lesson-harness-v1/frontal-five-format-examples-r2/manifest.json": "3d7be5e2e96fdda28d07c8c7d98857df5461074bd8929dccbfd87c22b7e46f08",
+    "/Volumes/EEG Research Workspace/MetaHackathon/version2/.local/lesson-harness-v1/real-inference-reload-verification-r1.json": "b4bc4c7d3f2805a978837c614fa3b0137b53c9a67a0773ddd2a93f2df117d1d7",
+    "/Volumes/EEG Research Workspace/MetaHackathon/version2/.local/lesson-harness-v1/data-eligibility-r1.json": "3cf6880636618eb3133e22025abe4462f1a814bfa023ff1cdfba7899ed39c7e9",
+    "/Volumes/EEG Research Workspace/MetaHackathon/version2/.local/lesson-harness-v1/unit-tests-current.log": "5aa2b6f7eea8682b55d64e964240d7e4ca8167c0733c55a3e2e4b2ed3c38ec77"
+  }
+}

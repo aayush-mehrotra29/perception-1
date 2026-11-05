@@ -1,0 +1,33 @@
+{
+  "schema": "perception-received-EEG-quality-policy-v1",
+  "status": "fixed_before_quality_screening_and_EEG_assisted_scoring",
+  "purpose": "Conservative engineering screen of received voltage summaries for exploratory auxiliary supervision; not validated brain-state labels",
+  "primary_documentation": "https://mind-monitor.com/FAQ.php#oscspec",
+  "documentation_inspected_with_browser": "2026-11-04",
+  "channels": ["tp9", "af7", "af8", "tp10"],
+  "contact_codes": {"1": "good", "2": "medium", "4": "bad"},
+  "contact_rule": "Both bracketing received contact packets must report good for every channel; maximum packet separation 500 ms; no fill before first or after last packet",
+  "maximum_contact_packet_gap_ms": 500,
+  "movement_padding_ms": {"blink": 500, "jaw_clench": 1000},
+  "flatline_rows": 128,
+  "flatline_definition": "At least 128 identical consecutive received values in any channel; broken by missing original rows; row count does not imply verified physical duration",
+  "documented_voltage_range_uv": [0.0, 1682.815],
+  "range_rule": "Reject values at or outside documented limits; do not treat the observed 1450 value as an established Athena saturation limit",
+  "maximum_rejected_sample_fraction": 0.1,
+  "minimum_retained_rows": 256,
+  "target_definition": "Recompute four channel means and four log1p population variances from retained received rows in each original 44-second reported-position context",
+  "preserve_original_target_artifacts": true,
+  "interpolation_or_spectral_reconstruction": false,
+  "thresholds_are_validated_neuroscience_cutoffs": false,
+  "physical_acquisition_alignment_established": false,
+  "historical_stimulus_identity_established": false,
+  "artifact_free_claim": false,
+  "selection_uses_behavioral_ratings_or_held_out_scores": false,
+  "limitations": [
+    "Host-receipt clocks do not identify hardware acquisition latency.",
+    "Marker padding and 90 percent retained-row requirement are fixed engineering choices, not calibrated neuroscience criteria.",
+    "The general relay voltage specification may not expose every device-specific saturation boundary.",
+    "Good contact markers and movement screening do not exclude all ocular, muscle or reference artifacts.",
+    "Raw-voltage means retain device/reference offsets and must not be interpreted as cognitive ratings."
+  ]
+}

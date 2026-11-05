@@ -1,0 +1,133 @@
+{
+  "schema": "perception-lesson-experiment-v1",
+  "status": "fixed independent AI content review amendment; original numerical defaults preserved",
+  "context_seconds": 44,
+  "query_step_seconds": 1,
+  "representation_hz": 2,
+  "primary_domain": "educational_video",
+  "reference_population": "eligible study participants; no K-12 or individual-person calibration established",
+  "qualities": [
+    "attention_difficulty",
+    "interest_engagement",
+    "mental_effort",
+    "confusion_risk",
+    "comprehension_difficulty"
+  ],
+  "levels": [
+    0,
+    2.5,
+    5,
+    7.5,
+    10
+  ],
+  "representation_blocks": [
+    "text",
+    "audio",
+    "video",
+    "tribe"
+  ],
+  "auxiliary_blocks": [
+    "audio_descriptors",
+    "progress",
+    "sam_audio",
+    "sam_visual",
+    "semantics",
+    "visual_descriptors"
+  ],
+  "preprocessing": {
+    "pca_cap_per_block": 16,
+    "scope": "training_only",
+    "feature_clip": 5
+  },
+  "architecture": {
+    "hidden_widths": [
+      64,
+      32
+    ],
+    "activation": "gelu",
+    "output_heads": 5,
+    "levels_per_head": 5
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.01,
+    "batch_size": 32,
+    "epochs": 100,
+    "gradient_clip": 1,
+    "seeds": [
+      17,
+      29,
+      43
+    ],
+    "human_weight": 1,
+    "synthetic_weight": 0.2,
+    "checkpoint": "final_fixed_epoch",
+    "aggregation": "mean_seed_distributions"
+  },
+  "synthetic_labels": {
+    "teacher": "two independent AI content reviewers",
+    "rubrics": [
+      "evidence_first_v1",
+      "counterevidence_first_v1"
+    ],
+    "max_expected_score_disagreement": 2.5,
+    "use_insufficient_evidence_mask": true,
+    "participant_data_cloud_allowed": false,
+    "sampling": "same 31 previously selected content windows; no participant records or EEG in review packets",
+    "method": "independent-categorical-content-review-v1",
+    "distribution_method": "one-hot categorical opinion per reviewer, averaged only after agreement gate; not calibrated uncertainty",
+    "probabilities_calibrated_to_humans": false,
+    "eeg_in_annotation": false
+  },
+  "arms": [
+    "mean",
+    "content_ridge",
+    "content_network",
+    "content_tribe_network",
+    "full_eeg_informed",
+    "training_eeg_reassigned"
+  ],
+  "alerts": {
+    "checkpoint_seconds": 5,
+    "minimum_change": 2,
+    "consecutive_checkpoints": 3,
+    "status": "prototype_rule_not_validated_state_transition"
+  },
+  "resources": {
+    "threads": 1,
+    "internal_reserve_bytes": 12884901888,
+    "external_reserve_bytes": 12884901888,
+    "increase_cloud_limits": false
+  },
+  "claims": {
+    "five_qualities_human_validated": false,
+    "one_second_psychological_accuracy": false,
+    "measured_fmri_superiority": false,
+    "TRIBE_weights_changed": false,
+    "synthetic_label_agreement_is_human_accuracy": false
+  },
+  "eeg_auxiliary": {
+    "target": "Audited received-row means and log1p variances for the qualified montage; frontal amendment uses AF7/AF8 only",
+    "loss": "Huber delta=1 on train-viewing-weighted standardized summaries",
+    "loss_weight": 0.1,
+    "head": "training-only linear32-to-audited-target-width (4 for frontal;8 for original montage)",
+    "inference_uses_recorded_EEG": false,
+    "negative_control": "within-viewing nonzero cyclic reassignment, seed 1729, training rows only",
+    "batch_sampling": "32 uniform EEG rows with replacement per quality minibatch; global viewing weights retained",
+    "benchmark_interpretation": "with common quality labels, auxiliary ablation isolates additional EEG supervision; synthetic-label provenance reported separately",
+    "allowed_montages": [
+      [
+        "TP9",
+        "AF7",
+        "AF8",
+        "TP10"
+      ],
+      [
+        "AF7",
+        "AF8"
+      ]
+    ],
+    "montage_selection": "source quality manifest, never held-out model score"
+  }
+}

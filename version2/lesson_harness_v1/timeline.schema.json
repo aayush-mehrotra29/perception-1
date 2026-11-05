@@ -1,0 +1,442 @@
+{
+  "$defs": {
+    "ChangeFlag": {
+      "additionalProperties": false,
+      "properties": {
+        "quality": {
+          "title": "Quality",
+          "type": "string"
+        },
+        "baseline_second": {
+          "minimum": 0,
+          "title": "Baseline Second",
+          "type": "integer"
+        },
+        "onset_second": {
+          "minimum": 0,
+          "title": "Onset Second",
+          "type": "integer"
+        },
+        "confirmed_second": {
+          "minimum": 0,
+          "title": "Confirmed Second",
+          "type": "integer"
+        },
+        "direction": {
+          "enum": [
+            "increase",
+            "decrease"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "change": {
+          "title": "Change",
+          "type": "number"
+        },
+        "interpretation": {
+          "const": "predicted_interval_not_observed_student_transition",
+          "default": "predicted_interval_not_observed_student_transition",
+          "title": "Interpretation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "quality",
+        "baseline_second",
+        "onset_second",
+        "confirmed_second",
+        "direction",
+        "change"
+      ],
+      "title": "ChangeFlag",
+      "type": "object"
+    },
+    "QualityValue": {
+      "additionalProperties": false,
+      "properties": {
+        "distribution": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Distribution"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "maximum": 10,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "ensemble_sd": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ensemble Sd"
+        },
+        "evidence_status": {
+          "enum": [
+            "human_supported",
+            "synthetic_proxy",
+            "experimental_transfer",
+            "unavailable"
+          ],
+          "title": "Evidence Status",
+          "type": "string"
+        },
+        "supervision_origins": {
+          "items": {
+            "enum": [
+              "human",
+              "synthetic"
+            ],
+            "type": "string"
+          },
+          "title": "Supervision Origins",
+          "type": "array"
+        },
+        "validation_status": {
+          "default": "not_evaluated",
+          "enum": [
+            "not_evaluated",
+            "exploratory",
+            "human_evaluated"
+          ],
+          "title": "Validation Status",
+          "type": "string"
+        },
+        "training_label_resolution_seconds": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Training Label Resolution Seconds"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        }
+      },
+      "required": [
+        "evidence_status"
+      ],
+      "title": "QualityValue",
+      "type": "object"
+    },
+    "SourceReference": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "minLength": 1,
+          "title": "Source Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "media_interval",
+            "text_span",
+            "page",
+            "image"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start"
+        },
+        "stop": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stop"
+        },
+        "page_index": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page Index"
+        },
+        "character_start": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Character Start"
+        },
+        "character_stop": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Character Stop"
+        }
+      },
+      "required": [
+        "source_id",
+        "kind"
+      ],
+      "title": "SourceReference",
+      "type": "object"
+    },
+    "TimelinePoint": {
+      "additionalProperties": false,
+      "properties": {
+        "second": {
+          "minimum": 0,
+          "title": "Second",
+          "type": "integer"
+        },
+        "context_start": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Context Start"
+        },
+        "context_stop": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Context Stop"
+        },
+        "qualities": {
+          "additionalProperties": {
+            "$ref": "#/$defs/QualityValue"
+          },
+          "title": "Qualities",
+          "type": "object"
+        },
+        "active_modalities": {
+          "items": {
+            "enum": [
+              "text",
+              "audio",
+              "video",
+              "tribe"
+            ],
+            "type": "string"
+          },
+          "title": "Active Modalities",
+          "type": "array"
+        },
+        "concept_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Concept Ids",
+          "type": "array"
+        },
+        "references": {
+          "items": {
+            "$ref": "#/$defs/SourceReference"
+          },
+          "title": "References",
+          "type": "array"
+        }
+      },
+      "required": [
+        "second",
+        "qualities"
+      ],
+      "title": "TimelinePoint",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "perception-lesson-timeline-v1",
+      "default": "perception-lesson-timeline-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "model_version": {
+      "default": "lesson-harness-v1",
+      "title": "Model Version",
+      "type": "string"
+    },
+    "source_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Source Sha256",
+      "type": "string"
+    },
+    "artifact_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Artifact Sha256",
+      "type": "string"
+    },
+    "input_format": {
+      "enum": [
+        "video",
+        "audio",
+        "text",
+        "pdf",
+        "image"
+      ],
+      "title": "Input Format",
+      "type": "string"
+    },
+    "duration_seconds": {
+      "exclusiveMinimum": 0,
+      "title": "Duration Seconds",
+      "type": "number"
+    },
+    "clock_basis": {
+      "minLength": 1,
+      "title": "Clock Basis",
+      "type": "string"
+    },
+    "query_step_seconds": {
+      "const": 1,
+      "default": 1,
+      "title": "Query Step Seconds",
+      "type": "integer"
+    },
+    "context_seconds": {
+      "const": 44,
+      "default": 44,
+      "title": "Context Seconds",
+      "type": "integer"
+    },
+    "psychological_resolution_validated_seconds": {
+      "default": null,
+      "title": "Psychological Resolution Validated Seconds",
+      "type": "null"
+    },
+    "observed_student_state": {
+      "const": false,
+      "default": false,
+      "title": "Observed Student State",
+      "type": "boolean"
+    },
+    "analysis_mode": {
+      "const": "whole_lesson_offline",
+      "default": "whole_lesson_offline",
+      "title": "Analysis Mode",
+      "type": "string"
+    },
+    "causal_realtime_prediction_validated": {
+      "const": false,
+      "default": false,
+      "title": "Causal Realtime Prediction Validated",
+      "type": "boolean"
+    },
+    "reference_population": {
+      "minLength": 1,
+      "title": "Reference Population",
+      "type": "string"
+    },
+    "points": {
+      "items": {
+        "$ref": "#/$defs/TimelinePoint"
+      },
+      "title": "Points",
+      "type": "array"
+    },
+    "flags": {
+      "items": {
+        "$ref": "#/$defs/ChangeFlag"
+      },
+      "title": "Flags",
+      "type": "array"
+    }
+  },
+  "required": [
+    "source_sha256",
+    "artifact_sha256",
+    "input_format",
+    "duration_seconds",
+    "clock_basis",
+    "reference_population",
+    "points",
+    "flags"
+  ],
+  "title": "Timeline",
+  "type": "object"
+}

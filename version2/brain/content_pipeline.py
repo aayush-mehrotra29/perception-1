@@ -1,8 +1,7 @@
 """One entry point for timed videos/audio and explicitly timed text/documents.
 
-Video uses the full integrated EEG head. Other formats use separately trained
-available-modality heads and remain experimental transfers from lecture-video
-training. There are no synthetic learners or attention/retention predictions.
+Optional lesson_model adds experimental five-quality timelines. Legacy EEG paths
+remain selectable. Neither path executes synthetic students or predicts retention.
 """
 import argparse
 import asyncio
@@ -48,7 +47,7 @@ def _load_head(root, mode):
     return path
 
 
-def run(source: Path, request: PublicMediaRequest, output: Path, request_prefix: str, *,
+def _run_content(source: Path, request: PublicMediaRequest, output: Path, request_prefix: str, *,
         video_model=None, transfer_models=None, fusion_model=None, words_per_minute=None, seconds_per_page=None):
     if fusion_model is not None:
         if video_model is not None or transfer_models is not None:
@@ -159,6 +158,40 @@ def run(source: Path, request: PublicMediaRequest, output: Path, request_prefix:
         raise
 
 
+def run(source: Path, request: PublicMediaRequest, output: Path, request_prefix: str, *,
+        video_model=None, transfer_models=None, fusion_model=None, lesson_model=None, composite_model=None,
+        words_per_minute=None, seconds_per_page=None, narration_captions=None,
+        narration_voice='Samantha (English (US))', narration_rate=180):
+    if composite_model is not None:
+        if any(x is not None for x in [video_model,transfer_models,fusion_model,lesson_model]):
+            raise ValueError('composite_model is exclusive with other model selectors')
+        if words_per_minute is not None or seconds_per_page is not None:
+            raise ValueError('composite narration uses actual audio duration, not an assumed silent reading clock')
+        from numerical_brain_v1.pipeline import run as run_composite
+        return run_composite(source,request,output,request_prefix,composite_model=composite_model,
+            caption_records=narration_captions,voice=narration_voice,narration_rate=narration_rate)
+    if lesson_model is not None:
+        if any(x is not None for x in [video_model,transfer_models,fusion_model]):
+            raise ValueError("lesson_model is exclusive with legacy EEG model selection")
+        from lesson_harness_v1.artifact import preflight
+        from lesson_harness_v1.inference import preflight_runtime
+        preflight(lesson_model)
+        guard(output)
+        preflight_runtime()  # Fail before paid calls if local inference cannot run.
+    result=_run_content(source,request,output,request_prefix,video_model=video_model,
+        transfer_models=transfer_models,fusion_model=fusion_model,words_per_minute=words_per_minute,
+        seconds_per_page=seconds_per_page)
+    if lesson_model is None:return result
+    from lesson_harness_v1.integration import attach
+    try:
+        return attach(output,request,lesson_model,result)
+    except Exception as error:
+        (Path(output)/'lesson-incomplete.json').write_text(json.dumps({'stage':'lesson_quality_inference',
+            'error_type':type(error).__name__,'content_and_TRIBE_outputs_preserved':True,
+            'paid_calls_automatically_retried':False},indent=2)+'\n')
+        raise
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     for name in ("source", "request", "output"):
@@ -167,10 +200,17 @@ if __name__ == "__main__":
     parser.add_argument("--video-model", type=Path)
     parser.add_argument("--transfer-models", type=Path)
     parser.add_argument("--fusion-model", type=Path)
+    parser.add_argument("--lesson-model", type=Path)
+    parser.add_argument("--composite-model", type=Path)
+    parser.add_argument("--narration-captions", type=Path)
+    parser.add_argument("--narration-voice", default='Samantha (English (US))')
+    parser.add_argument("--narration-rate", type=int, default=180)
     parser.add_argument("--words-per-minute", type=float)
     parser.add_argument("--seconds-per-page", nargs="+", type=float)
     args = parser.parse_args()
     print(json.dumps(run(args.source, PublicMediaRequest.model_validate_json(args.request.read_text()), args.output,
         args.request_prefix, video_model=args.video_model, transfer_models=args.transfer_models,
-        fusion_model=args.fusion_model,
+        fusion_model=args.fusion_model, lesson_model=args.lesson_model, composite_model=args.composite_model,
+        narration_captions=json.loads(args.narration_captions.read_text()) if args.narration_captions else None,
+        narration_voice=args.narration_voice, narration_rate=args.narration_rate,
         words_per_minute=args.words_per_minute, seconds_per_page=args.seconds_per_page)))

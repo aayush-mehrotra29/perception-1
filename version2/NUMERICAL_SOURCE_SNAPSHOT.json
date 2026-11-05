@@ -1,0 +1,1139 @@
+{
+  "schema": "perception-numerical-source-snapshot-v1",
+  "release": "numerical-brain-v1-r1",
+  "source_files": [
+    {
+      "file": "brain/meta_voice.py",
+      "sha256": "29f77792b0dac9e3dae63608f01d11b9a06ec2f012270b5b87538cb4a7bb5e18"
+    },
+    {
+      "file": "brain/local_baseline.py",
+      "sha256": "3d866434da7b5edba11dd57d70a02e7df76f9410b435fc7d532268ed2a80f851"
+    },
+    {
+      "file": "brain/qualify_native.py",
+      "sha256": "c724e166c9434119cf40242da7518122af5c396e3adcb4ad745cce36bce81450"
+    },
+    {
+      "file": "brain/lesson_meta.py",
+      "sha256": "c23dd14d83f343948b8cf4e38c67e44ca833c1a2961a8b546cf8ec0cb44dface"
+    },
+    {
+      "file": "brain/bundle.py",
+      "sha256": "f9f4e3022f5f405f47944633c6e4a13084a52b2c7089661b9ba305de17a1be0e"
+    },
+    {
+      "file": "brain/behavior_report.py",
+      "sha256": "95982633cde9da7306ba7386d117e30dcb6356420f469a84086a76ce2efe1de8"
+    },
+    {
+      "file": "brain/fusion_v3_inference.py",
+      "sha256": "69e009d1d014956ecd75ab885a4ef34ba18db0579a7f5c60ee34a27bf9693d67"
+    },
+    {
+      "file": "brain/content_windows.py",
+      "sha256": "e678ba9ed2c68f4f872b15e049795fd258ad0e0cb563e012bffc8ed16b7935c5"
+    },
+    {
+      "file": "brain/fusion_v3_handoff.py",
+      "sha256": "a0fe48dc871546d9c8174cb7e87fcda16064594e60a5a6bda2676fbb46b81b9d"
+    },
+    {
+      "file": "brain/cache_media.py",
+      "sha256": "8294619b9211def94f451550cc05174579f671a7ee7f02e3f25ea9cd0de7f920"
+    },
+    {
+      "file": "brain/auxiliary_windows.py",
+      "sha256": "9eddc36af963bd32604b5e1c26817025e5c994799bd893e974ceed1bb4fa86fe"
+    },
+    {
+      "file": "brain/behavior_verify.py",
+      "sha256": "50477cbb7685c21f0f5ca7beec11537218b03cfb1112a91226faaa7047600b44"
+    },
+    {
+      "file": "brain/audio_arrays.py",
+      "sha256": "fe303d78a7ab2cf16ab832bd274bce73abc863c4f541f0bc201cce88f94cf4cd"
+    },
+    {
+      "file": "brain/credentials.py",
+      "sha256": "ee0f9bde13ce5a53e293e0f52d301ecae8196dffafc617a533760d3481950a20"
+    },
+    {
+      "file": "brain/fusion_v3_model.py",
+      "sha256": "055858e9486ad82dac9ec84fd0aef5e6aece00d17378f95ffff6441776e5cdd3"
+    },
+    {
+      "file": "brain/train_integrated.py",
+      "sha256": "6479c4825300acb2c97fa51315d8a10aabd59b9b4ab5702cd3fbf4c397da3200"
+    },
+    {
+      "file": "brain/corpus_pipeline.py",
+      "sha256": "f951830a77c5a19b17df591d7b4edd15c9f84a8247a63b90e5b56ae35157c9ee"
+    },
+    {
+      "file": "brain/tribe_events.py",
+      "sha256": "0ba9ed9453fd1aa725dd65c1c834fa40a0e098bce086fcd9e96ed923899afe76"
+    },
+    {
+      "file": "brain/video_frame_cache.py",
+      "sha256": "bec81e6fc2bab7b54d2af40c741ee8f90e89a3e0bd77c21fffa2a46f33dbd054"
+    },
+    {
+      "file": "brain/behavior_audit.py",
+      "sha256": "ef95bacce63631e1e1234c6e9f8349a62855eaeffc39dc0d7bc825c33d48742b"
+    },
+    {
+      "file": "brain/fusion_handoff.py",
+      "sha256": "4804ec7c8a177d9661812d1148da52ebff83b2d195a2cce9b9e400a60d8df2d7"
+    },
+    {
+      "file": "brain/fusion_audit.py",
+      "sha256": "26515ed4a4bb5e8e88f6a34e46e451eb402b133935857f29faa0341c270cdabd"
+    },
+    {
+      "file": "brain/media_frames.py",
+      "sha256": "ce68ac11b4c3866e6928097a408314899f9c37becb8e3fbceb00f5a33d330c01"
+    },
+    {
+      "file": "brain/signal_audit.py",
+      "sha256": "f0aec08ee1f55d18b7e0921834ae91d4ce897e38aa8c6977b896db18444f5574"
+    },
+    {
+      "file": "brain/eeg.py",
+      "sha256": "ab8907d98c42e1b5ee2f126582e27d19f2d50fc83a88edf402d154b2ecd096bf"
+    },
+    {
+      "file": "brain/worker_contract.py",
+      "sha256": "62424ffa5a6e33abcf199b35917e3f3c51111e0621d85bb6000a76b52170e309"
+    },
+    {
+      "file": "brain/__init__.py",
+      "sha256": "8f3fc11e5d7e87b9467fada24b6856ae882c6e2103ed9f625fc3edfaf513921e"
+    },
+    {
+      "file": "brain/content_pipeline.py",
+      "sha256": "93a596ab7e7887fc496fa8b0f9b134fe07ac8a0435693a55cdcaddab18ca9be8"
+    },
+    {
+      "file": "brain/audio_derivative.py",
+      "sha256": "d1aa6693497a99fdd54b786e5d000bf651edc22e6ae07e4b8c8f4dca453393e0"
+    },
+    {
+      "file": "brain/sensory.py",
+      "sha256": "c108f8692c34f2cb1ec0665e8242dc36e3f6f09d3b50088e9192cd9606654220"
+    },
+    {
+      "file": "brain/fusion_report.py",
+      "sha256": "49640f40c6203f6681e62cc3fd9317ff89bb9f7391acced372801a94f8692fba"
+    },
+    {
+      "file": "brain/edugage_targets.py",
+      "sha256": "e203de0f5396d714aae77bca29208a5dce540cb21fd1c9e22d20f6ef7eead24e"
+    },
+    {
+      "file": "brain/lesson_features.py",
+      "sha256": "1b5277549a94814cbab7add92826e9dc2e1f96414c134e6923c3e49caebfcaa6"
+    },
+    {
+      "file": "brain/smoke_meta.py",
+      "sha256": "f8f31d9806fca6db2d07d4b33378a796dfe16f8804032523af62f99ff5817dcb"
+    },
+    {
+      "file": "brain/fusion_v3_quality.py",
+      "sha256": "8941931ab9bc4b75e4fec24e1fc2eb117ab485847cceb74aaf996b1c0b6078fb"
+    },
+    {
+      "file": "brain/transfer.py",
+      "sha256": "78b8d571779dba24cbf23669afca1202ae43dab7491cb153341f321af9c55f15"
+    },
+    {
+      "file": "brain/presentation.py",
+      "sha256": "e9ccb86249202fc9def45522baede314d297db2c571a5f2797aa71088147e071"
+    },
+    {
+      "file": "brain/qualify_corpus.py",
+      "sha256": "7db568c26fd8310a948d8200d8bb62e0443d0154307bb164147dd90d87c9f96d"
+    },
+    {
+      "file": "brain/pipeline.py",
+      "sha256": "5d2046209038901635580d2ab107853617b197ea1bff6cdbd9f575136f162547"
+    },
+    {
+      "file": "brain/dense_capture.py",
+      "sha256": "2a0dfe253af4f2acf10476f2caab150e1918ebdb8bfc4ffc3f5b57d531810860"
+    },
+    {
+      "file": "brain/predict_bundle.py",
+      "sha256": "d967aed1e97fcdd37f9ceb151954c80a32ac6c83455e9f2bddf0538808a72ad0"
+    },
+    {
+      "file": "brain/fusion_data.py",
+      "sha256": "c3e8340f52ba488416df4394c7e2496964f0598a72167854bed3bb42d28b8345"
+    },
+    {
+      "file": "brain/fusion_v3_report.py",
+      "sha256": "63241907923b1e172f4dfc7e9247552f3715cecc3b01b9afce71162e578e6576"
+    },
+    {
+      "file": "brain/document_presentation.py",
+      "sha256": "124e129d44fdf59d3a67b0738fecc5d9687828f0dc4ad3dc697ced2abf77e29b"
+    },
+    {
+      "file": "brain/evaluate.py",
+      "sha256": "a509024f91dc8b3687806f3d6c78a4a2547ad8eb0175db649a45a7c46ca8d48f"
+    },
+    {
+      "file": "brain/sam_compat.py",
+      "sha256": "e740fbffc05c14e81b94f8d2a2d6bc2a93586af16dc5226ea31f180873479b1e"
+    },
+    {
+      "file": "brain/windows.py",
+      "sha256": "8e8668c992c2ea783319bcd6adc148ea6c20152b0493cd15e9fca4decbbdc1cd"
+    },
+    {
+      "file": "brain/fusion_v3_experiment.py",
+      "sha256": "fc86cce655e2f596c91bc870e7e850d6fb52476cef64bbb8c706da620a398bce"
+    },
+    {
+      "file": "brain/behavior_models.py",
+      "sha256": "9fd6c8cf6c47fb87802e1d8b004a1f3a69a4b0205d6ec33a88ebbfc8260564bd"
+    },
+    {
+      "file": "brain/representations.py",
+      "sha256": "eb019dc133e20dc6c6decbb1689248fdb01c7f81473ca4f6fd042ec7ec3af550"
+    },
+    {
+      "file": "brain/fusion_inference.py",
+      "sha256": "31e806088abb77247bfa52740af2e7debf6590208b36c146f191fa2fcc807ada"
+    },
+    {
+      "file": "brain/modal_client.py",
+      "sha256": "29f5ea1822952ef44523a104afaeec066858d75db11f48b3e0b0f80d2473c580"
+    },
+    {
+      "file": "brain/meta_features.py",
+      "sha256": "bcd4ceb90a09c164dffecff13faef29aa960d82cdeba319e0597b81a05f25197"
+    },
+    {
+      "file": "brain/observe_call.py",
+      "sha256": "db7af3a4f2af14dc2a0b144052c591131f28321f49d486a2f1fc10008578b0d2"
+    },
+    {
+      "file": "brain/behavior_prepare.py",
+      "sha256": "bdd4ed3b06a10c99d37288bcb560da7404372c7b9d0e9396f324292dbe3f8df9"
+    },
+    {
+      "file": "brain/credits.py",
+      "sha256": "ed41e7ae378e13591d0df2d97b5b2f4f181d815fba8bec65e061c0d3743aa315"
+    },
+    {
+      "file": "brain/fusion_export.py",
+      "sha256": "8702bd367ffc34f42f76e270dc68503fb1225d04be108778561e42b36931922f"
+    },
+    {
+      "file": "brain/separation_features.py",
+      "sha256": "79e332f7582c9f6288be6738521ca79ebe17630fa4e20ef5f680ee7faf1347c6"
+    },
+    {
+      "file": "brain/fusion_qualify.py",
+      "sha256": "63affd21c89064bf1766bc11c8fec90884da11c03f2c17b6c81eb7a31f96fec4"
+    },
+    {
+      "file": "brain/behavior_benchmark.py",
+      "sha256": "c866e89e83eb5a4350502819e0ed4b894ed326ada3ec001f94ce5cff30924d41"
+    },
+    {
+      "file": "brain/__main__.py",
+      "sha256": "4ef64f5653a3637518488976ff900561ebdf337f5160ce494a106dbf0d3db001"
+    },
+    {
+      "file": "brain/sensory_core.py",
+      "sha256": "461b4df8df99a5f16ea9950ebcd04ff46aa48ec67b2d3802d16dc6843a5f450e"
+    },
+    {
+      "file": "brain/remote_inference.py",
+      "sha256": "96f8195677f0761c6ea218fbf187dabd43e0b2b9af4708d2cca0b9d8aa304780"
+    },
+    {
+      "file": "brain/fusion_v3_audit.py",
+      "sha256": "40d870a524764d6b965a91d658e7297932f2760343ab89b4220a89217af99584"
+    },
+    {
+      "file": "brain/surface.py",
+      "sha256": "ceb2d885519e5d1671bfdda1e4cb880a8fe0a8eaa97087de41d8bea1ee6d459b"
+    },
+    {
+      "file": "brain/qualify_gpu.py",
+      "sha256": "02b1c79a6d0b55e1ef89d004d1b7e6a633df6cac5af831206bfb1e0514e4f291"
+    },
+    {
+      "file": "brain/fusion_experiment.py",
+      "sha256": "40b00852476fcb8e62a22e9a287c6e06027dddfc07d51142e8512b830c5d2063"
+    },
+    {
+      "file": "brain/recover_modal.py",
+      "sha256": "49d46304b325f2811fcdb01350c5fc3901b6044c2ce5b92c7e580358970d92d9"
+    },
+    {
+      "file": "brain/fusion_model.py",
+      "sha256": "5689b80dde028983d705c347dccb08749bc45b241111f8131251c97cd02e0fa5"
+    },
+    {
+      "file": "speech_eeg/cohort_replay.py",
+      "sha256": "b62d58faf4fd810c9b7ba74ae25324781eb84aec1fe50e5727a5188ded73c74d"
+    },
+    {
+      "file": "speech_eeg/cohort_targets.py",
+      "sha256": "e4db72adb7048ef39062b498d09aacb918c8717ff5b04abd39eb4a679ea341f1"
+    },
+    {
+      "file": "speech_eeg/endpoint_review.py",
+      "sha256": "a99120d309a0c723f525bb4474192fae0005cfe61e92e130e28d56adc20eb5b9"
+    },
+    {
+      "file": "speech_eeg/tribe_capture.py",
+      "sha256": "cdd80e14607c7a15c3b3a5a98c7beb221403efc12bee856e7113843729adb8ca"
+    },
+    {
+      "file": "speech_eeg/handoff.py",
+      "sha256": "b239c3f3526da37aeeb939b6451f45285bd6a3d900b4fcd19712a90e79ece727"
+    },
+    {
+      "file": "speech_eeg/cohort_data.py",
+      "sha256": "f9367a6cd87d699c0cebc12a6df7d35a63fd80178d6a17e30b67da0d213cce2b"
+    },
+    {
+      "file": "speech_eeg/submit_tribe.py",
+      "sha256": "c942603813ab774a2c0a803654885d9067e1c62e195b3ad46b5675a0246ada28"
+    },
+    {
+      "file": "speech_eeg/bbbd_inventory.py",
+      "sha256": "e1af3771b258857ecbc7834fbabc99cf44fe5f0b7563f3dfe4850ff2fa9c6c71"
+    },
+    {
+      "file": "speech_eeg/cohort_evaluate.py",
+      "sha256": "c830b16ddfd2cf998b4679eaf65006262bdf60d9cc188fafe0270e42a880e148"
+    },
+    {
+      "file": "speech_eeg/__init__.py",
+      "sha256": "395c1ea1b34a1c06ddfba044c0aefa45816e46e9686351fcd6a6dbe0c2e30536"
+    },
+    {
+      "file": "speech_eeg/finalize.py",
+      "sha256": "4dc6293c76bd8962851d40010771916f6d2d6f3ef99295f3bbe054527c891689"
+    },
+    {
+      "file": "speech_eeg/completion_audit.py",
+      "sha256": "575dc5bac245dd25f6ad74383284a8623be57ce83400b1f484c98c0949d1d6f8"
+    },
+    {
+      "file": "speech_eeg/model.py",
+      "sha256": "19a4ce9e754b12878ec0a9737b9a7a6f883f7b3d875a1f7d9c6ad0cfb5c3d382"
+    },
+    {
+      "file": "speech_eeg/submit_batch.py",
+      "sha256": "d385614359f3ae6c401ffdd4f88ef8db4992cc8d7a7773a883b1ac522ef85db0"
+    },
+    {
+      "file": "speech_eeg/endpoint.py",
+      "sha256": "b5903a86985c1fa013a14ad28f84fb5f5f5dbd764bee3dfc003275d2b09658ba"
+    },
+    {
+      "file": "speech_eeg/cohort_train.py",
+      "sha256": "0275d5e8497ccd451a7e4ddbd56192acb83dcfc94c99cb121ecffd8a5bf5accc"
+    },
+    {
+      "file": "speech_eeg/common.py",
+      "sha256": "7eb09f6167926d94866ebde8e910b41c598298027bcd074953ca0e83b8e6d9f8"
+    },
+    {
+      "file": "speech_eeg/train.py",
+      "sha256": "89f94042d8aa0fceec5e8ba699d5298060f781bf5729f622f4b4e059cb875729"
+    },
+    {
+      "file": "speech_eeg/endpoint_experiment.py",
+      "sha256": "a2fbd4a592086dc7cc249fd600b47d8c00257b1e16425dab2d54e17e8a4c9000"
+    },
+    {
+      "file": "speech_eeg/inference.py",
+      "sha256": "12bc3dcd56436098b0450eceb0c8e59d9085c9e110d4575467b6440374d490ee"
+    },
+    {
+      "file": "speech_eeg/cohort_features.py",
+      "sha256": "3a5679a30f79e73042c9bdd922340399f49f24788c452149a8f4feb90294180c"
+    },
+    {
+      "file": "speech_eeg/cohort_diagnostics.py",
+      "sha256": "0d7be9cb28877fdbbfc2466f00e791ad28b560c7272c456614c617da38e16f0e"
+    },
+    {
+      "file": "speech_eeg/endpoint_inference.py",
+      "sha256": "85275a8867f8865770b6f85d749ca720f78a74b8cec01bc421cb02f90643927f"
+    },
+    {
+      "file": "speech_eeg/report.py",
+      "sha256": "d3e35917f20676d9b5d2b7b7cc0132dd7533b65c1ee9408fd84d888d05ff155a"
+    },
+    {
+      "file": "speech_eeg/prepare.py",
+      "sha256": "1a66c8fce2e9b2b048353357d4566fec5a7fc5a4e3e17b65be930caf1a71dc14"
+    },
+    {
+      "file": "speech_eeg/acquire_alice.py",
+      "sha256": "a403f3eb96961fcf254740ac7979e48a161d3c3419a80cb83d5e498eea6a5faa"
+    },
+    {
+      "file": "speech_eeg/status.py",
+      "sha256": "adfb51cc4f7d7026f7f208f7059ebe3dc6f354cac98257d345e6a5010ae1dcc8"
+    },
+    {
+      "file": "lesson_harness_v1/local_teacher.py",
+      "sha256": "8ac83ec85490619a9d4519c1ef21c37dac295f257b358c7ab46f2045896d0618"
+    },
+    {
+      "file": "lesson_harness_v1/bbbd_engagement_audit.py",
+      "sha256": "9c50f982a228b7919f101b8d069eed01f5b6c754e47e64acb58bc0437b8c1a8e"
+    },
+    {
+      "file": "lesson_harness_v1/qwen_annotation_import.py",
+      "sha256": "a56352d4fe6be7ddff3e66ef8cb6af8360b17fbd0378d148bd4be1528b20029a"
+    },
+    {
+      "file": "lesson_harness_v1/pilot.py",
+      "sha256": "f3dab0c60ccd77bce8bfe020744f13fb00ec8ee16e85f9e22e708e736d320dc4"
+    },
+    {
+      "file": "lesson_harness_v1/bundle.py",
+      "sha256": "193092c2f52b7f52abfc581d1f41e8c32cfd4568d53896481405d41278aea412"
+    },
+    {
+      "file": "lesson_harness_v1/labels.py",
+      "sha256": "fb9d5ab389bcbb0fc3003b9c90ad870f6710a9670e990d1e90f0119e909fd2aa"
+    },
+    {
+      "file": "lesson_harness_v1/deadline_review_import.py",
+      "sha256": "1819322db9d28b8a7c81e41c916a488226487f254b36c552a8c3d76b9a2d9183"
+    },
+    {
+      "file": "lesson_harness_v1/eeg_quality_frontal.py",
+      "sha256": "2d66080209490175e5784df7974b493e1cbebf4f9ec66a0f9d0d911095a7673d"
+    },
+    {
+      "file": "lesson_harness_v1/quality_corpus.py",
+      "sha256": "935b858d12b0d9697bbe664ac21a8a65a42683f145a4ac4378f3850bb9a4fe2a"
+    },
+    {
+      "file": "lesson_harness_v1/qwen_teacher_corpus.py",
+      "sha256": "d64baa28c7af3b2c010422e264091591b70f517942025e241c75ebf992e62c48"
+    },
+    {
+      "file": "lesson_harness_v1/benchmark.py",
+      "sha256": "0bd71e73fffbd7f4584fb13bcb32a93b9fc20ec53d55331576c6611ab9df9252"
+    },
+    {
+      "file": "lesson_harness_v1/artifact.py",
+      "sha256": "175d1e4c93758f118c32a9023eff9397422b0c19495541b39feebe8f1f2a82b2"
+    },
+    {
+      "file": "lesson_harness_v1/INTEGRATION.md",
+      "sha256": "d97b3fc69c3ee26278e5fb95a38e0d953d49341c6dd5ed6e64b36f2e945390d0"
+    },
+    {
+      "file": "lesson_harness_v1/teacher_diagnostics.py",
+      "sha256": "f758522394e3fda73d690954b45167b597689180240ea2205e627f50fbe8a65a"
+    },
+    {
+      "file": "lesson_harness_v1/ordinal_teacher.py",
+      "sha256": "4077d45bbd40a96f16ad42a1037ddaaad3cfb2efcea2190bc0516e1df0d09ae5"
+    },
+    {
+      "file": "lesson_harness_v1/guarded_job.py",
+      "sha256": "4ea898aa79329d2bc521af6ca4a6089e31dec4b3f0b150b42dfab9f58441a183"
+    },
+    {
+      "file": "lesson_harness_v1/deployment.py",
+      "sha256": "22927d2a18c24421463265e33763a5b1eaa0e308ac82a0ae06b15a265bbd8b9d"
+    },
+    {
+      "file": "lesson_harness_v1/combined_export.py",
+      "sha256": "962a1867a14c9f7b4d3932cb5db267b46cf692cf02fc855c8f89843428d0cf8c"
+    },
+    {
+      "file": "lesson_harness_v1/RESUME.txt",
+      "sha256": "db533e6fcd3257fa265399cf4593388488564d348710f2081d3c03a252fc9f50"
+    },
+    {
+      "file": "lesson_harness_v1/content_teacher_v2_probes.py",
+      "sha256": "055f9023f3ff2493fc06150d2411604a23bd321201187377e92faf073ac93de2"
+    },
+    {
+      "file": "lesson_harness_v1/eeg_auxiliary.py",
+      "sha256": "826efdad5378de440ed2d56bbd431715f860594a4ae87ab78479f26513c02c6f"
+    },
+    {
+      "file": "lesson_harness_v1/annotation_import.py",
+      "sha256": "07d76ce668171ef69b04e1c2a1f1dcf47a7c8c50321c2312e6064a67b7e3a0d4"
+    },
+    {
+      "file": "lesson_harness_v1/MODEL_CARD.md",
+      "sha256": "f239f242948c5284006a341f5254b15c77cd80f3cf3445cf786b50b6255dd81a"
+    },
+    {
+      "file": "lesson_harness_v1/eeg_quality_policy.json",
+      "sha256": "25d6cc1562d00870e4dc33bbdfa9e2910fa564e5a8699b365164f2f6e41ab9d1"
+    },
+    {
+      "file": "lesson_harness_v1/eeg_timeline.py",
+      "sha256": "795b2ee56999f113bb8b33dbaa1ca0c6b0e47d411f648cf08633527caef6b565"
+    },
+    {
+      "file": "lesson_harness_v1/config.json",
+      "sha256": "95fdb0ffa37844997ad913fa6159a1f032046b9a5bcd75b0f4da4300b9e6226e"
+    },
+    {
+      "file": "lesson_harness_v1/frontal_amendment.json",
+      "sha256": "abfca6e07c82a79437480a7c5d42574dae8cf4dc3ebaee117e640e996b436e21"
+    },
+    {
+      "file": "lesson_harness_v1/quality_gate_revision.json",
+      "sha256": "77332a3340ace67563c3e1bd26faca5c50960e8a15a737e9a04773eab977f17a"
+    },
+    {
+      "file": "lesson_harness_v1/content_teacher_v2.py",
+      "sha256": "7fa04160697aeabaa20e9afce3ccd89c616e592b734d6971a1f986205139ca0b"
+    },
+    {
+      "file": "lesson_harness_v1/mlx_teacher.py",
+      "sha256": "004714289969ed66c634109690de78a62934ebb474d064a2b9a2c4b6b71413f0"
+    },
+    {
+      "file": "lesson_harness_v1/evaluation.py",
+      "sha256": "3b3d6fea492d4647e30575f5bb45ea72c1f2aa05d99d6085e45e8b756e76b257"
+    },
+    {
+      "file": "lesson_harness_v1/review_benchmark.py",
+      "sha256": "3328bd9f1b176add82e2f6667bf1acf063f3e0b0a35bfb1fd764925cb4421595"
+    },
+    {
+      "file": "lesson_harness_v1/app_release.py",
+      "sha256": "4c4c43d4d2b70f392a02e427926bb70f21cc4de93722b7f14c813abe24b044a1"
+    },
+    {
+      "file": "lesson_harness_v1/readout_latency.py",
+      "sha256": "464abc2b73bdaa7ad85d3392e8428a3af9da0eadd52e550c82c7b5e55f5f916f"
+    },
+    {
+      "file": "lesson_harness_v1/review_deployment.py",
+      "sha256": "6dca7ac7f8c76b1b7ecf06e0af0cd9aa3c584aced33232a7d80009375e76f733"
+    },
+    {
+      "file": "lesson_harness_v1/__init__.py",
+      "sha256": "a20289f643ca5236bc01e13ebdcd5461b010dfb860e16588c8ecf71e02466292"
+    },
+    {
+      "file": "lesson_harness_v1/features.py",
+      "sha256": "e0efc551218da9abee204afc2507298bc523160307eaac38ab3ceb9cef891c63"
+    },
+    {
+      "file": "lesson_harness_v1/qwen_release_fit.py",
+      "sha256": "76156497db23d9ff8c16572f57126b441d997a03cd4290c7fe08fc58bdcb353a"
+    },
+    {
+      "file": "lesson_harness_v1/qwen_benchmark.py",
+      "sha256": "5357526b93120574870b0dcd20cdb7779fa08394069b34c3b6b6590418a6581c"
+    },
+    {
+      "file": "lesson_harness_v1/release_preview.py",
+      "sha256": "fc5ba73b53af6777bada8ecace7fedaf9a702c923c39ce006b601f3483edf928"
+    },
+    {
+      "file": "lesson_harness_v1/feature_equivalence.py",
+      "sha256": "63c12c9858c58701edf247b885b6f9ddf5b16141261c2ca9eeeba0b19218baab"
+    },
+    {
+      "file": "lesson_harness_v1/qwen_training.py",
+      "sha256": "a95444ef32ea84d539c5a62ae8fe5abbb1c96502eac10412e3886e2d064323cc"
+    },
+    {
+      "file": "lesson_harness_v1/review_training.py",
+      "sha256": "3c2f79d8ca8e9f69b0d3ec899ae44240f0e9fe42b21618280dd6ae0125dd313f"
+    },
+    {
+      "file": "lesson_harness_v1/qwen_teacher_diagnostic.py",
+      "sha256": "4ff5165ff7da039056d83672fc6b649551044725b42dd7254f0dbe743a82c02e"
+    },
+    {
+      "file": "lesson_harness_v1/answer_position_diagnostic.py",
+      "sha256": "00cc4c63f002c4ea4910fda6a34188c2c9df497219ef800065c9be004961b47f"
+    },
+    {
+      "file": "lesson_harness_v1/integration.py",
+      "sha256": "85c7c89d17d1eb48aa766b14c127d212b10b9500f98ffa766babe51a512b52b6"
+    },
+    {
+      "file": "lesson_harness_v1/model.py",
+      "sha256": "fef279fd7b05cb2615eb9d8971c92828bdb53800e608984369580cb4fa14a230"
+    },
+    {
+      "file": "lesson_harness_v1/README.md",
+      "sha256": "280cd33b3a38cafb73e5c0f02793b7936287ad97eea7df4c3e6550ce990129d9"
+    },
+    {
+      "file": "lesson_harness_v1/word_transcripts.py",
+      "sha256": "f78ced1061b635bb7474537e464b682088b9e36e05340addf9c825c9e99eb474"
+    },
+    {
+      "file": "lesson_harness_v1/eeg_quality.py",
+      "sha256": "25ad14b1892705f7460235ed090b099eb5d074239a3adc540d292d8555711004"
+    },
+    {
+      "file": "lesson_harness_v1/mixed_benchmark.py",
+      "sha256": "7d33168c74ecac2a903d457fae8f62ef26bb395ecbadd1644be2c7ddce99f9e6"
+    },
+    {
+      "file": "lesson_harness_v1/RELEASE.json",
+      "sha256": "b3a464ff033dddc0bbc0aac4c690bf17d1ca2a068537bab7f0060460935d7c94"
+    },
+    {
+      "file": "lesson_harness_v1/eeg_quality_frontal_policy.json",
+      "sha256": "343986c593a63bd2850ba3d52fb2064ee604ae2deb66f0f6b468b8bd4c5951ec"
+    },
+    {
+      "file": "lesson_harness_v1/BROWSER_RELEASE.md",
+      "sha256": "d1173bdec8a7824f7fc3cbe9af601d0c11221e08583ee431280bf3cc5ef48cd3"
+    },
+    {
+      "file": "lesson_harness_v1/release_report.py",
+      "sha256": "847da861cefebd1c6dfc99a233a441f675d79fd72aa09dc3853a968e2293ce9f"
+    },
+    {
+      "file": "lesson_harness_v1/acquire_qwen_teacher.py",
+      "sha256": "be47594d7b4bc69f4e8a3d7e00a0cf031db40854a5f8689826dd26c17a0d9982"
+    },
+    {
+      "file": "lesson_harness_v1/examples.py",
+      "sha256": "6438e1a3edfbb9fa4610232091ecd2f50e7238066a6fb6b27abda5cd5dc98290"
+    },
+    {
+      "file": "lesson_harness_v1/timeline.schema.json",
+      "sha256": "dd0e27b5a3f3b8a61e622d47cb5b82cdd58c825bcc63350d53cf9119373607f7"
+    },
+    {
+      "file": "lesson_harness_v1/qwen_deployment.py",
+      "sha256": "21b57f35956703f90c5fa1aaaa7b599686501aa284e1d6c822fe8fc544f52d4a"
+    },
+    {
+      "file": "lesson_harness_v1/annotation_policy.json",
+      "sha256": "b2c29ec888a929434dd09e612490153cf0a3dfbcb2f5b95708992b4e15476ba3"
+    },
+    {
+      "file": "lesson_harness_v1/inference.py",
+      "sha256": "21944ed7a0677156da72baf4e58cd41e12f95de32bf65b949755ab1bab6a5d3b"
+    },
+    {
+      "file": "lesson_harness_v1/IMPLEMENTATION_PLAN.txt",
+      "sha256": "d9e64a4bc93b3120fdb0f5e8a5c61b8680d7018088780d07e16b3701b95d5a90"
+    },
+    {
+      "file": "lesson_harness_v1/README.txt",
+      "sha256": "5989060781236110fe1ba4117ebbef259b7e78915a792e9ff4fb60fbc6c0e6f0"
+    },
+    {
+      "file": "lesson_harness_v1/content_teacher_v2_policy.json",
+      "sha256": "e7483ebce3d10fef799acc40fa196b3c00e7342f8880b32f902d3b0dc63e8fee"
+    },
+    {
+      "file": "lesson_harness_v1/quality_training_amendment.json",
+      "sha256": "e317d9aa99ea4d70b1450e1eb8e8463669f4c4519a4b1c276fa329245c994cf5"
+    },
+    {
+      "file": "lesson_harness_v1/windows.py",
+      "sha256": "a57cd50dad519e238d072cd6b639856f6ae2800505e105bb58a3910d6fda6997"
+    },
+    {
+      "file": "lesson_harness_v1/presentation_evidence.py",
+      "sha256": "bd935b60cbd25360322f9da8885428ba657f4ae9fe5a3b7cd087f19879124af6"
+    },
+    {
+      "file": "lesson_harness_v1/eeg_examples.py",
+      "sha256": "d9ac8b79c1f53dc89216edf13b3db2e5ff266413fa62844f80e2b46d8b95202f"
+    },
+    {
+      "file": "lesson_harness_v1/review_config.json",
+      "sha256": "2481bad01006dab8985379b7702c8402f5ee41662990145b87ec7bdc87fd9b51"
+    },
+    {
+      "file": "lesson_harness_v1/qwen_config.json",
+      "sha256": "102b886f6f5b044de40408d7820398230cb177ac2e36ddb1ed759a2a9efc04bc"
+    },
+    {
+      "file": "lesson_harness_v1/review_release_fit.py",
+      "sha256": "b79930019b9a60d6202727d2f7b37437c69adac667333cc2015b1a4fc58f2566"
+    },
+    {
+      "file": "lesson_harness_v1/quality_import.py",
+      "sha256": "851d7da8b69e605865c27194828dea8b5aa22ae7cb388368a077df5d6ce2e0c0"
+    },
+    {
+      "file": "lesson_harness_v1/contract.py",
+      "sha256": "af9ca2921f2325b04057627a766aa7c7af75485d6f896e5495dd5f311e9fc0b1"
+    },
+    {
+      "file": "lesson_harness_v1/combined_preview.py",
+      "sha256": "ddc8f5097c924dd42bffdc348f26a8ad3ada69175a4292651be11e8b4067895e"
+    },
+    {
+      "file": "lesson_harness_v1/STATUS.json",
+      "sha256": "9b3f9babd110cec3a16257c796e4b804bc0b66beea010258c010ddeaf8ce642e"
+    },
+    {
+      "file": "lesson_harness_v1/source.py",
+      "sha256": "a15e466408583ddd900e1d517a31ceca206cfc6d425cff5c9d798d9bd72bfb9b"
+    },
+    {
+      "file": "lesson_harness_v1/eeg_readout.py",
+      "sha256": "1d0586ed45255a703fb57a508310e44a67ddff5b3c73e7f0a9d1421d68f32b0a"
+    },
+    {
+      "file": "lesson_harness_v1/concepts.py",
+      "sha256": "ab4bf60a0be575a42956ab7ce6af07aaf0c16d70f808bb987e373e33ecf4e01a"
+    },
+    {
+      "file": "lesson_harness_v1/THREE_STREAM_INTEGRATION.md",
+      "sha256": "aa8c75026f9959d8b80b41aab35e454dc43209f25506374c5e7749ab82915a68"
+    },
+    {
+      "file": "lesson_harness_v1/rubrics.py",
+      "sha256": "6ec997fb4f899c5f88fd558b54d9e9f8d835f78013ffe78236343464acfd2e9b"
+    },
+    {
+      "file": "lesson_harness_v1/report.py",
+      "sha256": "f7320c3697481ba49af56800e2f2cbff7b38e4cf6bc44a3c3d52f175aa12f052"
+    },
+    {
+      "file": "lesson_harness_v1/auxiliary.py",
+      "sha256": "cc56ea924d4ec7c2ddbcc999b3971fdc7dcfeb3f677a0551ee86234f3b2f7be4"
+    },
+    {
+      "file": "lesson_harness_v1/annotation_packets.py",
+      "sha256": "a598189fc31956d2076ddb16e3411267882afe82b663f484a652939e08cf404f"
+    },
+    {
+      "file": "lesson_harness_v1/training.py",
+      "sha256": "83c0acb3db11b75b299e1dc72e43d52ca7f7aa8d5f86f5f182f80d76da0a2395"
+    },
+    {
+      "file": "lesson_harness_v1/data.py",
+      "sha256": "43d5fef825c604b77c7c98a4f26800d288dd7687483b0254d1fedaf00c03e1fe"
+    },
+    {
+      "file": "lesson_harness_v1/acquire_teacher.py",
+      "sha256": "3939f455c126d83ee4aa28680f9cf2b63aff8983f3e62c63258a08bf35940513"
+    },
+    {
+      "file": "lesson_harness_v1/config_history/95f62d746b6f3a19fab22e0b801934611d381e08758354ea904282c01d21e1e8.json",
+      "sha256": "95f62d746b6f3a19fab22e0b801934611d381e08758354ea904282c01d21e1e8"
+    },
+    {
+      "file": "lesson_harness_v1/config_history/annotation-838891a68d9dc5f9a2f58774f65fecca57530d3d8ec7e3d52c3a32e374f5a0f8.json",
+      "sha256": "838891a68d9dc5f9a2f58774f65fecca57530d3d8ec7e3d52c3a32e374f5a0f8"
+    },
+    {
+      "file": "lesson_harness_v1/config_history/050184302e7d54026e62b8c2229e5b915837d8f4d6d4de4b1d239a7668914521.json",
+      "sha256": "050184302e7d54026e62b8c2229e5b915837d8f4d6d4de4b1d239a7668914521"
+    },
+    {
+      "file": "lesson_harness_v1/config_history/annotation-c262b1a76b3b6e69fac9787ae213d901c1a63ddd8d92b0fd1c938ac0bd8a1a73.json",
+      "sha256": "c262b1a76b3b6e69fac9787ae213d901c1a63ddd8d92b0fd1c938ac0bd8a1a73"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_eeg_auxiliary.py",
+      "sha256": "97964ffa0e13df5dd4f9020727c4981906061cfc702a879884a9fa1e2a7036d4"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_model.py",
+      "sha256": "62eb0fe69abf3577d86c01cf8ae850bd2bcb1b64f080dae0f3335eead3751c24"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_inference.py",
+      "sha256": "9003be9dc1e19ee41d61a57f51ea450f4c56f667996b48d10164e0f48420b168"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_safety_gates.py",
+      "sha256": "46173621dd526a1a0264a24207647a0721ef8df906ed55473e326461f232e893"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_quality_import.py",
+      "sha256": "8d83788340bdbc833326741fab424a52577c7a00206e9ea37c27ae9e1b7fde8b"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_presentation_evidence.py",
+      "sha256": "93b98597f08ecea507435c4f55dd06c7a1b1179f434228509ea058d62a51ee71"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_app_release.py",
+      "sha256": "d04f7958f99ec0bf0efc30f1420fc3997686ccf2ab21e84531ee4c505a1461ca"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_features.py",
+      "sha256": "9d5f14359bc98694bc2681c2c0a0eaf83f86bbd17acc53b2f60d057d82186832"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_mixed_benchmark.py",
+      "sha256": "ea66f7e838cc996ceb1ab968bfd9861bfbb2b2dd624de6232685534a65186119"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_annotation_packets.py",
+      "sha256": "83ffe8485199da694ec07a046396a2ab7e153b7e3eb3cd187a5a83e24121cdf0"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_qwen_training.py",
+      "sha256": "f09ae04310ee98e0a79a92891278e7402d2a7de2937fc4a943068a4dd3d4e169"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_word_transcripts.py",
+      "sha256": "7b46b65094653a137a4f0face7deb9e3b6a24169ccb839fda52b0a08dfd2e1fb"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_core.py",
+      "sha256": "c29a522c847e1e411bd65c1e57400ca757ed3fc6a4c82e7b9fc33457405e940e"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_frontal_quality.py",
+      "sha256": "611d7e636a8fefec2e34c9b9388ed95e3538bd0f9bf477015cf3087fa3af1a27"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_teacher_diagnostics.py",
+      "sha256": "d64d231e7590df407f208627f3e9db54fdd979b6d4cdfee9203c1e5b3f452b83"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_release_report.py",
+      "sha256": "934f5eef14c0de3707a83ddac6b33f3b9bd7815e4636e9bc84ee6400195c2c8b"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_deadline_review.py",
+      "sha256": "0ba09ee410220649064ced4b28dbf2ee44a70b3f0f9e601e489cb13fb6ec63cb"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_bundle.py",
+      "sha256": "fb5be7bcab685b49068f16889e3e90825588e2620579d0515773530154f73a1f"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_evaluation.py",
+      "sha256": "3cea476c45282a3140a7e48ffc432fcbc9216d04457ecb75ac09c435b67293d6"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_combined_export.py",
+      "sha256": "6ad1a307e7c1388f4897d767e7d2f6de989582cb542cbb7f5cf10c8d8ed99b14"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_ordinal_teacher.py",
+      "sha256": "e92c587d91b8f12d7a6a6baecbd02203935d12b47b4c6b3784631c7faeea464f"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_content_teacher_v2.py",
+      "sha256": "e5f5dbb11b6478d6cf21286d9e1b3b2e43745f8cda6cb0c048274c293d51f30d"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_training.py",
+      "sha256": "979d8a60394879a9c52b576e467af0da4580cf0df8ad565faeac1359b8f5f177"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_eeg_readout.py",
+      "sha256": "02a9cb2b80ee815674fe1376bb726d66ecb05ab701d3d63b0b8f4dbe8821be7e"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_qwen_annotation_import.py",
+      "sha256": "3524ae8fb1d537f378c75197daacf8072cb8dd29d49d1ceb7a3cb32b4a6f1b65"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_eeg_quality.py",
+      "sha256": "5a3c9886a0c9768f85c61e9392fd03736fb8e858dbaf81e27d31f3fa218f2d64"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_cached_grid.py",
+      "sha256": "e7371cdeff5ef84cd034e8ddaf6b5f477db573758525ffc051254d7a1c8c3537"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_annotation_import.py",
+      "sha256": "9fc237155bc90e18ec64806b97456b09c44cda639f94782cc9fa731996240a86"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_release_preview.py",
+      "sha256": "5d6a7a30320549587ee8d504b398507c0d895aa7223ccabe77a1114acb69f397"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_qwen_teacher.py",
+      "sha256": "1c536e34e287c0ae39bad824c0c37b1977b56278a9c3f6ad37b5c9bd39edf07e"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_bbbd_engagement_audit.py",
+      "sha256": "5b9bfda1111fcae514a15ce745107d032f29355b7fbefd8dd01f87d14b6968d2"
+    },
+    {
+      "file": "lesson_harness_v1/tests/test_deployment.py",
+      "sha256": "dda7aca65bc0ff45afef37be64fff81a8f29f6cefef8f76e6865c3de27a2f8ca"
+    },
+    {
+      "file": "numerical_brain_v1/waveform.py",
+      "sha256": "ac53cf1e2e232c41858453d1e4a068c3d0d9e7ff41ed3d21a5bcc5f4c2e2bdaf"
+    },
+    {
+      "file": "numerical_brain_v1/speech_prepare.py",
+      "sha256": "9e907f1492f33256ba904e2ac88c434667afd0414cfd79c373c51cd46691ce5e"
+    },
+    {
+      "file": "numerical_brain_v1/latency.py",
+      "sha256": "e8457feb3db1132f67b313799206c899d5105a58175d90e4665d2632d2ae858b"
+    },
+    {
+      "file": "numerical_brain_v1/presentation_recovery_launch.py",
+      "sha256": "9149ca0aaed4bf021433a2d00f833a740c3efa2b5fdcaeae2d4f17d57acb087c"
+    },
+    {
+      "file": "numerical_brain_v1/cloud_presentations.py",
+      "sha256": "0aeb6ff686a932b811264b7f27d78dbf59840fe2d91e45bc0fe2aee81f02f080"
+    },
+    {
+      "file": "numerical_brain_v1/INTEGRATION.md",
+      "sha256": "75c3dedfec40b4560c1d29788e5e8598b659bbb16cd3f0df114cdf41af1140fe"
+    },
+    {
+      "file": "numerical_brain_v1/MODEL_CARD.md",
+      "sha256": "5c7c74816fdf3617182e19d45da97904c2f25dcc0c6289734c53e1f0e5d7ca81"
+    },
+    {
+      "file": "numerical_brain_v1/release_audit.py",
+      "sha256": "e93a15d1e582aa8ae44d20f49be2c38db91a371c832ea43d80160d28e1cd69e4"
+    },
+    {
+      "file": "numerical_brain_v1/fusion_benchmark.py",
+      "sha256": "a7cc23abadafac045b450d544c778f7a0f4b6dc9c2e3cc3bae311a44bb52c1f7"
+    },
+    {
+      "file": "numerical_brain_v1/fusion_features.py",
+      "sha256": "d6aa63c261457b0484c93bf1baebdec128ffa452e6fd74648252664dc9e02d8b"
+    },
+    {
+      "file": "numerical_brain_v1/cloud_presentations_recovery.py",
+      "sha256": "55221c445fc01e4ed6626ec4040b1094b128036ee56741628e54cb73b66f86bf"
+    },
+    {
+      "file": "numerical_brain_v1/__init__.py",
+      "sha256": "ccb0575a958289dd4531161f14aad595ba69391135ec8ef77367ce2b5c8e205a"
+    },
+    {
+      "file": "numerical_brain_v1/export.py",
+      "sha256": "6d5158762b485701971fcb365e4c9fd74f52f50fc6ced6d257ccff10d190feda"
+    },
+    {
+      "file": "numerical_brain_v1/fusion_config.json",
+      "sha256": "fa394cb533e0e9c4df8c46db9f50eac454910a72a4300ff8051963a2cb77c255"
+    },
+    {
+      "file": "numerical_brain_v1/replay_launch.py",
+      "sha256": "2130d708ef29c3c0d029eded1e5e585dc2378df5d07d38c07113fbf7a29aae2d"
+    },
+    {
+      "file": "numerical_brain_v1/cloud_finish.py",
+      "sha256": "4fb6874ecad993aa63b12e18ab9fc2270f7e149004ca3d50420680fac09e65d3"
+    },
+    {
+      "file": "numerical_brain_v1/presentation_launch.py",
+      "sha256": "466395e7d893f6d6511b69a9c235c6826404550acb70cd9ecc194333cdde51d1"
+    },
+    {
+      "file": "numerical_brain_v1/cli.py",
+      "sha256": "18f7a3b8a5089f47d1c22edb9222b290f7f9a148d843dffdd5cfcbb01d3d9d23"
+    },
+    {
+      "file": "numerical_brain_v1/fusion_sensitivity.py",
+      "sha256": "b2591a08f247b6d19bbe9595a1534e0039c59e1f4faf704c4323221e627a2fa8"
+    },
+    {
+      "file": "numerical_brain_v1/pipeline.py",
+      "sha256": "caa62f694b4c36405fbbc6b46698ff6ecb18a4bfcf29850a6269db933454942a"
+    },
+    {
+      "file": "numerical_brain_v1/examples.py",
+      "sha256": "d5f6745a7df3c971a310bdd2e3ca4a2ef512bbe1792b5709a05c719be4c92c36"
+    },
+    {
+      "file": "numerical_brain_v1/cortical_replay.py",
+      "sha256": "ee9b90eb3e02d77f6ac047e6efcd63ea627065d07ebf9bdabf61465f976c2bd5"
+    },
+    {
+      "file": "numerical_brain_v1/captioning.py",
+      "sha256": "413c4d63b792e16180fe0142e406da4f77a755315315a36b767d75ef4f27b4e0"
+    },
+    {
+      "file": "numerical_brain_v1/presentation_batch.py",
+      "sha256": "07c2d5b74bef7c7b573d2bbba17b895ddcb9021603d62feed713ab456500b00b"
+    },
+    {
+      "file": "numerical_brain_v1/waveform_parity.py",
+      "sha256": "8867b222765e54ce8c57d0ff9cb700f6293f44bc1df7fe5e78188305eb9e67c8"
+    },
+    {
+      "file": "numerical_brain_v1/replay_staged_launch.py",
+      "sha256": "2ab37f974e1dbbd686c754991d4a42357c457e8e22d754188051f12e41afb06f"
+    },
+    {
+      "file": "numerical_brain_v1/fusion_inference.py",
+      "sha256": "2f4cf0ff010e0b5c4833f7bb4f73d689d574adef0bab4ebf6cb010a15bd468de"
+    },
+    {
+      "file": "numerical_brain_v1/fusion_training.py",
+      "sha256": "575f7e47df6f8b9da3b8fd3ded7dd6d07f568d877598229b4244dabf43050cad"
+    },
+    {
+      "file": "numerical_brain_v1/training_sources.template.json",
+      "sha256": "3e6a35eecd8f970a9d85aafe77dbb0ff56aaa738a7408e35d5c7a57b468c5d6d"
+    },
+    {
+      "file": "numerical_brain_v1/cloud_replay.py",
+      "sha256": "b535e2e77ee1ebeb72e28067aeab41a9bb991675ff05ecd6497df1caec4e4cf5"
+    },
+    {
+      "file": "numerical_brain_v1/narration.py",
+      "sha256": "c74623bcf1c8cb062325ae2eb0be8fc67513f0cf0c49b66d7ad4f919e4c06432"
+    },
+    {
+      "file": "numerical_brain_v1/report.py",
+      "sha256": "58a25c6879405c90bfff8108058a832e19b833b7795ac58d828ee5f4d4c4c51f"
+    },
+    {
+      "file": "numerical_brain_v1/tests/test_fusion_inference.py",
+      "sha256": "a94ed921bc1b7c46a8acf20cc53bdae09484764c5b5734dbc102c833d5b53e6a"
+    },
+    {
+      "file": "numerical_brain_v1/tests/test_fusion_sensitivity.py",
+      "sha256": "60723eb11542c2bfbab4be30aeff381837105a1a98fe1a1441c99388177eed54"
+    },
+    {
+      "file": "numerical_brain_v1/tests/test_waveform.py",
+      "sha256": "eb268c08738d2eb8ec967b8a6ff9ce7859c2417d7b8c8dd1df453ce9c98921a7"
+    },
+    {
+      "file": "numerical_brain_v1/tests/test_narration.py",
+      "sha256": "107d625acce2d69e01d33c3e509705bfc1253d9a57bb35df3a579b40c4c16b20"
+    },
+    {
+      "file": "numerical_brain_v1/tests/test_captioning.py",
+      "sha256": "02ce6cf7d4c749acbd7bc62d4d422718bd2523abd27f6d04d68300b2a3820ca1"
+    },
+    {
+      "file": "numerical_brain_v1/tests/test_fusion_training.py",
+      "sha256": "8dc9f20fca8d428311ec4739a6672083941af736ef685d19376e04de841a6b5e"
+    },
+    {
+      "file": "numerical_brain_v1/tests/test_fusion_benchmark.py",
+      "sha256": "bf7f189bed605a37ee46c14c9aad8e5d20835706bfd1c49dfdfece5d93bc1907"
+    },
+    {
+      "file": "numerical_brain_v1/tests/test_pipeline.py",
+      "sha256": "e933255c68478c2804eef82332bfa7c38e7e31e7a8f420e025877bd054ecc0d1"
+    },
+    {
+      "file": "numerical_brain_v1/tests/test_export.py",
+      "sha256": "07cbb91168dbd3ecb0bbf439c5e9a392978fd2562060475b24c920ab1b0d41ed"
+    },
+    {
+      "file": "numerical_brain_v1/tests/test_fusion_features.py",
+      "sha256": "918b4479202c3611b399d693cca94385bb6a88767a7e571b61b51fd0659d85d8"
+    },
+    {
+      "file": "configs/stage_b_requirements.json",
+      "sha256": "95a31a390bce3a70d4e22836cfc48d4470bc0e290030667545c785b26568ea77"
+    },
+    {
+      "file": "configs/tribe_batch_requests.json",
+      "sha256": "e1ba376dc42f4942a647d317744c5302309e907b84f94fe1fe48eb128e78a57e"
+    },
+    {
+      "file": "configs/tribe_pilot_request.json",
+      "sha256": "380dc4843115c56cd371bfb324d6bc5eaa0073082e961b4a8175fec44ae4f7e2"
+    },
+    {
+      "file": "configs/cohort_acquisition.json",
+      "sha256": "bde3d72fc113d1561be5a0a5e117b19d6212820ea4a1d68a262d80cddaff02e4"
+    },
+    {
+      "file": "configs/cohort_model_v1.json",
+      "sha256": "0f40b50528ef33271486a02b5ae1f3f214fa1fa470c405e801a4b442e93f9558"
+    },
+    {
+      "file": "configs/local_runtime_observed.json",
+      "sha256": "879b34feb63ed2ec4cdf88629a5ecb6cab36b25740e0e08fae9d0aaff7777a87"
+    },
+    {
+      "file": "configs/stage_a.json",
+      "sha256": "7e61f5304c4633b98cbebcb7e013f949b7b1a97b2752794ddeafb7da6a63e7c7"
+    },
+    {
+      "file": "configs/endpoint_v1.json",
+      "sha256": "2286ce644adc5d4001c67df4cf96f42e728623266c94a8bb17d6e1adc5c5c1d9"
+    },
+    {
+      "file": "configs/cohort_target_v1.json",
+      "sha256": "6e92ce8e59751ab4d678ba7804042811706bcebce4c1efda4384e931b33aa24c"
+    },
+    {
+      "file": "configs/cohort_acquisition_remainder.json",
+      "sha256": "b6950b5737955674fe42511c93d66f092e425a69bf3aadd03eb57161ab280c13"
+    },
+    {
+      "file": "tests/test_inference.py",
+      "sha256": "5c162dd54527ab6c6e4d11ae9ae29623c680f8bab7af6283a7cee6b29564c1b0"
+    },
+    {
+      "file": "tests/test_tribe_capture.py",
+      "sha256": "37f6e7fdbcb2547b2a60ac01e0a6fb1fd6cb03bb36f04396310eb52200ca1c2e"
+    },
+    {
+      "file": "tests/test_cohort_target.py",
+      "sha256": "5758f9616588f17cd9f4d7ca5dccef2039c263d44e64013afdaa6b208ab1e6d7"
+    },
+    {
+      "file": "tests/test_hidden_transport.py",
+      "sha256": "7e663987a4407dfd2945a9554bbb5b2dfccc567fd92d670d818ffb2368cf7af0"
+    },
+    {
+      "file": "tests/test_speech.py",
+      "sha256": "3996fe89a081022fa096e303652a41a5916154454b20c9a9bae0c274e573e3b4"
+    },
+    {
+      "file": "tests/test_cohort_features.py",
+      "sha256": "6071d1bdede65e4f61e9f74013cd04cbf9a7e1fe1461bf2a9c1fde2906ee5bd1"
+    },
+    {
+      "file": "tests/test_acquisition.py",
+      "sha256": "1ab2cea729a26ae8816e83aebfdecc5f6378dd5da8fadca874338325285a336c"
+    },
+    {
+      "file": "tests/test_audit.py",
+      "sha256": "40bfcaf260f94ef669fdd11ff9b4bd984247200493e05e69793032c862c3e3d7"
+    },
+    {
+      "file": "tests/test_bbbd_inventory.py",
+      "sha256": "800e3cc38042bee0dfa35414bab20cd1a8ff3e0e532490060cb2552e0bb987a0"
+    },
+    {
+      "file": "tests/test_endpoint.py",
+      "sha256": "1f8bf8eb470f038963b72a7f28bcdab05f1d55ddf86d45732e53542be50d16f7"
+    },
+    {
+      "file": "tests/test_cohort_evaluation.py",
+      "sha256": "a804745cf258f65be0ad359db6d0aa22c5f3e8c3de0695d4335608fc8724801c"
+    },
+    {
+      "file": "tests/test_cohort_training.py",
+      "sha256": "7ab53e8a5579407869578f2cffa0ce6dc5bf6f09bba44acaf5ba66f13d864c76"
+    }
+  ],
+  "raw_participant_data_included": false,
+  "model_weights_included": false,
+  "local_runtime_credentials_included": false,
+  "functional_release_complete": true,
+  "predictive_improvement_demonstrated": false
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "perception-quality-training-amendment-v1",
+  "frozen_at_utc": "2026-11-04T20:24:35.850406+00:00",
+  "base_config_sha256": "050184302e7d54026e62b8c2229e5b915837d8f4d6d4de4b1d239a7668914521",
+  "policy_sha256": "25d6cc1562d00870e4dc33bbdfa9e2910fa564e5a8699b365164f2f6e41ab9d1",
+  "screen_code_sha256": "25ad14b1892705f7460235ed090b099eb5d074239a3adc540d292d8555711004",
+  "import_code_sha256": "70f505da991b982fd5129668d13d9e484976ec36e4ccc0874fa9e5806f77dc36",
+  "reason": "Original raw voltage aggregation was not a signal-quality audit. Require fixed source-bound engineering screening before auxiliary EEG training or annotation.",
+  "target_definition": "means and log1p variances from retained received rows for TP9 AF7 AF8 TP10; preserve original arrays separately",
+  "eligibility": "Exact query/media/participant join; all EEG arms exclude within-viewing singletons so reassignment has a nonidentity permutation. Entire fold must have eligible EEG.",
+  "unchanged": [
+    "human labels and original temporal scope",
+    "held participant and content-family assignments",
+    "100 epochs, seeds17/29/43 and model architecture",
+    "12 GiB reserves",
+    "no participant data transmitted to cloud"
+  ],
+  "claims": {
+    "artifact_free": false,
+    "physical_acquisition_timing_established": false,
+    "neurobehavioral_validity_established": false
+  },
+  "scoring_status": "No screened-EEG arm has been fitted or scored."
+}
